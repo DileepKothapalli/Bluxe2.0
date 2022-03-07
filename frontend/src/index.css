@@ -1,0 +1,31 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+@font-face {
+  font-family: "SpecifyPERSONAL";
+  src: local("SpecifyPERSONAL"),
+    url("./fonts/specify/SpecifyPERSONAL-ExExpBold.woff") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Axis";
+  src: local("Axis"), url("./fonts/axis/axis.woff") format("truetype");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "Warownia";
+  src: local("Warownia"),
+    url("./fonts/waronia/Warownia.woff") format("truetype");
+  font-weight: bold;
+}
