@@ -1,5 +1,5 @@
 import AutoIncrementFactory from "mongoose-sequence";
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
 const AutoIncrement = AutoIncrementFactory(mongoose);
 
@@ -25,7 +25,7 @@ const InfoSchema = new mongoose.Schema(
   { _id: false }
 );
 
-EmailSchema.plugin(AutoIncrement, { inc_field: "_id" });
-const Info = mongoose.model("emails", InfoSchema);
+InfoSchema.plugin(AutoIncrement, { inc_field: "_id" });
+const Info = mongoose.model("data", InfoSchema);
 
 export default Info;

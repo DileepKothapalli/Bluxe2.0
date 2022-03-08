@@ -8,7 +8,7 @@ export const Div = styled(motion.div)`
   background-image: url(${bg});
   background: rgba(0, 0, 0, 1);
   display: flex;
-  min-height: 100vh;
+  min-height: 170vh;
   height: max-content;
   padding-bottom: 40px;
   max @media (max-width: 320px) {
@@ -159,7 +159,12 @@ export const SubscribeDivNew = styled(motion.div)`
   padding: 0px 6px;
 `;
 
-export const SubscribeNew = styled.input`
+export const SubmitForm = styled.form`
+  // position: relative;
+  background-color: transparent;
+`;
+
+export const Input = styled.input`
   display: flex;
   // width: 350px;
   flex: 1;
@@ -203,6 +208,7 @@ export const SubscribeInput = styled.input`
   outline: none;
   border: none;
   border: 1px solid #ddd;
+  background-color: transparent;
   padding: 5px;
   &:placeholder-shown {
     font-style: italic;

@@ -46,9 +46,9 @@ const Studio = () => {
     .padStart(3, "0")}.jpg`;
   console.log(newimg);
 
-  const [element, controls] = useScroll(0.7);
+  const [element, controls] = useScroll(0.1);
   const [element1, controls1] = useScroll(0.7);
-  const [element2, controls2] = useScroll(0.4);
+  const [element2, controls2] = useScroll(0.1);
   const [element3, controls3] = useScroll(0.4);
   return (
     <Div id="studio">
@@ -68,20 +68,6 @@ const Studio = () => {
           >
             PROVENANCE
           </StudioHeading>
-          {/* <HeadingCaption
-            ref={element1}
-            variants={StudioCaptionAnimate}
-            animate={controls1}
-            transition={{
-              duration: 1,
-              delay: 0.5,
-              bounce: 1.3,
-              ease: "easeInOut",
-            }}
-          >
-            The Goal of Bluxe Team is to provide long-term fashion value to our
-            community
-          </HeadingCaption> */}
         </HeadingContainer>
         <BodyContainer
           ref={element2}
@@ -98,7 +84,7 @@ const Studio = () => {
             variants={StudioWrapperAnimate}
             transition={{
               duration: 1,
-              delay: 0.5,
+              delay: 0.2,
               bounce: 1.3,
               ease: "easeInOut",
             }}

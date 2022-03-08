@@ -1,16 +1,12 @@
-const express = require("express");
-const app = express();
-const cors = require("cors");
-const bodyParser = require("body-parser");
-const logger = require("morgan");
-const { connectWalletHandler } = require("./functions");
-const port = process.env.PORT || 8080;
-const Info = require("./models/Info.js");
-const mongoose = require("mongoose");
+import express from "express";
+import mongoose from "mongoose";
+import Info from "./models/info.js";
+import cors from "cors";
 
-app.use(logger("dev"));
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+const app = express();
+const port = process.env.PORT || 8080;
+
+app.use(express.json());
 app.use(
   cors({
     origin: "http://localhost:3000",
@@ -18,7 +14,7 @@ app.use(
   })
 );
 mongoose.connect(
-  "mongodb+srv://bluxe:bluxepass@cluster0.fuilb.mongodb.net/wingx?retryWrites=true&w=majority",
+  "mongodb+srv://bluxe:bluxepass@cluster0.wi4qa.mongodb.net/info?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
@@ -35,9 +31,9 @@ app.get("/newpost", function (req, res, next) {
 });
 
 app.post("/newpost", async (req, res) => {
-  const email_id = req.body.email;
-  const wallet = req.body.wallet;
-  const balance = req.body.balance;
+  const email_id = "check";
+  const wallet = "check";
+  const balance = "check";
   const data = new Info({ email: email_id, wallet: wallet, balance: balance });
 
   try {
@@ -51,4 +47,3 @@ app.post("/newpost", async (req, res) => {
 app.listen(port, function () {
   console.log("Running on " + port);
 });
-module.exports = app;

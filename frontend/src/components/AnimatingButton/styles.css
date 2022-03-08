@@ -129,16 +129,16 @@ body {
 
 .checkDiv {
   cursor: pointer;
-  transform: translate(27%, 19%);
+  /* transform: translate(27%, 19%); */
 }
 
 .label {
   color: rgb(179, 67, 67);
   width: 300px;
-  transform: translate(-85%, 50%);
+  /* transform: translate(-85%, 50%); */
 }
 
 .position-check {
   width: 85px;
-  transform: translate(0%, 19%);
+  /* transform: translate(0%, 19%); */
 }

@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from "react";
-import Rellax from "rellax";
 
 import SideBar from "../Sidebar/index";
 import {
@@ -37,11 +36,12 @@ import {
   FadeUpCard,
   StaggerContainer,
   VideoAnimate,
+  AboutAnimation,
 } from "./AboutFramer";
 
 import fly from "../../images/fly.mp4";
 import run from "../../images/Run.mp4";
-import { AboutAnimation } from "../Animation";
+
 import { useScroll } from "../UseScroll";
 import Studio from "../Studio/index";
 import MysteryCode from "../MysteryCode";
@@ -62,7 +62,7 @@ const About = () => {
             variants={AboutAnimation}
             animate={controls}
             transition={{
-              duration: 1,
+              duration: 0.5,
               delay: 0.1,
               bounce: 1.3,
               ease: "easeInOut",
@@ -79,7 +79,7 @@ const About = () => {
             variants={AboutAnimation}
             animate={controls1}
             transition={{
-              duration: 1,
+              duration: 0.5,
               delay: 0.2,
               bounce: 0.3,
               ease: "easeInOut",
@@ -95,7 +95,7 @@ const About = () => {
           variants={StaggerContainer}
           animate={controls2}
           transition={{
-            duration: 1,
+            duration: 0.5,
             delay: 0.5,
             bounce: 0.3,
             ease: "easeInOut",
@@ -107,8 +107,8 @@ const About = () => {
                 <Video
                   variants={VideoAnimate}
                   transition={{
-                    duration: 1,
-                    delay: 0.5,
+                    duration: 0.5,
+                    delay: 0.1,
                     bounce: 1.3,
                     ease: "easeInOut",
                   }}
@@ -137,8 +137,8 @@ const About = () => {
                 <Video
                   variants={VideoAnimate}
                   transition={{
-                    duration: 1,
-                    delay: 0.5,
+                    duration: 0.5,
+                    delay: 0.1,
                     bounce: 1.3,
                     ease: "easeInOut",
                   }}

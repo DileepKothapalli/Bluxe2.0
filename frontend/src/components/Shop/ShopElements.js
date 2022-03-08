@@ -7,7 +7,7 @@ export const Div = styled.div`
   // flex: ${(props) => props.flex};
   display: flex;
   // background-color: black;
-  background-image: url(${bg});
+  // background-image: url(${bg});
 
   text-align: center;
   height: 100vh;

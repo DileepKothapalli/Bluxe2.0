@@ -21,7 +21,7 @@ export const BgImg = styled.div`
 export const Div = styled.div`
   flex: ${(props) => props.flex};
   // background-image: url(${bg});
-  background: rgba(18, 18, 18, 1);
+  background: rgba(0, 0, 0, 1);
   text-align: center;
   background-size: 100vh 100vw;
   height: max-content;

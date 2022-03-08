@@ -6,8 +6,8 @@ export const StudioHeadingAnimate = {
     scale: 1,
     y: 0,
     transition: {
-      delay: 0.3,
-      duration: 0.5,
+      delay: 0,
+      duration: 0.3,
       bounce: 0.5,
       ease: "easeInOut",
     },
@@ -28,7 +28,7 @@ export const StaggerContainer = {
   show: {
     transition: {
       staggerChildren: 0,
-      delayChildren: 0.5,
+      delayChildren: 0,
     },
   },
 };
@@ -42,7 +42,7 @@ export const StudioCaptionAnimate = {
     y: 0,
     opacity: 1,
     transition: {
-      delay: 0.4,
+      delay: 0,
       duration: 0.5,
       bounce: 0.5,
       ease: "easeInOut",
@@ -52,14 +52,14 @@ export const StudioCaptionAnimate = {
 
 export const StudioWrapperAnimate = {
   hidden: {
-    x: -30,
+    x: -50,
     opacity: 0,
   },
   show: {
     x: 0,
     opacity: 1,
     transition: {
-      delay: 0.5,
+      delay: 0,
       duration: 0.5,
       bounce: 0.5,
       ease: "easeInOut",
@@ -78,8 +78,8 @@ export const VideoAnimate = {
     opacity: 1,
     scale: 1.35,
     transition: {
-      delay: 0.5,
-      duration: 0.5,
+      delay: 0,
+      duration: 0.3,
       bounce: 0.5,
       ease: "easeInOut",
     },
