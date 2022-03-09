@@ -74,7 +74,7 @@ export const SidebarRoute = styled(LinkR)`
   white-space: nowrap;
   padding: 16px 64px;
   color: #010606;
-  font-size: 16px;
+  font-size: 1rem;
   outline: none;
   border: none;
   cursor: pointer;
@@ -114,7 +114,7 @@ export const Button = styled.button`
     color: white;
     padding-left: 15px;
     padding-right: 20px;
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 `;
 export const ButtonDIv = styled.div`
@@ -126,7 +126,7 @@ export const ButtonDIv = styled.div`
 export const NavLinksBtn = styled(NavLink)`
   text-decoration: none;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 1rem;
   margin: 10px;
   height: 50px;
   width: 150px;

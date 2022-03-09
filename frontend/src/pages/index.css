@@ -3,3 +3,7 @@
   overflow-x: hidden;
   /* Track */
 }
+
+.heade::-webkit-scrollbar {
+  display: none;
+}

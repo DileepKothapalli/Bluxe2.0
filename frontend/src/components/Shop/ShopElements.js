@@ -93,7 +93,7 @@ export const IconButtons = styled(IconButton)`
   position: relative;
   &:focus ${DropdownContent} {
     display: block;
-    font-size: 16px;
+    font-size: 1rem;
   }
 `;
 export const I = styled.i`
@@ -199,7 +199,7 @@ export const CardTitle = styled.div`
   color: #ececed;
 
   & > h4 {
-    font-size: 20px;
+    font-size: 1.25rem;
     margin: 10px;
   }
 `;
@@ -209,7 +209,7 @@ export const Price = styled.div`
   justify-content: center;
   margin-top: 10px;
   & > h4 {
-    font-size: 18px;
+    font-size: 1.125rem;
     margin: 10px;
   }
 `;
@@ -226,7 +226,7 @@ export const MintButton = styled.button`
   border-radius: 40px;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
   & > h4 {
-    font-size: 18px;
+    font-size: 1.125rem;
     margin: 0px;
     padding: 5px;
   }
@@ -243,7 +243,7 @@ export const Bid = styled.div`
     margin: 10px;
   }
   & > h4 {
-    font-size: 18px;
+    font-size: 1.125rem;
     margin: 10px;
   }
 `;

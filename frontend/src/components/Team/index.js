@@ -22,7 +22,7 @@ import { useScroll } from "../UseScroll";
 import DeepakJoshiAvatar from "../../images/DeepakJoshiAvatar.png";
 import BhawnaSingh from "../../images/BhawnaSingh.png";
 import Prashant from "../../images/Prashant1.png";
-import Dileep from "../../images/Dileep1.png";
+import Dileep from "../../images/Dileep2.png";
 import { StaggerContainer, TitleAnimation, FadeUpCard } from "./TeamFramer";
 
 import Navbar from "../Navbar";
@@ -45,7 +45,7 @@ const Team = () => {
               ease: "easeInOut",
             }}
           >
-            BLUXE BAND
+            TEAM
           </Title>
           <CardWrapper
             ref={element}

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 import { NavLink } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
@@ -88,7 +88,7 @@ export const NavLinks = styled(LinkS)`
   cursor: pointer;
   padding: 12px 0px;
 
-  font-size: 18px;
+  font-size: 1.125rem;
   &:hover {
     color: white;
     transition: 0.3s;
@@ -105,7 +105,7 @@ export const NavLinksh = styled(LinkS)`
   cursor: pointer;
   padding: 12px 0px;
 
-  font-size: 18px;
+  font-size: 1.125rem;
 
   color: #004c7a;
   color: white;
@@ -115,7 +115,7 @@ export const NavLinkLink = styled(NavLink)`
   cursor: pointer;
   padding: 12px 0px;
 
-  font-size: 18px;
+  font-size: 1.125px;
   &:hover {
     border-bottom: 3px solid white;
     color: white;
@@ -155,14 +155,14 @@ export const Button = styled.div`
     color: white;
     padding-left: 15px;
     padding-right: 20px;
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 `;
 
 export const NavLinksBtn = styled(NavLink)`
   text-decoration: none;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 1rem;
   margin: 10px;
   height: 50px;
   width: 150px;
@@ -175,6 +175,34 @@ export const NavLinksBtn = styled(NavLink)`
   border-radius: 50px;
 `;
 
+export const NeuButton = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  min-height: 50px;
+  min-width: 150px;
+  max-height: 50px;
+  max-width: 150px;
+  background: rgba(240, 240, 240, 1);
+  border: none;
+  border-radius: 5.5rem;
+  border: 7px solid rgba(240, 240, 240, 0.5);
+  color: #444;
+  font-weight: 700;
+  outline: none;
+  cursor: pointer;
+  // transition: 0.2s ease-in-out;
+  ${(props) =>
+    props.on === "on" &&
+    css`
+      box-shadow: -10px -10px 15px rgba(200, 200, 200, 0.2),
+        10px 10px 15px rgba(200, 200, 200, 0.2),
+        inset -3px -3px 30px rgba(70, 70, 70, 0.2),
+        inset 3px 3px 15px rgba(30, 30, 30, 0.12);
+    `}
+`;
+
 export const DetailsDiv = styled.div`
   display: flex;
   flex-direction: column;
@@ -182,12 +210,12 @@ export const DetailsDiv = styled.div`
 `;
 
 export const Balance = styled.h1`
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bold;
 `;
 
 export const Account = styled.h1`
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: bold;
   color: #ccc;
 `;
@@ -208,7 +236,7 @@ export const Dot = styled.div`
 `;
 
 export const Label = styled.label`
-  font-size: 12px;
+  font-size: 0.75rem;
 `;
 
 export const AccountDiv = styled.div`

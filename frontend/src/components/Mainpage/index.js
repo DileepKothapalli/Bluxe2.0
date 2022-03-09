@@ -70,7 +70,6 @@ const Home = () => {
   var newimg = `images/jpgimages/ezgif-frame-${(num + 1)
     .toString()
     .padStart(3, "0")}.jpg`;
-  console.log(newimg);
 
   const [errorMessage, setErrorMessage] = useState(null);
   const [defaultAccount, setDefaultAccount] = useState(null);
@@ -79,7 +78,6 @@ const Home = () => {
   const [check, setcheck] = useState(null);
 
   const newonce = () => {
-    console.log("done me");
     setErrorMessage(null);
     Axios.post("http://localhost:8080/newpost", {
       email_id: defaultAccount,
@@ -90,7 +88,6 @@ const Home = () => {
 
     if (!defaultAccount) {
       console.log(defaultAccount);
-      console.log("Connect to wallet");
       setErrorMessage("Connect to wallet");
       // localStorage.setItem("Error", errorMessage);
       return;
@@ -98,7 +95,6 @@ const Home = () => {
     connectWalletHandler();
 
     if (userBalance > 0.2) {
-      console.log("Low Balance");
       setErrorMessage("Low balance");
 
       return;

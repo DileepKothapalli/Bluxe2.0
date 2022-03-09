@@ -148,7 +148,7 @@ export const ShoeName = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   & > h2 {
-    font-size: 36px;
+    font-size: 2.25rem;
   }
 `;
 export const ShoeNameText = styled.div`
@@ -157,7 +157,7 @@ export const ShoeNameText = styled.div`
   justify-content: flex-start;
   font-family: "Playfair Display", serif;
   & > h2 {
-    font-size: 36px;
+    font-size: 2.25rem;
   }
 `;
 export const ShoeInfo = styled.div`
@@ -168,7 +168,7 @@ export const ShoeInfo = styled.div`
 
   margin: 30px 85px 40px 0px;
   & > h2 {
-    font-size: 17px;
+    font-size: 1rem;
     padding-left: 10px;
     margin-top: 16px;
     letter-spacing: 2px;
@@ -180,7 +180,7 @@ export const ShoeAttr = styled.div`
   font-family: "Poppins", sans-serif;
 `;
 export const Text = styled.p`
-  font-size: 16px;
+  font-size: 1rem;
   text-align: start;
   margin: 0;
 `;
@@ -201,13 +201,13 @@ export const MintButton = styled.button`
   border-radius: 1px;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
   & > h4 {
-    font-size: 18px;
+    font-size: 1.125rem;
     margin: 0px;
     padding: 5px;
   }
   &:hover {
     // box-shadow: 0px 0px 50px 30px rgba(0, 0, 0, 0.1);
   }
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: normal;
 `;

@@ -64,7 +64,7 @@ export const HeadingLogoW = styled.img`
 `;
 export const Heading = styled.h1`
   text-shadow: 1px 1px 1px #222;
-  font-size: 40px;
+  font-size: 2.5rem;
   margin-top: 0px;
   margin-right: 15px;
   justify-content: center;
@@ -77,7 +77,7 @@ export const Heading = styled.h1`
 `;
 export const Caption = styled(motion.h1)`
   text-shadow: 1px 1px 1px #222;
-  font-size: 24px;
+  font-size: 1.5rem;
   margin-top: 30px;
   max-width: 950px;
   justify-content: center;
@@ -128,7 +128,7 @@ export const Cards = styled(motion.div)`
 `;
 
 export const Skill = styled.p`
-  font-size: 20px;
+  font-size: 1.25rem;
   color: #00897b;
   color: white;
   color: #33a195;
@@ -137,7 +137,7 @@ export const Rarity = styled.p`
   color: white;
   // color: #00897b;
   color: #33a195;
-  font-size: 20px;
+  font-size: 1.25rem;
 `;
 export const Video = styled(motion.video)`
   height: 200px;

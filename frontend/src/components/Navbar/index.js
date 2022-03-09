@@ -23,6 +23,7 @@ import {
   Account,
   Dot,
   Label,
+  NeuButton,
 } from "./NavbarElements";
 
 import logo from "../../images/logowhite.png";
@@ -103,7 +104,6 @@ const Navbar = ({ toggle }) => {
             </MobileIcon>
           </NavLinksh>
         </LogoDiv>
-
         <NavMenu>
           <NavItem>
             <NavLinks
@@ -163,24 +163,12 @@ const Navbar = ({ toggle }) => {
           </NavItem>
           <NavItem></NavItem>
         </NavMenu>
-
-        {!displayAccount && (
-          <ButtonDIv>
-            <NavLinksBtn to="">
-              <Button onClick={connectWalletHandler}>{connButtonText}</Button>
-            </NavLinksBtn>
-            {/* <h1>{defaultAccount}</h1> */}
-            {/* <h1>{userBalance}</h1> */}
-          </ButtonDIv>
-        )}
-        {displayAccount && (
-          <DetailsDiv>
-            {/* <Dot></Dot> */}
-            {/* <Account> {displayAccount}</Account> */}
-
-            {/* <Label>Connected</Label> */}
-          </DetailsDiv>
-        )}
+        <ButtonDIv>
+          {!defaultAccount && (
+            <NeuButton onClick={connectWalletHandler}>Connect Wallet</NeuButton>
+          )}
+          {defaultAccount && <NeuButton on="on">Connected</NeuButton>}
+        </ButtonDIv>
       </NavContainer>
     </Nav>
   );

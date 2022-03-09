@@ -8,7 +8,8 @@ export const Div = styled(motion.div)`
   background-image: url(${bg});
   background: rgba(0, 0, 0, 1);
   display: flex;
-  min-height: 170vh;
+  min-height: 100vh;
+
   height: max-content;
   padding-bottom: 40px;
   max @media (max-width: 320px) {
@@ -105,14 +106,13 @@ export const NumberContainer = styled(motion.div)`
 `;
 
 export const Number = styled.h1`
-  font-size: 50px;
+  font-size: 3.125rem;
   color: white;
   margin-bottom: 30px;
 `;
 
 export const FooterContainer = styled(motion.div)`
   display: flex;
-  font-size: bolder;
   margin: 10px 0px 40px 0px;
   align-items: space-between;
   justify-content: flex-end;
@@ -185,7 +185,7 @@ export const SubscribeLabel = styled(motion.div)`
   color: #f3f2c9;
   color: white;
 
-  font-size: 20px;
+  font-size: 1.25rem;
   width: 300px;
   align-items: flex-start;
   justify-content: flex-start;
@@ -265,5 +265,5 @@ export const SubscribeBtnNew = styled.button`
 
 export const Minted = styled.h1`
   color: #00897b;
-  font-size: 32px;
+  font-size: 2rem;
 `;

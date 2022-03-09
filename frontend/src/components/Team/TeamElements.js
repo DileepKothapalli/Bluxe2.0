@@ -51,7 +51,7 @@ export const Title = styled(motion.h1)`
   margin: 50px 0px 30px 0px;
   font-family: "Playfair Display", serif;
   font-weight: bold;
-  font-size: 55px;
+  font-size: 3.375rem;
 `;
 
 export const Container = styled(motion.div)`
@@ -103,7 +103,7 @@ export const Card = styled(motion.div)`
 export const Heading = styled(motion.p)`
   margin: 0px;
   color: white;
-  font-size: 16px;
+  font-size: 1rem;
   color: #00897b;
   color: #33a195;
   color: #1f6159;
@@ -113,7 +113,7 @@ export const Heading = styled(motion.p)`
 export const Name = styled(motion.p)`
   margin: 0px;
   color: white;
-  font-size: 26px;
+  font-size: 1.625rem;
   color: #00897b;
   color: #2e9186;
   color: #247168;
