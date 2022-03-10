@@ -71,16 +71,21 @@ const Home = () => {
     .toString()
     .padStart(3, "0")}.jpg`;
 
-  const [errorMessage, setErrorMessage] = useState(null);
-  const [defaultAccount, setDefaultAccount] = useState(null);
-  const [userBalance, setUserBalance] = useState(null);
+  const [email_id, setEmail] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
+  const [defaultAccount, setDefaultAccount] = useState("");
+  const [userBalance, setUserBalance] = useState("");
   const [connButtonText, setConnButtonText] = useState("Connect Wallet");
   const [check, setcheck] = useState(null);
 
-  const newonce = () => {
+  const addEmail = () => {
     setErrorMessage(null);
-    Axios.post("http://localhost:8080/newpost", {
-      email_id: defaultAccount,
+    connectWalletHandler();
+
+    Axios.post("http://localhost:8080/insert", {
+      email_id: email_id,
+      account: defaultAccount,
+      balance: userBalance,
     });
   };
   const checkHandler = () => {
@@ -101,7 +106,6 @@ const Home = () => {
     } else {
       setcheck(!check);
     }
-    newonce();
   };
   const connectWalletHandler = () => {
     if (window.ethereum) {
@@ -158,14 +162,14 @@ const Home = () => {
               </SubscribeLabel>
 
               <SubscribeDivNew>
-                <SubmitForm>
+                <SubmitForm onSubmit={addEmail}>
                   <SubscribeInput
                     type="Email"
-                    // onChange={(event) => {
-                    //   // setEmail(event.target.value);
-                    // }}
+                    onChange={(event) => {
+                      setEmail(event.target.value);
+                    }}
                   />
-                  <SubscribeBtn type="Submit">Submit </SubscribeBtn>
+                  <SubscribeBtnNew type="Submit">I'm in </SubscribeBtnNew>
                 </SubmitForm>
               </SubscribeDivNew>
             </SubscribeDiv>

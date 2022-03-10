@@ -214,9 +214,14 @@ export const SubscribeInput = styled.input`
     font-style: italic;
   }
   &:focus {
-    border: 2px solid black;
+    // border: 2px solid black;
   }
-  background: #fff;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  padding-left: 20px;
+  caret-color: rgba(250, 255, 250, 0.7);
+  color: #ccc;
 `;
 
 export const SubscribeBtn = styled.button`
@@ -261,6 +266,7 @@ export const SubscribeBtnNew = styled.button`
   &::before {
     background-color: red;
   }
+  transform: translate(20%, 0%);
 `;
 
 export const Minted = styled.h1`

@@ -21,7 +21,7 @@ export const Div = styled(motion.div)`
   position: relative;
   height: max-content;
   z-index: 1;
-  // min-height: 95vh;
+  min-height: 100vh;
   font-family: "Encode Sans Expanded", sans-serif;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -77,14 +77,21 @@ export const Heading = styled.h1`
 `;
 export const Caption = styled(motion.h1)`
   text-shadow: 1px 1px 1px #222;
-  font-size: 1.5rem;
+  font-size: 1.6875rem;
   margin-top: 30px;
   max-width: 950px;
   justify-content: center;
   text-align: center;
-  color: #00897b;
-  // color: #00564d;
-  // color: white;
+  color: #00897d;
+`;
+export const Skill = styled.p`
+  font-size: 1.375rem;
+  color: #4daca4;
+`;
+export const Rarity = styled.p`
+  color: #888;
+
+  font-size: 1rem;
 `;
 
 export const CardsWrapper = styled(motion.div)`
@@ -127,18 +134,6 @@ export const Cards = styled(motion.div)`
   justify-content: center;
 `;
 
-export const Skill = styled.p`
-  font-size: 1.25rem;
-  color: #00897b;
-  color: white;
-  color: #33a195;
-`;
-export const Rarity = styled.p`
-  color: white;
-  // color: #00897b;
-  color: #33a195;
-  font-size: 1.25rem;
-`;
 export const Video = styled(motion.video)`
   height: 200px;
   width: 200px;

@@ -26,7 +26,8 @@ import {
   NeuButton,
 } from "./NavbarElements";
 
-import logo from "../../images/logowhite.png";
+import logo from "../../images/bluxe2.png";
+// import logo from "../../images/logowhite.png";
 import insta from "../../images/Instagram.png";
 import discord from "../../images/Discord.png";
 import twitter from "../../images/Twitter1.png";
@@ -68,7 +69,6 @@ const Navbar = ({ toggle }) => {
     setDefaultAccount(newAccount);
     let ans = newAccount.toString();
     let final = ans.substr(1, 7) + "...";
-    console.log(final);
     setDisplayAccount(final);
     getUserBalance(newAccount.toString());
   };

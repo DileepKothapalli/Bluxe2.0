@@ -1,5 +1,4 @@
 import styled, { css, keyframes } from "styled-components";
-// import styled from "styled-components";
 import bg from "../../images/BG6.png";
 import { motion } from "framer-motion";
 export const Div = styled.div`
@@ -12,16 +11,13 @@ export const Div = styled.div`
   height: max-content;
   min-height: 110vh;
   position: relative;
-  // overflow: auto;
 `;
 export const VideoDiv = styled.div`
-  // width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
   top: 150%;
   right: 50%;
-  // display: none;
 `;
 export const BodyContainer = styled.div`
   display: flex;
@@ -29,12 +25,7 @@ export const BodyContainer = styled.div`
   align-items: center;
   margin: 70px 10px 0px;
   min-height: 85vh;
-  // background-color: red;
-  // background: linear-gradient(
-  //   140.17deg,
-  //   rgba(255, 255, 255, 0.2) 0%,
-  //   rgba(255, 255, 255, 0.2) 100%
-  // );
+
   border-radius: 20px;
   position: absolute;
   top: 0;
@@ -54,11 +45,32 @@ export const HeadContainer = styled.div`
   display: flex;
   justify-content: center;
 `;
-export const Heading = styled.h1`
-  font-size: 1.875rem;
-  color: #33a195;
+export const Heading = styled.h2`
+  font-weight: bolder;
+  color: #00897d;
+  text-shadow: 1px 1px 2px #000;
   font-family: "Playfair Display", serif;
+  font-size: 2.5rem;
 `;
+export const Question = styled.h2`
+  padding: 10px 0px 40px;
+  margin-bottom: 10px;
+  width: 650px;
+
+  font-size: 1.5rem;
+  text-shadow: 0px 0px 1px #000;
+  color: #4daca4;
+  font-family: "Poppins", sans-serif;
+`;
+
+export const Answer = styled.h2`
+  font-size: 1.125rem;
+  color: #bbb;
+  overflow-wrap: break-word;
+  display: none;
+  font-family: "Poppins", sans-serif;
+`;
+
 export const QuestionsContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -80,14 +92,7 @@ export const QuestionContainer = styled.div`
   margin: 0px 0px 20px;
   transition: all 0.5s ease;
 `;
-export const Answer = styled.h1`
-  font-size: 1.125rem;
-  color: #bbb;
-  // transition: all 1s;
-  overflow-wrap: break-word;
-  display: none;
-  font-family: "Poppins", sans-serif;
-`;
+
 const FadeIn = (x) => keyframes`
         from {
           opacity: 0;
@@ -118,10 +123,7 @@ export const QuestionDiv = styled.button.attrs((props) => props)`
   align-items: flex-start;
   background-color: transparent;
   min-height: 20px;
-  // height: max-content;
-  // margin: 10px;
   min-width: 450px;
-  // width: 450px;
 
   max-width: 650px;
   position: relative;
@@ -147,15 +149,6 @@ export const QuestionDiv = styled.button.attrs((props) => props)`
     400px; 
   }
 `;
-export const Question = styled.h1`
-  color: #33a195;
-  font-size: 1.5rem;
-  padding: 10px 0px 40px;
-  margin-bottom: 10px;
-  width: 650px;
-  font-family: "Playfair Display", serif;
-  font-weight: bold;
-`;
 
 export const BottomContainer = styled.div`
   display: flex;
@@ -166,7 +159,7 @@ export const BottomContainer = styled.div`
 
 export const BottomHeading = styled.h1`
   font-size: 1.875rem;
-  color: white;
+  color: #aaa;
   margin-bottom: 20px;
 `;
 
@@ -177,6 +170,7 @@ export const Input = styled.textarea`
   height: 100px;
   border: none;
   outline: none;
+  background: #aaa;
   &: focus {
     padding-left: 5px;
     outline: none;
@@ -188,6 +182,7 @@ export const SubmitButton = styled.button`
   height: 40px;
   border: none;
   margin: 20px 0px 10px 0px;
+  background: #aaa;
   border-radius: 10px;
 `;
 

@@ -51,8 +51,8 @@ export const NavContainer = styled.div`
   align-items: center;
 `;
 export const Logo = styled.img`
-  width: 130px;
-  height: auto;
+  // width: 130px;
+  height: 70px;
   // margin-left: 210px;
 `;
 export const NavMenu = styled.div`

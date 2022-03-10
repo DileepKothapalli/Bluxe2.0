@@ -1,16 +1,16 @@
-import AutoIncrementFactory from "mongoose-sequence";
 import mongoose from "mongoose";
+import AutoIncrementFactory from "mongoose-sequence";
 
 const AutoIncrement = AutoIncrementFactory(mongoose);
 
-const InfoSchema = new mongoose.Schema(
+const EmailSchema = new mongoose.Schema(
   {
     _id: Number,
     email: {
       type: String,
       required: true,
     },
-    wallet: {
+    account: {
       type: String,
       required: true,
     },
@@ -25,7 +25,7 @@ const InfoSchema = new mongoose.Schema(
   { _id: false }
 );
 
-InfoSchema.plugin(AutoIncrement, { inc_field: "_id" });
-const Info = mongoose.model("data", InfoSchema);
+EmailSchema.plugin(AutoIncrement, { inc_field: "_id" });
+const Email = mongoose.model("emails", EmailSchema);
 
-export default Info;
+export default Email;

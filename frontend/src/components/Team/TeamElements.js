@@ -44,14 +44,30 @@ export const BgImg = styled(motion.div)`
   background-repeat: no-repeat;
 `;
 export const Title = styled(motion.h1)`
-  color: white;
-  color: #00897b;
-  color: #47aaa0;
-  text-shadow: 1px 1px 20px black;
-  margin: 50px 0px 30px 0px;
+  margin: 50px 0px 40px 0px;
+  font-weight: bolder;
+  color: #00897d;
+  text-shadow: 1px 1px 2px #000;
   font-family: "Playfair Display", serif;
-  font-weight: bold;
-  font-size: 3.375rem;
+  font-size: 3rem;
+`;
+export const Name = styled(motion.p)`
+  margin: 0px;
+  margin-top: 10px;
+  text-transform: uppercase;
+
+  font-size: 1.75rem;
+  text-shadow: 0px 0px 1px #000;
+  color: #4daca4;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+`;
+export const Heading = styled(motion.p)`
+  margin: 0px;
+  margin-top: 4px;
+  text-shadow: 1px 1px 20px black;
+  font-size: 1rem;
+  color: #999;
 `;
 
 export const Container = styled(motion.div)`
@@ -98,28 +114,6 @@ export const Card = styled(motion.div)`
   margin: 15px 0px;
   background: white;
   justify-content: center;
-`;
-
-export const Heading = styled(motion.p)`
-  margin: 0px;
-  color: white;
-  font-size: 1rem;
-  color: #00897b;
-  color: #33a195;
-  color: #1f6159;
-  margin-top: 5px;
-  text-shadow: 1px 1px 20px black;
-`;
-export const Name = styled(motion.p)`
-  margin: 0px;
-  color: white;
-  font-size: 1.625rem;
-  color: #00897b;
-  color: #2e9186;
-  color: #247168;
-  margin-top: 10px;
-  text-shadow: 1px 1px 20px black;
-  text-transform: uppercase;
 `;
 
 export const InnerCard = styled(motion.div)`

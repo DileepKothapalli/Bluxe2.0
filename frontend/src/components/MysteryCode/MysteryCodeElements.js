@@ -48,24 +48,27 @@ export const HeadingContainer = styled(motion.div)`
   // overflow: ;
 `;
 export const MysteryHeading = styled(motion.h2)`
-  font-size: 3.125rem;
   font-weight: bolder;
-  color: #53b8bb;
-  color: #fff;
+  font-size: 3rem;
+  color: #00897d;
   text-shadow: 1px 1px 2px #000;
   margin-bottom: 10px;
   font-family: "Playfair Display", serif;
 `;
 export const StoryCaption = styled(motion.h2)`
-  margin-left: -55px;
-  font-size: 1.5rem;
+  font-size: 2.125rem;
   text-shadow: 0px 0px 1px #000;
-  color: #f3f2c9;
+  color: #4daca4;
+  margin-bottom: 20px;
   text-align: center;
-  color: #fff;
   font-family: "Poppins", sans-serif;
 `;
-
+export const StoryText = styled(motion.p)`
+  font-size: 1.125rem;
+  color: #aaa;
+  text-align: justify;
+  text-justify: inter-word;
+`;
 export const BodyContainer = styled(motion.div)`
   position: relative;
   display: flex;
@@ -122,12 +125,6 @@ export const MysteryDiv = styled(motion.div).attrs((props) => props)`
   justify-content: space-between;
 `;
 
-export const StoryText = styled(motion.p)`
-  font-size: 1.125rem;
-  color: #aaa;
-  text-align: justify;
-  text-justify: inter-word;
-`;
 export const MysteryTextHeading = styled(motion.p)`
   font-size: 1.375rem;
   text-align: center;

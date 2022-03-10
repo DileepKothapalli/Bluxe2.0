@@ -44,7 +44,6 @@ const Studio = () => {
   var newimg = `images/walk/ezgif-frame-${(num + 1)
     .toString()
     .padStart(3, "0")}.jpg`;
-  console.log(newimg);
 
   const [element, controls] = useScroll(0.1);
   const [element1, controls1] = useScroll(0.7);

@@ -11,7 +11,6 @@ const AnimatingButton = () => {
   const [check, setcheck] = useState(null);
 
   const newonce = () => {
-    console.log("done me");
     setErrorMessage(null);
     Axios.post("http://localhost:8080/newpost", {
       email_id: defaultAccount,
@@ -21,7 +20,6 @@ const AnimatingButton = () => {
     connectWalletHandler();
 
     if (!defaultAccount) {
-      console.log(defaultAccount);
       console.log("Connect to wallet");
       setErrorMessage("Connect to wallet");
       // localStorage.setItem("Error", errorMessage);
