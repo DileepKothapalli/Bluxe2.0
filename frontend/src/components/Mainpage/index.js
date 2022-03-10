@@ -143,7 +143,6 @@ const Home = () => {
         <TopContainer>
           <HalfDivl>
             <Img src={newimg} alt="" />
-            <Canvas id="hero-lightpass"></Canvas>
           </HalfDivl>
           <HalfDivr
             variants={StaggerContainer}

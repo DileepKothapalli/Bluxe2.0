@@ -26,7 +26,7 @@ import {
   NeuButton,
 } from "./NavbarElements";
 
-import logo from "../../images/bluxe2.png";
+import logo from "../../images/bluxe3.jpg";
 // import logo from "../../images/logowhite.png";
 import insta from "../../images/Instagram.png";
 import discord from "../../images/Discord.png";
