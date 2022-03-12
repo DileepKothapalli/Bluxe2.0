@@ -3,6 +3,7 @@ import "./homeElements.js";
 import AnimatingButton from "../AnimatingButton/AnimatingButton.js";
 import Axios from "axios";
 import { ethers } from "ethers";
+import "./styles.css";
 import {
   Div,
   SubscribeDiv,
@@ -31,6 +32,9 @@ import {
   Img,
   SubmitForm,
   Input,
+  SubmitDiv,
+  Error,
+  InputDiv,
 } from "./homeElements.js";
 
 import {
@@ -42,6 +46,8 @@ import {
   IconFade2,
   IconFade3,
   IconFade4,
+  MintedUp,
+  NumberUp,
 } from "./homeFramer.js";
 
 import insta from "../../images/insta3.png";
@@ -78,10 +84,28 @@ const Home = () => {
   const [connButtonText, setConnButtonText] = useState("Connect Wallet");
   const [check, setcheck] = useState(null);
 
-  const addEmail = () => {
+  const addEmail = (e) => {
+    e.preventDefault();
+    console.log("refresh prevented");
     setErrorMessage(null);
     connectWalletHandler();
 
+    if (email_id === "") {
+      return;
+    }
+
+    if (!defaultAccount) {
+      setErrorMessage("Connect Wallet");
+      console.log("This is it");
+      return;
+    }
+    if (userBalance < 0.1) {
+      setErrorMessage("Recharge your Account");
+      console.log("This is ");
+      return;
+    } else {
+      setcheck(!check);
+    }
     Axios.post("http://localhost:8080/insert", {
       email_id: email_id,
       account: defaultAccount,
@@ -89,23 +113,7 @@ const Home = () => {
     });
   };
   const checkHandler = () => {
-    connectWalletHandler();
-
-    if (!defaultAccount) {
-      console.log(defaultAccount);
-      setErrorMessage("Connect to wallet");
-      // localStorage.setItem("Error", errorMessage);
-      return;
-    }
-    connectWalletHandler();
-
-    if (userBalance > 0.2) {
-      setErrorMessage("Low balance");
-
-      return;
-    } else {
-      setcheck(!check);
-    }
+    setcheck(!check);
   };
   const connectWalletHandler = () => {
     if (window.ethereum) {
@@ -137,23 +145,37 @@ const Home = () => {
   window.ethereum.on("accountChanged", accountChangeHandler);
   window.ethereum.on("chainChanged", chainChangedHandler);
 
+  const onSubmit = (e) => {
+    e.preventDefault();
+    console.log("refresh prevented");
+  };
   return (
     <Div id="home">
       <MainContainer>
         <TopContainer>
           <HalfDivl>
-            <Img src={newimg} alt="" />
+            <Video
+              id="hero-lightpass"
+              variants={ShoeFade}
+              initial="initial"
+              animate="animate"
+              loop
+              autoPlay
+              muted
+            >
+              <source src={shoevideo1} type="video/mp4" />
+              Your browser does not support the video tag.
+            </Video>
           </HalfDivl>
           <HalfDivr
             variants={StaggerContainer}
             initial="initial"
             animate="animate"
-            pos={divPosition}
           >
-            <NumberContainer variants={FadeUp}>
-              <Minted>Minted</Minted>
+            <NumberContainer>
+              <Minted variants={MintedUp}>Minted</Minted>
 
-              <Number>0/500</Number>
+              <Number variants={NumberUp}>0/500</Number>
             </NumberContainer>
             <SubscribeDiv variants={FadeUp}>
               <SubscribeLabel>
@@ -162,13 +184,36 @@ const Home = () => {
 
               <SubscribeDivNew>
                 <SubmitForm onSubmit={addEmail}>
-                  <SubscribeInput
-                    type="Email"
-                    onChange={(event) => {
-                      setEmail(event.target.value);
-                    }}
-                  />
-                  <SubscribeBtnNew type="Submit">I'm in </SubscribeBtnNew>
+                  <SubmitDiv>
+                    <InputDiv>
+                      <SubscribeInput
+                        type="Email"
+                        onChange={(event) => {
+                          setEmail(event.target.value);
+                        }}
+                      />
+                      {!check && (
+                        <SubscribeBtnNew type="submit">I'm in </SubscribeBtnNew>
+                      )}
+                      {check && (
+                        <div className="checkDiv" onClick={checkHandler}>
+                          <div className="checkmark-container">
+                            <svg
+                              x="0px"
+                              y="0px"
+                              fill="none"
+                              className="checkmark-svg"
+                              viewBox="0 0 25 30"
+                            >
+                              <path d="M2,19.2C5.9,23.6,9.4,28,9.4,28L23,2" />
+                            </svg>
+                          </div>
+                          <label className="label"> {errorMessage}</label>
+                        </div>
+                      )}
+                    </InputDiv>{" "}
+                    {errorMessage && <Error>{errorMessage}</Error>}
+                  </SubmitDiv>{" "}
                 </SubmitForm>
               </SubscribeDivNew>
             </SubscribeDiv>
@@ -208,7 +253,6 @@ const Home = () => {
             </IconsContainer>
           </HalfDivr>
         </TopContainer>
-        <FooterContainer></FooterContainer>
       </MainContainer>
     </Div>
   );

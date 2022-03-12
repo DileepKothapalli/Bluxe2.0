@@ -23,17 +23,42 @@ export const StaggerContainer = {
   },
 };
 export const FadeUp = {
+  initial: { opacity: 0, y: 0 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      ease: "easeInOut",
+      staggerChildren: 3.5,
+      delayChildren: 0.5,
+    },
+  },
+};
+export const MintedUp = {
   initial: { opacity: 0, y: 30 },
   animate: {
     opacity: 1,
-    y: [40, 30, 20, 10, 0, -5, 0],
+    y: 0,
     transition: {
       duration: 1,
+      delay: 0.5,
       ease: "easeInOut",
     },
   },
 };
-
+export const NumberUp = {
+  initial: { opacity: 0, y: 30 },
+  animate: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      delay: 1,
+      ease: "easeInOut",
+    },
+  },
+};
 export const IconsFade = {
   initial: {
     y: 0,

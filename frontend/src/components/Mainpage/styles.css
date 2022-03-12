@@ -1,0 +1,74 @@
+:root {
+  --circle-animation-time: 300ms;
+  --checkmark-animation-time: 300ms;
+  --btnnew-width: 80px;
+  --btnnew-height: 40px;
+}
+
+.checkmark-container {
+  background-color: #2b2d2f;
+  border-radius: 0.25em;
+  width: 0;
+  height: 0;
+  animation: circle var(--circle-animation-time) forwards
+    cubic-bezier(0.26, 0.6, 0.46, 1.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+.checkmark-container .checkmark-svg {
+  stroke: white;
+  width: 21px;
+  stroke-dashoffset: 40.84104919433594;
+  stroke-dasharray: 40.84104919433594;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 3px;
+  animation: checkmark var(--circle-animation-time) var(--circle-animation-time)
+    forwards;
+  border: none;
+}
+
+@keyframes hide {
+  100% {
+    width: 0;
+    height: 0;
+  }
+}
+
+@keyframes circle {
+  0% {
+    width: calc(var(--btnnew-width) * 1.5);
+    height: calc(var(--btnnew-height) * 0.1);
+  }
+  100% {
+    background-color: #71dfbe;
+    width: 42px;
+    height: 42px;
+    border-radius: 100%;
+    transform: translate(300%, 0%);
+  }
+}
+
+@keyframes checkmark {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+.checkDiv {
+  cursor: pointer;
+  width: 40px;
+  transform: translate(-150%, 18%);
+}
+
+.label {
+  color: rgb(179, 67, 67);
+  width: 300px;
+}
+
+.position-check {
+  width: 5px;
+}

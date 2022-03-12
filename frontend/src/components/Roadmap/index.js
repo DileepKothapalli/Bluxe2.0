@@ -62,6 +62,68 @@ const Roadmap = () => {
     setMouse(5);
   }
 
+  const [mouse1, setMouse1] = useState(0);
+  const [mouse2, setMouse2] = useState(0);
+  const [mouse3, setMouse3] = useState(0);
+  const [mouse4, setMouse4] = useState(0);
+  const [mouse5, setMouse5] = useState(0);
+
+  function handleClick1() {
+    if (mouse1) {
+      setMouse1(0);
+    } else {
+      setMouse1(1);
+    }
+    setMouse2(0);
+    setMouse3(0);
+    setMouse4(0);
+    setMouse5(0);
+    console.log("mouse1", mouse1);
+  }
+  function handleClick2() {
+    setMouse1(0);
+    if (mouse2) {
+      setMouse2(0);
+    } else {
+      setMouse2(1);
+    }
+    setMouse3(0);
+    setMouse5(0);
+    setMouse4(0);
+  }
+  function handleClick3() {
+    setMouse1(0);
+    setMouse2(0);
+    if (mouse3) {
+      setMouse3(0);
+    } else {
+      setMouse3(1);
+    }
+    setMouse5(0);
+    setMouse4(0);
+  }
+  function handleClick4() {
+    setMouse1(0);
+    setMouse2(0);
+    setMouse3(0);
+    if (mouse4) {
+      setMouse4(0);
+    } else {
+      setMouse4(1);
+    }
+    setMouse5(0);
+  }
+  function handleClick5() {
+    setMouse1(0);
+    setMouse2(0);
+    setMouse3(0);
+    setMouse4(0);
+    if (mouse5) {
+      setMouse5(0);
+    } else {
+      setMouse5(1);
+    }
+  }
   const [element, controls] = useScroll(0.7);
   const [element1, controls1] = useScroll(0.7);
   const [element2, controls2] = useScroll(0.4);
@@ -124,6 +186,7 @@ const Roadmap = () => {
               x={mouse}
               y={prevMouse}
               onMouseEnter={handleMouseEnter1}
+              onClick={handleClick1}
             >
               <RoadmapLineTop>
                 <RoadmapDotFixed></RoadmapDotFixed>
@@ -131,10 +194,10 @@ const Roadmap = () => {
               </RoadmapLineTop>
               <RoadmapCardRight>
                 <RoadmapCardDiv>
-                  <RoadmapTextHeading>
+                  <RoadmapTextHeading mousenum={mouse1}>
                     Announcement and Giveaway
                   </RoadmapTextHeading>
-                  <RoadmapP>
+                  <RoadmapP mousenum={mouse1}>
                     Your support means everything to us. We want to show our
                     love by give-away and air-dropping special Bluxe NFTs. A
                     special privilage will be extended to Bluxe NFT owners as
@@ -150,6 +213,7 @@ const Roadmap = () => {
               y={prevMouse}
               id="div2"
               onMouseEnter={handleMouseEnter2}
+              onClick={handleClick2}
             >
               <RoadmapLine>
                 <RoadmapDotFixed></RoadmapDotFixed>
@@ -157,10 +221,10 @@ const Roadmap = () => {
               </RoadmapLine>
               <RoadmapCardRight>
                 <RoadmapCardDiv>
-                  <RoadmapTextHeading>
+                  <RoadmapTextHeading mousenum={mouse2}>
                     Genisis Bluxe 500 Sneakers
                   </RoadmapTextHeading>
-                  <RoadmapP>
+                  <RoadmapP mousenum={mouse2}>
                     The first batch of Bluxe is limited and unique early bird
                     catches the worm. This batch will be priced at 0.08 Eth.
                   </RoadmapP>
@@ -172,6 +236,7 @@ const Roadmap = () => {
               x={mouse}
               y={prevMouse}
               onMouseEnter={handleMouseEnter3}
+              onClick={handleClick3}
             >
               <RoadmapLine>
                 <RoadmapDotFixed></RoadmapDotFixed>
@@ -179,10 +244,10 @@ const Roadmap = () => {
               </RoadmapLine>
               <RoadmapCardRight>
                 <RoadmapCardDiv>
-                  <RoadmapTextHeading>
+                  <RoadmapTextHeading mousenum={mouse3}>
                     Grand Bluxe 1000 Sneakers
                   </RoadmapTextHeading>
-                  <RoadmapP>
+                  <RoadmapP mousenum={mouse3}>
                     The next prime collection of 1000 Bluxe NFT is distinctive
                     in itself.You can't take your eyes off. This batch will be
                     priced at 0.1 Eth{" "}
@@ -194,6 +259,7 @@ const Roadmap = () => {
               x={mouse}
               y={prevMouse}
               onMouseEnter={handleMouseEnter4}
+              onClick={handleClick4}
             >
               <RoadmapLine>
                 <RoadmapDotFixed></RoadmapDotFixed>
@@ -201,10 +267,10 @@ const Roadmap = () => {
               </RoadmapLine>
               <RoadmapCardRight>
                 <RoadmapCardDiv>
-                  <RoadmapTextHeading>
+                  <RoadmapTextHeading mousenum={mouse4}>
                     Launch of Bluxe store in Wingx World
                   </RoadmapTextHeading>
-                  <RoadmapP>
+                  <RoadmapP mousenum={mouse4}>
                     Several announcements regarding the opening of the bluxe
                     fashion store in the metaverse.{" "}
                   </RoadmapP>
@@ -215,6 +281,7 @@ const Roadmap = () => {
               x={mouse}
               y={prevMouse}
               onMouseEnter={handleMouseEnter5}
+              onClick={handleClick5}
             >
               <RoadmapLineBottom>
                 <RoadmapDotFixed></RoadmapDotFixed>
@@ -222,10 +289,10 @@ const Roadmap = () => {
               </RoadmapLineBottom>
               <RoadmapCardRight>
                 <RoadmapCardDiv>
-                  <RoadmapTextHeading>
+                  <RoadmapTextHeading mousenum={mouse5}>
                     Announcing first Bluxe Fashion week
                   </RoadmapTextHeading>
-                  <RoadmapP>Need to be written </RoadmapP>
+                  <RoadmapP mousenum={mouse5}>Need to be written </RoadmapP>
                 </RoadmapCardDiv>
               </RoadmapCardRight>
             </RoadmapDiv>

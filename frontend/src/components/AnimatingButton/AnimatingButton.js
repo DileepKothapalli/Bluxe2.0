@@ -12,16 +12,18 @@ const AnimatingButton = () => {
 
   const newonce = () => {
     setErrorMessage(null);
-    Axios.post("http://localhost:8080/newpost", {
+    Axios.post("http://localhost:8080/insert", {
       email_id: defaultAccount,
     });
   };
-  const checkHandler = () => {
+
+  const checkHandler = (e) => {
     connectWalletHandler();
+    e.preventDefault();
 
     if (!defaultAccount) {
       console.log("Connect to wallet");
-      setErrorMessage("Connect to wallet");
+      // setErrorMessage("Connect to wallet");
       // localStorage.setItem("Error", errorMessage);
       return;
     }
@@ -35,7 +37,9 @@ const AnimatingButton = () => {
     } else {
       setcheck(!check);
     }
-    newonce();
+    // newonce();
+    e.preventDefault();
+    console.log("refresh prevented");
   };
   const connectWalletHandler = () => {
     if (window.ethereum) {
@@ -68,7 +72,7 @@ const AnimatingButton = () => {
   window.ethereum.on("chainChanged", chainChangedHandler);
 
   return (
-    <div className="body">
+    <div className="bodynew">
       {!check && (
         <div className="position-check">
           <button className="btnnew" onClick={checkHandler}>

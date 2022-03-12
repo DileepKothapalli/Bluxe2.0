@@ -7,7 +7,7 @@ import shoe5 from "../../images/shoe5.jpeg";
 
 const MovingDown = (x, y) => keyframes`
     ${
-      x === y
+      x === y || y === 0
         ? css`
             0% {
               top: ${50}%;
@@ -17,7 +17,6 @@ const MovingDown = (x, y) => keyframes`
             }
             5% {
               top: ${50}%;
-              // background-color: #00adf2;
             }
 
             100% {
@@ -28,15 +27,12 @@ const MovingDown = (x, y) => keyframes`
         ? css`
             0% {
               top: ${(y - x) * 50}%;
-              // background-color: white;
             }
             4% {
               top: ${(y - x) * 50}%;
-              // background-color: white;
             }
             5% {
               top: ${(y - x) * 50}%;
-              // background-color: #00adf2;
             }
             100% {
               top: ${50}%;
@@ -66,8 +62,6 @@ export const Div = styled(motion.div)`
   padding-bottom: 60px;
   position: relative;
   padding-top: 30px;
-  // min-width: 100vw;
-
   overflow: hidden;
   overflow-x: hidden;
 `;
@@ -79,9 +73,9 @@ export const Container = styled(motion.div)`
   position: relative;
   min-height: 90vh;
 `;
+
 export const HeadingContainer = styled(motion.div)`
   display: flex;
-  flex: 1;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -91,6 +85,7 @@ export const HeadingContainer = styled(motion.div)`
   overflow-wrap: break-word;
   // overflow: ;
 `;
+
 export const RoadmapHeading = styled(motion.h2)`
   font-weight: bolder;
   color: #00897d;
@@ -115,8 +110,9 @@ export const RoadmapTextHeading = styled(motion.p)`
   text-justify: inter-word;
   color: #ddd;
   font-weight: 500;
-  flex: 1;
   margin-bottom: 0px;
+
+  color: ${({ mousenum }) => (mousenum === 1 && "#4daca4") || "#ddd"};
 `;
 
 export const RoadmapP = styled(motion.p)`
@@ -128,9 +124,8 @@ export const RoadmapP = styled(motion.p)`
   font-weight: 500;
   flex: 1;
   display: none;
-  visibility: hidden;
-  opacity: 0;
   min-width: 500px;
+  display: ${({ mousenum }) => (mousenum === 1 && "block") || "none"};
   max-width: 500px;
 `;
 export const BodyContainer = styled(motion.div)`
@@ -146,7 +141,7 @@ export const RoadmapWrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: flex-start;
   position: relative;
   font-family: "Poppins", sans-serif;
 `;
@@ -259,7 +254,7 @@ export const RoadmapCardRight = styled(motion.button)`
   align-items: center;
   background-color: transparent;
   border-radius: 10px;
-  min-height: 80px;
+  min-height: 75px;
   height: max-content;
   margin: 10px;
   min-width: 500px;
@@ -291,21 +286,11 @@ export const RoadmapCardRight = styled(motion.button)`
   }
   @media (max-width: 1281px) {
   }
-  &:focus ${RoadmapP} {
-    display: block;
-    font-size: 1rem;
-    visibility: visible;
-    opacity: 1;
-    transition: visibility 0s, opacity 1.5s linear;
-  }
-  // border: none;
 
   &:focus {
-    border: 2px solid gray;
     border: none;
-    border-left: none;
-    border-top: none;
   }
+  border: ${({ mousenum }) => (mousenum === 1 && "none") || ""};
 `;
 export const RoadmapCardDiv = styled(motion.div)`
   display: flex;

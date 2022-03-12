@@ -5,61 +5,15 @@ import { motion } from "framer-motion";
 import IconButton from "@material-ui/core/IconButton";
 
 export const Div = styled(motion.div)`
-  background-image: url(${bg});
   background: rgba(0, 0, 0, 1);
   display: flex;
   min-height: 100vh;
-
   height: max-content;
-  padding-bottom: 40px;
-  max @media (max-width: 320px) {
-    background-size: 100vw 150vh;
-  }
-  @media (max-width: 480px) {
-    background-size: 200vw 150vh;
-  }
-  @media (max-width: 600px) {
-    background-size: 250vw 150vh;
-  }
-  @media (max-width: 801px) {
-    background-size: cover;
-    // background: rgba(0, 0, 0, 1);
-  }
-  @media (max-width: 1025px) {
-    background-size: 150vw 200vh;
-  }
-  @media (max-width: 1281px) {
-    background-size: 12vwh;
-    background-position: -90px 40px;
-  }
-  background-position: 0px 40px;
   background-size: 100vw 100vh;
   font-family: "Playfair Display", serif;
   font-weight: bold;
-`;
-export const Video = styled(motion.video)`
-  height: 400px;
-  width: 400px;
-  position: relative;
-  margin-top: 70px;
-  margin-right: 10vw;
-  display: none;
-`;
-export const Canvas = styled(motion.canvas)`
-  position: fixed;
-  left: 20%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 450px;
-  // height: 500px;
-`;
-
-export const Img = styled(motion.img)`
-  height: 400px;
-  width: 400px;
-  position: relative;
-  margin-top: 70px;
-  margin-right: 10vw;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const MainContainer = styled(motion.div)`
@@ -70,7 +24,6 @@ export const MainContainer = styled(motion.div)`
   justify-content: center;
   align-items: center;
   height: max-content;
-  margin-top: 200px;
 `;
 
 export const TopContainer = styled(motion.div)`
@@ -85,14 +38,21 @@ export const HalfDivl = styled(motion.div)`
   position: relative;
   align-items: center;
   justify-content: center;
+  min-height: 450px;
+  min-width: 550px;
 `;
-
+export const Video = styled(motion.video)`
+  height: 400px;
+  width: 400px;
+  position: relative;
+`;
 export const HalfDivr = styled(motion.div)`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-evenly;
   padding: 20px 0px;
   flex-direction: column;
+  min-width: 550px;
 `;
 
 export const NumberContainer = styled(motion.div)`
@@ -102,28 +62,31 @@ export const NumberContainer = styled(motion.div)`
   align-items: center;
   position: relative;
   text-align: center;
-  margin-top: 30px;
 `;
 
-export const Number = styled.h1`
-  font-size: 3.125rem;
-  color: white;
-  margin-bottom: 30px;
-`;
-
-export const FooterContainer = styled(motion.div)`
+export const SubscribeDiv = styled(motion.div)`
   display: flex;
-  margin: 10px 0px 40px 0px;
-  align-items: space-between;
-  justify-content: flex-end;
-  min-height: max-content;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const IconsContainer = styled(motion.div)`
   display: flex;
-  align-items: flex-end;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+`;
+
+export const Number = styled(motion.h1)`
+  font-size: 3.125rem;
+  color: white;
+`;
+
+export const FooterContainer = styled(motion.div)`
+  display: flex;
+  align-items: space-between;
   justify-content: flex-end;
-  margin-left: 65px;
+  min-height: max-content;
 `;
 
 export const Icons = styled(motion.a)`
@@ -140,13 +103,6 @@ export const MailingList = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
-`;
-
-export const SubscribeDiv = styled(motion.div)`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 30px;
 `;
 
 export const SubscribeDivNew = styled(motion.div)`
@@ -259,9 +215,8 @@ export const SubscribeBtnNew = styled.button`
   align-items: center;
   text-align: center;
   background-color: #00897b;
-  color: white;
+  background-color: #71dfbe;
   color: black;
-  color: #fff;
   content: "";
   &::before {
     background-color: red;
@@ -269,7 +224,24 @@ export const SubscribeBtnNew = styled.button`
   transform: translate(20%, 0%);
 `;
 
-export const Minted = styled.h1`
+export const Minted = styled(motion.h1)`
   color: #00897b;
   font-size: 2rem;
+`;
+
+export const SubmitDiv = styled(motion.div)`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+`;
+export const InputDiv = styled(motion.div)`
+  display: flex;
+  align-items: center;
+`;
+
+export const Error = styled(motion.span)`
+  // transform: translate(10%, 100%);
+  margin-bottom: -24px;
+  margin-left: 20px;
+  color: red;
 `;

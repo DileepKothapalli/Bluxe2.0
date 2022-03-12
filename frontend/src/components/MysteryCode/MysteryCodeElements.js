@@ -65,7 +65,8 @@ export const StoryCaption = styled(motion.h2)`
 `;
 export const StoryText = styled(motion.p)`
   font-size: 1.125rem;
-  color: #aaa;
+  // color: #aaa;
+  color: rgba(176, 176, 176, 0.75);
   text-align: justify;
   text-justify: inter-word;
 `;
@@ -84,9 +85,19 @@ export const MysteryWrapper = styled(motion.div)`
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
+  // justify-content: center;
   position: relative;
-  min-width: 500px;
+  min-width: 550px;
   font-family: "Poppins", sans-serif;
+  padding: 30px 45px;
+  background: linear-gradient(
+    152.97deg,
+    rgba(0, 137, 123, 0.4) 0%,
+    rgba(0, 137, 123, 0.1) 100%
+  );
+  backdrop-filter: blur(42px);
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 16px;
 `;
 
 export const MysteryDot = styled(motion.div)`

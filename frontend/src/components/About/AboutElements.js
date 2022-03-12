@@ -1,20 +1,7 @@
 import styled from "styled-components";
-// import bg from "../../images/BG5.png";
-import bg from "../../images/IMG_2715.JPG";
-import shoe5 from "../../images/shoe5.jpeg";
 import { motion } from "framer-motion";
-export const BgImg = styled.div`
-  position: fixed;
-  background-image: url(${bg});
-  background-size: cover;
-  width: 100%;
-  height: 120vh;
-  background-repeat: no-repeat;
-  // z-index: -10;
-  fliter: blur(8px);
-`;
+
 export const Div = styled(motion.div)`
-  background-image: url(${bg});
   background: rgba(0, 0, 0, 1);
   text-align: center;
   background-size: cover;
@@ -27,17 +14,16 @@ export const Div = styled(motion.div)`
   overflow-y: hidden;
   font-weight: bold;
   font-family: "Poppins", sans-serif;
-  // font-family: "Playfair Display", serif;
 `;
 
 export const Container = styled(motion.div)`
   display: flex;
   flex-direction: column;
-  min-height: 80vh;
+  min-height: 100vh;
   height: max-content;
-  justify-content: space-between;
+  justify-content: space-evenly;
   position: relative;
-  align-items: space-between;
+  align-items: space-evenly;
 `;
 
 export const TopContainer = styled(motion.div)`
@@ -45,7 +31,6 @@ export const TopContainer = styled(motion.div)`
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  margin: 0px 60px 0px;
 `;
 export const HeadContainer = styled(motion.div)`
   display: flex;
@@ -75,10 +60,15 @@ export const Heading = styled.h1`
   color: white;
   height: 40px;
 `;
+
+export const CaptionDiv = styled(motion.div)`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
 export const Caption = styled(motion.h1)`
   text-shadow: 1px 1px 1px #222;
-  font-size: 1.6875rem;
-  margin-top: 30px;
+  font-size: 1.5rem;
   max-width: 950px;
   justify-content: center;
   text-align: center;
@@ -90,7 +80,7 @@ export const Skill = styled.p`
 `;
 export const Rarity = styled.p`
   color: #888;
-
+  margin-top: -20px;
   font-size: 1rem;
 `;
 
@@ -102,14 +92,11 @@ export const CardsWrapper = styled(motion.div)`
   align-items: center;
   text-align: justify;
   text-justify: inter-word;
-  margin: 0px 0px 10px 0px;
 `;
 export const HalfContainer = styled(motion.div)`
   display: flex;
-  // flex-wrap: wrap;
   justify-content: space-between;
   flex: 1;
-  margin: 0px 0px;
   max-width: 800px;
   text-align: justify;
   text-justify: inter-word;
@@ -119,17 +106,16 @@ export const CardsContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin: 0px 30px;
   flex: 1;
+  height: 350px;
 `;
 
 export const Cards = styled(motion.div)`
   display: flex;
   min-height: 200px;
   min-width: 200px;
-  // height: 250px;
-  // width: 250px;
   background: white;
   justify-content: center;
 `;

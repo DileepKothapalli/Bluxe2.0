@@ -78,7 +78,7 @@ const MysteryCode = () => {
               ease: "easeInOut",
             }}
           >
-            <StoryCaption>Lorem Ipsum</StoryCaption>
+            {/* <StoryCaption>Lorem Ipsum</StoryCaption> */}
             <StoryText>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
@@ -87,7 +87,6 @@ const MysteryCode = () => {
               reprehenderit in voluptate velit esse cillum dolore eu fugiat
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
-              <br /> <br />
               Turpis tincidunt id aliquet risus feugiat in. Tellus rutrum tellus
               pellentesque eu tincidunt tortor aliquam nulla. Dignissim diam
               quis enim lobortis scelerisque fermentum dui faucibus. Hendrerit
@@ -98,13 +97,12 @@ const MysteryCode = () => {
               sem integer vitae justo eget magna fermentum. Odio ut sem nulla
               pharetra diam. Nunc lobortis mattis aliquam faucibus purus. Sem et
               tortor consequat id porta nibh venenatis cras sed. Auctor eu augue
-              ut lectus. Nisl vel pretium lectus quam id.
-              <br /> <br /> Aenean sed adipiscing diam donec adipiscing
-              tristique risus. Vel pharetra vel turpis nunc eget lorem dolor
-              sed. Feugiat scelerisque varius morbi enim nunc. Feugiat
-              scelerisque varius morbi enim nunc faucibus a pellentesque.
-              Pharetra vel turpis nunc eget lorem dolor sed. Vestibulum sed arcu
-              non odio euismod lacinia.
+              ut lectus. Nisl vel pretium lectus quam id. Aenean sed adipiscing
+              diam donec adipiscing tristique risus. Vel pharetra vel turpis
+              nunc eget lorem dolor sed. Feugiat scelerisque varius morbi enim
+              nunc. Feugiat scelerisque varius morbi enim nunc faucibus a
+              pellentesque. Pharetra vel turpis nunc eget lorem dolor sed.
+              Vestibulum sed arcu non odio euismod lacinia.
             </StoryText>
           </MysteryWrapper>
         </BodyContainer>

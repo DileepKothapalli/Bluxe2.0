@@ -49,10 +49,24 @@ import shoe20 from "../../images/shoe20.jpeg";
 // import shoe25 from "../../images/shoe25.jpeg";
 const Shoe = (shoenum) => {
   const rellaxRef = useRef();
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [divPosition, setDivPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition(position);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     new Rellax(".animate", {
-      speed: -10,
+      speed: 10,
       center: false,
       wrapper: null,
       round: true,
@@ -61,7 +75,7 @@ const Shoe = (shoenum) => {
     });
 
     new Rellax(rellaxRef.current, {
-      speed: -6,
+      speed: 6,
       center: false,
       wrapper: null,
       round: true,
@@ -76,7 +90,8 @@ const Shoe = (shoenum) => {
       <MainContainer>
         <CardsContainer>
           <SideBarDiv>
-            <SideBar>
+            {/* <SideBar rotate={scrollPosition - 4200}> */}
+            <SideBar ref={rellaxRef}>
               <Img src={shoe1} />
               <Img src={shoe2} />
               <Img src={shoe3} />

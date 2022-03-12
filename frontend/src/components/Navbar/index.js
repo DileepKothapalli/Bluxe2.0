@@ -26,8 +26,10 @@ import {
   NeuButton,
 } from "./NavbarElements";
 
-import logo from "../../images/bluxe3.jpg";
-// import logo from "../../images/logowhite.png";
+// import logo from "../../images/bluxe3.jpg";
+// import logo from "../../images/Asset1.png";
+import logo from "../../images/Asset2.png";
+// import logo from "../../images/logo4.png";
 import insta from "../../images/Instagram.png";
 import discord from "../../images/Discord.png";
 import twitter from "../../images/Twitter1.png";
@@ -111,7 +113,7 @@ const Navbar = ({ toggle }) => {
               duration={500}
               spy={true}
               exact="true"
-              offset={-60}
+              offset={-30}
             >
               PROVENANCE
             </NavLinks>{" "}

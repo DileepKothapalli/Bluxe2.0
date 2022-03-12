@@ -94,6 +94,7 @@ export const SideBar = styled.div`
   @media (max-width: 800px) {
     display: none;
   }
+  transform: translate3d(0px, ${(props) => props.rotate}px, 0px);
 `;
 export const CardBar = styled.div`
   display: flex;

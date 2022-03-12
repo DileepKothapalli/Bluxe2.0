@@ -1,9 +1,9 @@
 import React, { useRef, useEffect, useState } from "react";
 
-import { Container } from "react-bootstrap";
 import {
   BodyContainer,
   Div,
+  Container,
   HeadingCaption,
   HeadingContainer,
   StudioHeading,
@@ -23,28 +23,11 @@ import {
 } from "./StudioFramer";
 
 import walk from "../../images/walk.webm";
+import nakedMan from "../../images/man.webm";
 
 import { useScroll } from "../UseScroll.js";
 
 const Studio = () => {
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-    setScrollPosition(position);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-  var num = Math.ceil(scrollPosition / 3 + 64) % 137;
-  var newimg = `images/walk/ezgif-frame-${(num + 1)
-    .toString()
-    .padStart(3, "0")}.jpg`;
-
   const [element, controls] = useScroll(0.1);
   const [element1, controls1] = useScroll(0.7);
   const [element2, controls2] = useScroll(0.1);
@@ -52,7 +35,6 @@ const Studio = () => {
   return (
     <Div id="studio">
       <Container>
-        {/* <BgImg></BgImg> */}
         <HeadingContainer>
           <StudioHeading
             ref={element}
@@ -88,31 +70,34 @@ const Studio = () => {
               ease: "easeInOut",
             }}
           >
-            <StoryCaption>The Story</StoryCaption>
             <StoryText>
-              Change is the very core of evolution and without it. all creatures
-              would look alike and behave the same way. We evolved from animal
-              to human with help of each other and developed into a social
-              animal. Tracing back, we were naked being without resources and
-              knowledge of covering or dressing. But as truly said, its neither
-              the strongest nor the intelligent which survives but the one who
-              is most adaptable to the change.
-              <br /> <br />
-              Human started with wearing leaves, shells, fur to animal pelts.
-              This change was initially to protect oneselves from cold and heat
-              but slowly it defined their culture, tradition, their society and
-              soon it became the act of defining their class and giving out
-              style statement.
+              Our logo symbolises ‘The naked man’. Change is the very core of
+              evolution and without it all creatures would look alike. We
+              evolved from animals to human and developed into a social animal.
+              Going back, we were naked being without resources and knowledge of
+              covering or dressing. But as truly said, its neither the strongest
+              nor the most intelligent which survives but the one who is most
+              adaptable to the change.
+              <br /> <br /> Human started with wearing leaves, shells, fur to
+              animal pelts. This change was initially to protect oneselves from
+              cold and heat but slowly it defined their culture, tradition,
+              their society and soon it became the act of defining their class
+              and giving out style statement.
               <br /> <br /> Our next advancement is metaverse, a virtual reality
-              space. Bluxe Studio is carrying the real-time evolution of premium
-              shoes and wearables to metaverse. These shoes doesnt only function
-              as vesture but also come with rare powers. To evolve is to develop
-              gradually but fierceful like from bare foot to shoes with
-              superpower. This is really exciting.
+              space. Bluxe Studio is carrying the real-time evolution of luxury
+              wearables to metaverse. Our first collection is of shoes, which
+              doesnt only function as vesture but also come with rare powers.{" "}
+              <br /> <br /> To evolve is to develop gradually but fierceful like
+              from bare foot to shoes with superpower. This is really exciting.
+              And to mark the rising and coming of our brand we will be hosting
+              ‘The Naked Man’ festival disrupting the digital fashion industry.
             </StoryText>
           </StudioWrapper>
 
-          <Img src={newimg} alt="" />
+          <Video loop autoPlay muted>
+            <source src={nakedMan} type="video/mp4" />
+            Your browser does not support the video tag.
+          </Video>
         </BodyContainer>
       </Container>
     </Div>

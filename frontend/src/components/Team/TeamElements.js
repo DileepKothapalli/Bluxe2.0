@@ -104,13 +104,13 @@ export const CardsContainer = styled(motion.div)`
   align-items: center;
   justify-contents: space-evenly;
   min-width: 400px;
-  margin: 0px 10px 10px 10px;
+  margin: 0px 10px 40px 10px;
 `;
 
 export const Card = styled(motion.div)`
   display: flex;
-  height: 180px;
-  width: 220px;
+  height: 160px;
+  width: 200px;
   margin: 15px 0px;
   background: white;
   justify-content: center;
@@ -119,11 +119,9 @@ export const Card = styled(motion.div)`
 export const InnerCard = styled(motion.div)`
   border-radius: 9px;
   background: rgba(242, 142, 139);
-  max-height: 160px;
+  max-height: 140px;
   margin: 10px;
-  max-width: 200px;
-  height: 218px;
-  width: 218px;
+  max-width: 180px;
 `;
 
 export const Image = styled(motion.img)`

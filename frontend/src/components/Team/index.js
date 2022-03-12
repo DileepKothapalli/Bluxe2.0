@@ -62,7 +62,7 @@ const Team = () => {
               <Card>
                 <InnerCard>
                   <Image
-                    height="255"
+                    height="235"
                     top="-95"
                     left="-26"
                     src={BhawnaSingh}
@@ -75,7 +75,7 @@ const Team = () => {
             <CardsContainer variants={FadeUpCard}>
               <Card>
                 <InnerCard>
-                  <Image height="230" top="-70" left="-15" src={Dileep}></Image>
+                  <Image height="210" top="-70" left="-15" src={Dileep}></Image>
                 </InnerCard>
               </Card>
               <Name>Dileep</Name>
@@ -94,7 +94,7 @@ const Team = () => {
               <Card>
                 <InnerCard>
                   <Image
-                    height="230"
+                    height="210"
                     top="-70"
                     left="-15"
                     src={DeepakJoshiAvatar}
@@ -109,7 +109,7 @@ const Team = () => {
               <Card>
                 <InnerCard>
                   <Image
-                    height="210"
+                    height="190"
                     top="-50"
                     left="-3"
                     src={Prashant}

@@ -24,6 +24,7 @@ import {
   HeadingLogo,
   HeadingLogoW,
   Video,
+  CaptionDiv,
 } from "./AboutElements.js";
 import Navbar from "../../components/Navbar/index";
 import logo from "../../images/logowhite.png";
@@ -52,7 +53,6 @@ const About = () => {
   const [element2, controls2] = useScroll(0.4);
   return (
     <Div id="about">
-      <BgImg></BgImg>
       <Studio></Studio>
 
       <Container>
@@ -74,21 +74,23 @@ const About = () => {
             <HeadingLogoW src={logo1}></HeadingLogoW>
           </HeadContainer>
 
-          <Caption
-            ref={element1}
-            variants={AboutAnimation}
-            animate={controls1}
-            transition={{
-              duration: 0.5,
-              delay: 0.2,
-              bounce: 0.3,
-              ease: "easeInOut",
-            }}
-          >
-            Bluxe studio has partened with Wingx World to launch its exclusive
-            sneaker collection for its metaverse. With rare attributes to
-            navigate the streets.
-          </Caption>
+          <CaptionDiv>
+            <Caption
+              ref={element1}
+              variants={AboutAnimation}
+              animate={controls1}
+              transition={{
+                duration: 0.5,
+                delay: 0.2,
+                bounce: 0.3,
+                ease: "easeInOut",
+              }}
+            >
+              Bluxe studio has partened with Wingx World to launch its exclusive
+              sneaker collection for its metaverse. With rare attributes to
+              navigate the streets.
+            </Caption>
+          </CaptionDiv>
         </TopContainer>
         <CardsWrapper
           ref={element2}

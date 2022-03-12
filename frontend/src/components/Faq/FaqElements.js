@@ -9,8 +9,9 @@ export const Div = styled.div`
   background: rgba(0, 0, 0, 1);
   text-align: center;
   height: max-content;
-  min-height: 110vh;
+  min-height: 120vh;
   position: relative;
+  padding-bottom: 70px;
 `;
 export const VideoDiv = styled.div`
   height: 100vh;
@@ -53,14 +54,40 @@ export const Heading = styled.h2`
   font-size: 2.5rem;
 `;
 export const Question = styled.h2`
-  padding: 10px 0px 40px;
+  padding: 10px 0px 25px;
   margin-bottom: 10px;
   width: 650px;
-
   font-size: 1.5rem;
   text-shadow: 0px 0px 1px #000;
-  color: #4daca4;
   font-family: "Poppins", sans-serif;
+  color: ${({ mouse }) => (mouse === 1 && "#4daca4") || "#fff"};
+`;
+
+const FadeIn = (x, mouse) => keyframes`
+
+${
+  mouse === 1
+    ? css`
+        from {
+          opacity: 0;
+          height: 0;
+        }
+        to {
+          opacity: 1;
+          height: ${x}px;
+        }
+      `
+    : css`
+        from {
+          opacity: 1;
+          height: ${x}px;
+        }
+        to {
+          opacity: 0;
+          height: 0px;
+        }
+      `
+}
 `;
 
 export const Answer = styled.h2`
@@ -69,6 +96,9 @@ export const Answer = styled.h2`
   overflow-wrap: break-word;
   display: none;
   font-family: "Poppins", sans-serif;
+  display: ${({ mouse }) => (mouse === 1 && "block") || "none"};
+  animation: ${(props) => FadeIn(props.x, props.mouse)} 0.2s ease-in-out;
+  margin-bottom: 20px;
 `;
 
 export const QuestionsContainer = styled.div`
@@ -93,29 +123,48 @@ export const QuestionContainer = styled.div`
   transition: all 0.5s ease;
 `;
 
-const FadeIn = (x) => keyframes`
+const Rotate = (x) => keyframes`
+${
+  x === 1
+    ? css`
         from {
-          opacity: 0;
-          height: 0;
+          transform: rotate(0deg);
         }
         to {
-          opacity: 1;
-          height: ${x}px;
-        }    
-`;
+          transform: rotate(135deg);
+        }
+      `
+    : css`
+        from {
+          transform: rotate(135deg);
+        }
+        to {
+          transform: rotate(0deg);
+        }
+      `
+}
+}`;
 
-const Rotate = keyframes`
-from { transform: rotate(0deg);
-}
-to {transform: rotate(135deg);
-}
-`;
+// const Rotate = (x) => keyframes`
+
+//   from {
+//     transform: rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(135deg);
+//   }
+// }`;
 export const Icon = styled(motion.img)`
   height: 35px;
   margin: -15px 3px 0px 3px;
+  animation: ${(props) => Rotate(props.direction)} 0.5s ease-in-out;
+
+  transform: rotate(
+    ${({ direction }) => (direction === 1 && "135deg") || "0deg"}
+  );
 `;
 
-export const QuestionDiv = styled.button.attrs((props) => props)`
+export const QuestionDiv = styled.div.attrs((props) => props)`
   overflow-wrap: break-word;
   display: flex;
   flex-direction: column;
@@ -135,15 +184,7 @@ export const QuestionDiv = styled.button.attrs((props) => props)`
   text-align: justify;
   text-justify: inter-word;
   transition: all 0.5s ease-in-out;
-  &:focus ${Answer} {
-    display: ${({ mouse }) => (mouse === true && "block") || "none"};
-    animation: ${(props) => FadeIn(props.x)} 0.2s ease-in-out;
-    margin-bottom: 20px;
-  }
-  &:focus ${Icon} {
-    animation: ${Rotate} 0.5s ease-in-out;
-    transform: rotate(135deg);
-  }
+
   border: none;
   @media (max-width: 801px) {
     400px; 
@@ -170,7 +211,9 @@ export const Input = styled.textarea`
   height: 100px;
   border: none;
   outline: none;
-  background: #aaa;
+  border-radius: 10px;
+  background: #fff;
+  padding: 5px;
   &: focus {
     padding-left: 5px;
     outline: none;
@@ -183,7 +226,11 @@ export const SubmitButton = styled.button`
   border: none;
   margin: 20px 0px 10px 0px;
   background: #aaa;
-  border-radius: 10px;
+  border-radius: 50px;
+  &:hover {
+    background: #ccc;
+    transform: scale(1.02);
+  }
 `;
 
 export const Icons = styled(motion.a)`
