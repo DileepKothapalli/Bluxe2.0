@@ -70,8 +70,8 @@ const Shoe = (shoenum) => {
       center: false,
       wrapper: null,
       round: true,
-      vertical: true,
-      horizontal: false,
+      vertical: false,
+      horizontal: true,
     });
 
     new Rellax(rellaxRef.current, {
@@ -79,8 +79,8 @@ const Shoe = (shoenum) => {
       center: false,
       wrapper: null,
       round: true,
-      vertical: true,
-      horizontal: false,
+      vertical: false,
+      horizontal: true,
     });
   }, []);
 

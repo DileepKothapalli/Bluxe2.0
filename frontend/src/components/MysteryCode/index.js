@@ -80,29 +80,15 @@ const MysteryCode = () => {
           >
             {/* <StoryCaption>Lorem Ipsum</StoryCaption> */}
             <StoryText>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-              Turpis tincidunt id aliquet risus feugiat in. Tellus rutrum tellus
-              pellentesque eu tincidunt tortor aliquam nulla. Dignissim diam
-              quis enim lobortis scelerisque fermentum dui faucibus. Hendrerit
-              gravida rutrum quisque non tellus orci ac auctor. Porta lorem
-              mollis aliquam ut porttitor. Fames ac turpis egestas integer. In
-              nulla posuere sollicitudin aliquam ultrices sagittis orci. Cursus
-              eget nunc scelerisque viverra mauris in aliquam sem. Sodales ut eu
-              sem integer vitae justo eget magna fermentum. Odio ut sem nulla
-              pharetra diam. Nunc lobortis mattis aliquam faucibus purus. Sem et
-              tortor consequat id porta nibh venenatis cras sed. Auctor eu augue
-              ut lectus. Nisl vel pretium lectus quam id. Aenean sed adipiscing
-              diam donec adipiscing tristique risus. Vel pharetra vel turpis
-              nunc eget lorem dolor sed. Feugiat scelerisque varius morbi enim
-              nunc. Feugiat scelerisque varius morbi enim nunc faucibus a
-              pellentesque. Pharetra vel turpis nunc eget lorem dolor sed.
-              Vestibulum sed arcu non odio euismod lacinia.
+              Your interest in us and our project is our pride. To serve you
+              better and reward you for your support we devised a fun game for
+              you. There are various mystery codes hidden all over our website,
+              instagram and twitter handles. All you have to do is stay active
+              and find the code. You can add the code while minting your
+              favorite sneaker and get rewards like Eth and free NFTs. There are
+              50 codes to be explored and all the codes with the person who used
+              it first will be updated in this space. Don't share your code with
+              anyone else as each code can be used only once. Happy Hunting.
             </StoryText>
           </MysteryWrapper>
         </BodyContainer>

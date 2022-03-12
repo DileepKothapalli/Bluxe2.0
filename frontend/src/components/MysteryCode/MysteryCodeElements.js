@@ -88,6 +88,7 @@ export const MysteryWrapper = styled(motion.div)`
   // justify-content: center;
   position: relative;
   min-width: 550px;
+  max-width: 750px;
   font-family: "Poppins", sans-serif;
   padding: 30px 45px;
   background: linear-gradient(
