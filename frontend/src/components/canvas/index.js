@@ -9,88 +9,263 @@ import {
 } from "@react-three/drei";
 import { Div } from "./canvasElements";
 import "./styles.css";
-function Dileepnew({ ...props }) {
+function Shoenew({ ...props }) {
   const group = useRef();
-  const { nodes, materials } = useGLTF("/dileep.glb");
+  const { nodes, materials } = useGLTF("/shoe.glb");
   return (
     <group ref={group} {...props} dispose={null}>
-      <primitive object={nodes.Hips} />
-      <skinnedMesh
-        geometry={nodes.Wolf3D_Body.geometry}
-        material={materials.Wolf3D_Body}
-        skeleton={nodes.Wolf3D_Body.skeleton}
+      <group
+        position={[19.89, 0, -0.31]}
+        rotation={[-Math.PI, 1.33, -Math.PI]}
+        scale={0.65}
+      >
+        <mesh
+          geometry={nodes.Cube_1.geometry}
+          material={nodes.Cube_1.material}
+          scale={[1, 1, -1]}
+        />
+        <mesh
+          geometry={nodes.Cube001_1.geometry}
+          material={nodes.Cube001_1.material}
+          position={[0.78, -0.37, 0]}
+          scale={0.49}
+        />
+        <mesh
+          geometry={nodes.Cube002_1.geometry}
+          material={nodes.Cube002_1.material}
+        />
+        <mesh
+          geometry={nodes.Cube003_1.geometry}
+          material={nodes.Cube003_1.material}
+          position={[0, 0.08, 0]}
+        />
+        <mesh
+          geometry={nodes.NurbsPath_1.geometry}
+          material={nodes.NurbsPath_1.material}
+        />
+        <mesh
+          geometry={nodes.NurbsPath001_1.geometry}
+          material={nodes.NurbsPath001_1.material}
+        />
+        <mesh
+          geometry={nodes.NurbsPath002_1.geometry}
+          material={nodes.NurbsPath002_1.material}
+        />
+        <mesh
+          geometry={nodes.NurbsPath003_1.geometry}
+          material={nodes.NurbsPath003_1.material}
+        />
+        <mesh
+          geometry={nodes.NurbsPath004_1.geometry}
+          material={nodes.NurbsPath004_1.material}
+        />
+        <mesh
+          geometry={nodes.Sphere_1.geometry}
+          material={nodes.Sphere_1.material}
+          position={[-0.16, 0.77, 0]}
+          rotation={[0, 0, -0.36]}
+        />
+        <mesh
+          geometry={nodes.Sphere001_1.geometry}
+          material={nodes.Sphere001_1.material}
+          position={[-0.16, 0.77, 0]}
+          rotation={[0, 0, -0.36]}
+          scale={[1, 1, 1.07]}
+        />
+      </group>
+      <group
+        position={[18.47, 0.28, 0.24]}
+        rotation={[-3.12, 0.58, 2.92]}
+        scale={0.65}
+      >
+        <mesh
+          geometry={nodes.Cube_2.geometry}
+          material={nodes.Cube_2.material}
+          scale={[1, 1, -1]}
+        />
+        <mesh
+          geometry={nodes.Cube001_2.geometry}
+          material={nodes.Cube001_2.material}
+          position={[0.78, -0.37, 0]}
+          scale={0.49}
+        />
+        <mesh
+          geometry={nodes.Cube002_2.geometry}
+          material={nodes.Cube002_2.material}
+        />
+        <mesh
+          geometry={nodes.Cube003_2.geometry}
+          material={nodes.Cube003_2.material}
+          position={[0, 0.08, 0]}
+        />
+        <mesh
+          geometry={nodes.NurbsPath_2.geometry}
+          material={nodes.NurbsPath_2.material}
+        />
+        <mesh
+          geometry={nodes.NurbsPath001_2.geometry}
+          material={nodes.NurbsPath001_2.material}
+        />
+        <mesh
+          geometry={nodes.NurbsPath002_2.geometry}
+          material={nodes.NurbsPath002_2.material}
+        />
+        <mesh
+          geometry={nodes.NurbsPath003_2.geometry}
+          material={nodes.NurbsPath003_2.material}
+        />
+        <mesh
+          geometry={nodes.NurbsPath004_2.geometry}
+          material={nodes.NurbsPath004_2.material}
+        />
+        <mesh
+          geometry={nodes.Sphere_2.geometry}
+          material={nodes.Sphere_2.material}
+          position={[-0.16, 0.77, 0]}
+          rotation={[0, 0, -0.36]}
+        />
+        <mesh
+          geometry={nodes.Sphere001_2.geometry}
+          material={nodes.Sphere001_2.material}
+          position={[-0.16, 0.77, 0]}
+          rotation={[0, 0, -0.36]}
+          scale={[1, 1, 1.07]}
+        />
+      </group>
+      <mesh
+        geometry={nodes.Cube.geometry}
+        material={nodes.Cube.material}
+        scale={[1, 1, -1]}
       />
-      <skinnedMesh
-        geometry={nodes.Wolf3D_Hair.geometry}
-        material={materials.Wolf3D_Hair}
-        skeleton={nodes.Wolf3D_Hair.skeleton}
+      <mesh
+        geometry={nodes.Cube001.geometry}
+        material={nodes.Cube001.material}
+        position={[0.78, -0.37, 0]}
+        scale={0.49}
       />
-      <skinnedMesh
-        geometry={nodes.Wolf3D_Outfit_Bottom.geometry}
-        material={materials.Wolf3D_Outfit_Bottom}
-        skeleton={nodes.Wolf3D_Outfit_Bottom.skeleton}
+      <mesh
+        geometry={nodes.Cube002.geometry}
+        material={nodes.Cube002.material}
       />
-      <skinnedMesh
-        geometry={nodes.Wolf3D_Outfit_Footwear.geometry}
-        material={materials.Wolf3D_Outfit_Footwear}
-        skeleton={nodes.Wolf3D_Outfit_Footwear.skeleton}
+      <mesh
+        geometry={nodes.Cube003.geometry}
+        material={nodes.Cube003.material}
+        position={[0, 0.08, 0]}
       />
-      <skinnedMesh
-        geometry={nodes.Wolf3D_Outfit_Top.geometry}
-        material={materials.Wolf3D_Outfit_Top}
-        skeleton={nodes.Wolf3D_Outfit_Top.skeleton}
+      <mesh
+        geometry={nodes.NurbsPath.geometry}
+        material={nodes.NurbsPath.material}
       />
-      <skinnedMesh
-        name="EyeLeft"
-        geometry={nodes.EyeLeft.geometry}
-        material={nodes.EyeLeft.material}
-        skeleton={nodes.EyeLeft.skeleton}
-        morphTargetDictionary={nodes.EyeLeft.morphTargetDictionary}
-        morphTargetInfluences={nodes.EyeLeft.morphTargetInfluences}
+      <mesh
+        geometry={nodes.NurbsPath001.geometry}
+        material={nodes.NurbsPath001.material}
       />
-      <skinnedMesh
-        name="EyeRight"
-        geometry={nodes.EyeRight.geometry}
-        material={nodes.EyeRight.material}
-        skeleton={nodes.EyeRight.skeleton}
-        morphTargetDictionary={nodes.EyeRight.morphTargetDictionary}
-        morphTargetInfluences={nodes.EyeRight.morphTargetInfluences}
+      <mesh
+        geometry={nodes.NurbsPath002.geometry}
+        material={nodes.NurbsPath002.material}
       />
-      <skinnedMesh
-        name="Wolf3D_Head"
-        geometry={nodes.Wolf3D_Head.geometry}
-        material={materials.Wolf3D_Skin}
-        skeleton={nodes.Wolf3D_Head.skeleton}
-        morphTargetDictionary={nodes.Wolf3D_Head.morphTargetDictionary}
-        morphTargetInfluences={nodes.Wolf3D_Head.morphTargetInfluences}
+      <mesh
+        geometry={nodes.NurbsPath003.geometry}
+        material={nodes.NurbsPath003.material}
       />
-      <skinnedMesh
-        name="Wolf3D_Teeth"
-        geometry={nodes.Wolf3D_Teeth.geometry}
-        material={materials.Wolf3D_Teeth}
-        skeleton={nodes.Wolf3D_Teeth.skeleton}
-        morphTargetDictionary={nodes.Wolf3D_Teeth.morphTargetDictionary}
-        morphTargetInfluences={nodes.Wolf3D_Teeth.morphTargetInfluences}
+      <mesh
+        geometry={nodes.NurbsPath004.geometry}
+        material={nodes.NurbsPath004.material}
+      />
+      <mesh
+        geometry={nodes.Sphere.geometry}
+        material={nodes.Sphere.material}
+        position={[-0.16, 0.77, 0]}
+        rotation={[0, 0, -0.36]}
+      />
+      <mesh
+        geometry={nodes.Sphere001.geometry}
+        material={nodes.Sphere001.material}
+        position={[-0.16, 0.77, 0]}
+        rotation={[0, 0, -0.36]}
+        scale={[1, 1, 1.07]}
+      />
+      <mesh
+        geometry={nodes.Cube004.geometry}
+        material={nodes.Cube004.material}
+        position={[0, 0, -2]}
+      />
+      <mesh
+        geometry={nodes.Cube005.geometry}
+        material={nodes.Cube005.material}
+        position={[0.78, -0.37, -2]}
+        scale={0.49}
+      />
+      <mesh
+        geometry={nodes.Cube006.geometry}
+        material={nodes.Cube006.material}
+        position={[0, 0, -2]}
+      />
+      <mesh
+        geometry={nodes.Cube007.geometry}
+        material={nodes.Cube007.material}
+        position={[0, 0.08, -2]}
+      />
+      <mesh
+        geometry={nodes.NurbsPath005.geometry}
+        material={nodes.NurbsPath005.material}
+        position={[0, 0, -2]}
+      />
+      <mesh
+        geometry={nodes.NurbsPath006.geometry}
+        material={nodes.NurbsPath006.material}
+        position={[0, 0, -2]}
+      />
+      <mesh
+        geometry={nodes.NurbsPath007.geometry}
+        material={nodes.NurbsPath007.material}
+        position={[0, 0, -2]}
+      />
+      <mesh
+        geometry={nodes.NurbsPath008.geometry}
+        material={nodes.NurbsPath008.material}
+        position={[0, 0, -2]}
+      />
+      <mesh
+        geometry={nodes.NurbsPath009.geometry}
+        material={nodes.NurbsPath009.material}
+        position={[0, 0, -2]}
+      />
+      <mesh
+        geometry={nodes.Sphere002.geometry}
+        material={nodes.Sphere002.material}
+        position={[-0.16, 0.77, -2]}
+        rotation={[0, 0, -0.36]}
+      />
+      <mesh
+        geometry={nodes.Sphere003.geometry}
+        material={nodes.Sphere003.material}
+        position={[-0.16, 0.77, -2]}
+        rotation={[0, 0, -0.36]}
+        scale={[1, 1, 1.07]}
       />
     </group>
   );
 }
+
 const Canvasnew = () => {
   return (
     <Div>
       <Canvas
         camera={{
           fov: 70,
-          zoom: 2.5,
+          zoom: 1.5,
           near: 1,
           far: 1000,
           position: [0, 0, 10],
         }}
       >
         <ambientLight intensity={0.5} />
-        <spotLight intensity={0.3} position={[5, 20, 20]} />
+        <spotLight intensity={0.3} position={[5, -20, 20]} />
+        <spotLight intensity={0.3} position={[5, 60, 20]} />
+        <spotLight intensity={0.3} position={[0, 0, 0]} />
         <Suspense fallback={null}>
-          <Dileepnew />
+          <Shoenew />
         </Suspense>
         <OrbitControls enableZoom={false} />
       </Canvas>

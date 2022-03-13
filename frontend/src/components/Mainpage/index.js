@@ -61,22 +61,6 @@ import Canvasnew from "../canvas/index.js";
 const Home = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [divPosition, setDivPosition] = useState(0);
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-    setScrollPosition(position);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll, { passive: true });
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-  var num = Math.ceil(scrollPosition / 3) % 140;
-  var newimg = `images/jpgimages/ezgif-frame-${(num + 1)
-    .toString()
-    .padStart(3, "0")}.jpg`;
 
   const [email_id, setEmail] = useState("");
   const [errorMessage, setErrorMessage] = useState("");

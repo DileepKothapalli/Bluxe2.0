@@ -80,7 +80,13 @@ export const StoryText = styled(motion.p)`
   font-style: italic;
   font-family: "Arial", sans-serif;
 `;
-
+export const Storyp = styled(motion.p)`
+  font-size: 1rem;
+  color: rgba(176, 176, 176, 0.75);
+  font-family: "Arial", sans-serif;
+  display: inline;
+  font-style: normal;
+`;
 export const StudioWrapper = styled(motion.div)`
   display: flex;
   flex-direction: column;

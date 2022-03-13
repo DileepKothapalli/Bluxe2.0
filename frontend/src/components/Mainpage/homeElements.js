@@ -30,6 +30,7 @@ export const TopContainer = styled(motion.div)`
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  align-items: center;
   position: relative;
 `;
 
@@ -53,6 +54,8 @@ export const HalfDivr = styled(motion.div)`
   padding: 20px 0px;
   flex-direction: column;
   min-width: 550px;
+  min-height: 450px;
+  max-height: 450px;
 `;
 
 export const NumberContainer = styled(motion.div)`
@@ -80,6 +83,7 @@ export const IconsContainer = styled(motion.div)`
 export const Number = styled(motion.h1)`
   font-size: 3.125rem;
   color: white;
+  font-family: "Arial", serif;
 `;
 
 export const FooterContainer = styled(motion.div)`
@@ -95,7 +99,7 @@ export const Icons = styled(motion.a)`
 `;
 
 export const Icon = styled(motion.img)`
-  height: 50px;
+  height: 40px;
   margin: 0px 3px 0px 3px;
 `;
 
@@ -243,5 +247,5 @@ export const Error = styled(motion.span)`
   // transform: translate(10%, 100%);
   margin-bottom: -24px;
   margin-left: 20px;
-  color: red;
+  color: #ff4444;
 `;

@@ -12,6 +12,7 @@ import {
   StoryCaption,
   StoryText,
   Img,
+  Storyp,
 } from "./StudioElements";
 
 import {
@@ -71,13 +72,13 @@ const Studio = () => {
             }}
           >
             <StoryText>
-              Our logo symbolises ‘The naked man’. Change is the very core of
-              evolution and without it all creatures would look alike. We
-              evolved from animals to human and developed into a social animal.
-              Going back, we were naked being without resources and knowledge of
-              covering or dressing. But as truly said, its neither the strongest
-              nor the most intelligent which survives but the one who is most
-              adaptable to the change.
+              Our logo symbolises <Storyp> ‘The naked man’ </Storyp>. Change is
+              the very core of evolution and without it all creatures would look
+              alike. We evolved from animals to human and developed into a
+              social animal. Going back, we were naked being without resources
+              and knowledge of covering or dressing. But as truly said, its
+              neither the strongest nor the most intelligent which survives but
+              the one who is most adaptable to the change.
               <br /> <br /> Human started with wearing leaves, shells, fur to
               animal pelts. This change was initially to protect oneselves from
               cold and heat but slowly it defined their culture, tradition,

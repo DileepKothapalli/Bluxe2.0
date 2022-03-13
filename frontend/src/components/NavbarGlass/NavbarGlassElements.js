@@ -43,16 +43,16 @@ export const Nav = styled.div`
 
 export const NavContainer = styled.div`
   display: flex;
-  width: 80%;
+  width: 90%;
   text-align: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   margin-top: 20px;
-
+  padding: 0px 30px;
   font-family: "Playfair Display", serif;
   font-weight: bold;
   border: 1px solid hsla(0, 0%, 80%, 0.47);
-  border-radius: 5px;
+  border-radius: 24px;
   height: 70px;
 `;
 export const Logo = styled.img`

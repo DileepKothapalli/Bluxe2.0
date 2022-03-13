@@ -54,29 +54,26 @@ const Sidebar = ({ isOpen, toggle }) => {
       </Icon>
       <SidebarWrapper>
         <SidebarMenu>
-          <SidebarLink to="mainhome" onClick={toggle}>
-            Home
-          </SidebarLink>
-          <SidebarLink to="services" onClick={toggle}>
-            About Us
-          </SidebarLink>
-          <SidebarLink to="wingxpaper" onClick={toggle}>
-            Roadmap
-          </SidebarLink>
-          <SidebarLink to="payment" onClick={toggle}>
-            Buy Bluxe
+          <SidebarLink to="about" onClick={toggle}>
+            PROVENANCE
           </SidebarLink>
           <SidebarLink to="roadmap" onClick={toggle}>
-            Bluxe Band
+            ROADMAP
+          </SidebarLink>
+          <SidebarLink to="shoe" onClick={toggle}>
+            SHOP
+          </SidebarLink>
+          <SidebarLink to="team" onClick={toggle}>
+            TEAM
+          </SidebarLink>
+          <SidebarLink to="faq" onClick={toggle}>
+            FAQ
           </SidebarLink>
           {/* <ButtonDIv> */}
           {/* <NavLinksBtn to=""> */}
           <Button onClick={connectWalletHandler}>{connButtonText}</Button>
           {/* </NavLinksBtn> */}
           {/* </ButtonDIv> */}
-          <SidebarLink to="roadmap" onClick={toggle}>
-            Faq
-          </SidebarLink>
         </SidebarMenu>
       </SidebarWrapper>
     </SidebarContainer>
