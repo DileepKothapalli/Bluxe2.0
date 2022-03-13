@@ -14,6 +14,8 @@ import { useScroll } from "../components/UseScroll";
 import { motion } from "framer-motion";
 import Studio from "../components/Studio";
 import MysteryCode from "../components/MysteryCode";
+import Canvasnew from "../components/canvas";
+import NavbarGlass from "../components/NavbarGlass";
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -28,7 +30,8 @@ const Home = () => {
   return (
     <div className="heade">
       <Sidebar isOpen={isOpen} toggle={toggle} />
-      <Navbar toggle={toggle} />
+      {/* <Navbar toggle={toggle} /> */}
+      <NavbarGlass toggle={toggle} />
 
       <motion.div initial="hidden" animate="show">
         <Mainpage />

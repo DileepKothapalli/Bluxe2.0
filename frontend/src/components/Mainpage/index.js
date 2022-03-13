@@ -50,12 +50,13 @@ import {
   NumberUp,
 } from "./homeFramer.js";
 
-import insta from "../../images/insta3.png";
-import discord from "../../images/discord1.png";
-import twitter from "../../images/twitter3.png";
-import telegram from "../../images/telegram2.png";
+import insta from "../../images/insta4.png";
+import discord from "../../images/discord2.png";
+import twitter from "../../images/twitter4.png";
+import telegram from "../../images/telegram3.png";
 import shoevideo1 from "../../images/shoewb.webm";
 import AnimatingShoe from "../AnimatingShoe.js/AnimatingShoe.js";
+import Canvasnew from "../canvas/index.js";
 
 const Home = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -154,7 +155,7 @@ const Home = () => {
       <MainContainer>
         <TopContainer>
           <HalfDivl>
-            <Video
+            {/* <Video
               id="hero-lightpass"
               variants={ShoeFade}
               initial="initial"
@@ -165,7 +166,8 @@ const Home = () => {
             >
               <source src={shoevideo1} type="video/mp4" />
               Your browser does not support the video tag.
-            </Video>
+            </Video> */}
+            <Canvasnew />
           </HalfDivl>
           <HalfDivr
             variants={StaggerContainer}

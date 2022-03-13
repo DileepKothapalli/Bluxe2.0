@@ -70,7 +70,7 @@ const Shoe = (shoenum) => {
       center: false,
       wrapper: null,
       round: true,
-      vertical: false,
+      vertical: true,
       horizontal: true,
     });
 
@@ -79,7 +79,7 @@ const Shoe = (shoenum) => {
       center: false,
       wrapper: null,
       round: true,
-      vertical: false,
+      vertical: true,
       horizontal: true,
     });
   }, []);

@@ -41,7 +41,6 @@ export const MainContainer = styled.div`
 
 export const CardsContainer = styled.div`
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
@@ -73,6 +72,7 @@ export const Img = styled.img`
 `;
 export const SideBarDiv = styled.div`
   display: flex;
+  flex: 0.25;
   overflow-y: scroll;
   justify-content: center;
   align-items: center;
@@ -86,6 +86,7 @@ export const SideBarDiv = styled.div`
 export const SideBar = styled.div`
   max-height: 95vh;
   display: flex;
+  flex-direction: column;
   padding-top: 30px;
   animation-name: ${scrolling} 20s linear infinite;
   // animation-duration: 8s;
@@ -93,7 +94,7 @@ export const SideBar = styled.div`
   @media (max-width: 800px) {
     display: none;
   }
-  // transform: translate3d(${(props) => props.rotate}px, 0px, 0px);
+  transform: translate3d(0px, ${(props) => props.rotate}px, 0px);
 `;
 export const CardBar = styled.div`
   display: flex;

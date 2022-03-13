@@ -3,33 +3,13 @@ import styled from "styled-components";
 import bg from "../../images/DeepakJoshiAvatar.png";
 import { motion } from "framer-motion";
 export const Div = styled(motion.div)`
-  flex: ${(props) => props.flex};
-  // background-image: url(${bg});
   background-size: cover;
   background: rgba(0, 0, 0, 1);
   text-align: center;
   background-size: 100vw 100vh;
   padding-bottom: 30px;
+  min-height: 100vh;
   height: max-content;
-  @media (max-width: 320px) {
-    background-size: 100vw 100%;
-  }
-  @media (max-width: 480px) {
-    background-size: 200vw 100%;
-  }
-  @media (max-width: 600px) {
-    background-size: 200vw 100%;
-  }
-  @media (max-width: 801px) {
-    background-size: 150vw 150vh;
-  }
-  @media (max-width: 1025px) {
-    background-size: 150vw 200vh;
-  }
-  @media (max-width: 1281px) {
-    background-size: 120vw 100vh;
-    background-position: -90px 40px;
-  }
 `;
 
 export const BgImg = styled(motion.div)`
@@ -44,7 +24,7 @@ export const BgImg = styled(motion.div)`
   background-repeat: no-repeat;
 `;
 export const Title = styled(motion.h1)`
-  margin: 50px 0px 40px 0px;
+  margin: 70px 0px 40px 0px;
   font-weight: bolder;
   color: #00897d;
   text-shadow: 1px 1px 2px #000;

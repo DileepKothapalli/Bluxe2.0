@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import styled, { css, keyframes } from "styled-components";
-// import bg from "../../images/greensmoke.jpg";
+import bg from "../../images/greensmoke.jpg";
 // import bg from "../../images/yellowsmoke.jpg";
-import bg from "../../images/moonbackground.jpg";
+// import bg from "../../images/moonbackground.jpg";
 import shoe5 from "../../images/shoe5.jpeg";
 
 export const Div = styled(motion.div)`
@@ -77,6 +77,8 @@ export const StoryText = styled(motion.p)`
   color: rgba(176, 176, 176, 0.75);
   text-align: justify;
   text-justify: inter-word;
+  font-style: italic;
+  font-family: "Arial", sans-serif;
 `;
 
 export const StudioWrapper = styled(motion.div)`

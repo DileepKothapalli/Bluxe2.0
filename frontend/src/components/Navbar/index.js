@@ -27,8 +27,8 @@ import {
 } from "./NavbarElements";
 
 // import logo from "../../images/bluxe3.jpg";
-// import logo from "../../images/Asset1.png";
-import logo from "../../images/Asset2.png";
+import logo from "../../images/Asset1.png";
+// import logo from "../../images/Asset2.png";
 // import logo from "../../images/logo4.png";
 import insta from "../../images/Instagram.png";
 import discord from "../../images/Discord.png";

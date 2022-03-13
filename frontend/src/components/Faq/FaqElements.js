@@ -200,7 +200,7 @@ export const BottomContainer = styled.div`
 
 export const BottomHeading = styled.h1`
   font-size: 1.875rem;
-  color: #aaa;
+  color: #fff;
   margin-bottom: 20px;
 `;
 
@@ -225,11 +225,11 @@ export const SubmitButton = styled.button`
   height: 40px;
   border: none;
   margin: 20px 0px 10px 0px;
-  background: #aaa;
+  background: #fff;
   border-radius: 50px;
   &:hover {
-    background: #ccc;
-    transform: scale(1.02);
+    background: #00897d;
+    transform: scale(1.04);
   }
 `;
 
