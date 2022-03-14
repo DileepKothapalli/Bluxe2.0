@@ -147,20 +147,6 @@ const Roadmap = () => {
           >
             ROADMAP
           </RoadmapHeading>
-          <HeadingCaption
-            ref={element1}
-            variants={RoadmapCaptionAnimate}
-            animate={controls1}
-            transition={{
-              duration: 1,
-              delay: 0.5,
-              bounce: 1.3,
-              ease: "easeInOut",
-            }}
-          >
-            The Goal of Bluxe Team is to provide long-term fashion value to our
-            community
-          </HeadingCaption>
         </HeadingContainer>
         <BodyContainer
           ref={element2}

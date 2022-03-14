@@ -48,9 +48,9 @@ export const NavContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
-  padding: 0px 30px;
-  font-family: "Playfair Display", serif;
-  font-weight: bold;
+  font-family: "Gilroy-Bold", sans-serif;
+  padding: 0px 10px 0px 30px;
+  // font-weight: bold;
   border: 1px solid hsla(0, 0%, 80%, 0.47);
   border-radius: 24px;
   height: 70px;
@@ -99,7 +99,8 @@ export const NavLinks = styled(LinkS)`
     transition: 0.3s;
   }
   &.active {
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid #00897d;
+    color: #00897d;
   }
 
   color: #004c7a;
@@ -174,6 +175,7 @@ export const NavLinksBtn = styled(NavLink)`
 
   &.active {
     border-bottom: 3px solid white;
+    color: #00897d;
   }
   color: #004c7a;
   background-color: #ddd;
@@ -247,3 +249,8 @@ export const Label = styled.label`
 export const AccountDiv = styled.div`
   display: flex;
 `;
+
+// 6. if we can reduce the width of the text.
+// Shop page
+// 1. Reduce border radius of various images.
+// 2. Add two input box, one above the mint button, one below for the mystery code.

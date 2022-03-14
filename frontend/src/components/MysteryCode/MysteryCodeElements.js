@@ -65,8 +65,8 @@ export const StoryCaption = styled(motion.h2)`
 `;
 export const StoryText = styled(motion.p)`
   font-size: 1.125rem;
-  // color: #aaa;
-  color: rgba(176, 176, 176, 0.75);
+  // color: #fff;
+  color: rgba(256, 256, 256, 0.75);
   text-align: justify;
   text-justify: inter-word;
 `;
@@ -81,49 +81,24 @@ export const BodyContainer = styled(motion.div)`
 `;
 
 export const MysteryWrapper = styled(motion.div)`
+  // justify-content: flex-end;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  // justify-content: center;
+  justify-content: center;
   position: relative;
+  width: 50vw;
   min-width: 550px;
   max-width: 750px;
   font-family: "Poppins", sans-serif;
   padding: 30px 45px;
   background: linear-gradient(
     152.97deg,
-    rgba(0, 137, 123, 0.4) 0%,
+    rgba(0, 0, 137, 0.2) 0%,
     rgba(0, 137, 123, 0.1) 100%
   );
-  backdrop-filter: blur(42px);
-  /* Note: backdrop-filter has minimal browser support */
-  border-radius: 16px;
-`;
-
-export const MysteryDot = styled(motion.div)`
-  max-height: 8px;
-  max-width: 8px;
-  border-radius: 8px;
-  padding: 8px;
-  background-color: #f3f2c9;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -150%);
-  box-shadow: 1px 1px 10px #000;
-`;
-export const MysteryDotFixed = styled(motion.div)`
-  max-height: 8px;
-  max-width: 8px;
-  border-radius: 8px;
-  padding: 8px;
-  background-color: #f3f2c9;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 1px 1px 10px #000;
+  backdrop-filter: blur(1px);
 `;
 
 export const MysteryDiv = styled(motion.div).attrs((props) => props)`

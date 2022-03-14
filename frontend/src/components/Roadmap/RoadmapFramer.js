@@ -70,13 +70,13 @@ export const RoadmapWrapperAnimate = {
 export const VideoAnimate = {
   hidden: {
     x: 30,
-    scale: 1.35,
+    // scale: 1.35,
     opacity: 0,
   },
   show: {
     x: 0,
     opacity: 1,
-    scale: 1.35,
+    // scale: 1.15,
     transition: {
       delay: 0.2,
       duration: 0.5,

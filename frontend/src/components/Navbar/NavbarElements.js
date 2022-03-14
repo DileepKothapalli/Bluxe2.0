@@ -38,9 +38,8 @@ export const Nav = styled.nav`
   // );
   box-shadow: 0px 1px 24px -1px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
-  font-family: "Playfair Display", serif;
   font-weight: bold;
-  // font-family: 'Poppins', sans-serif;
+  font-family: "Gilroy-Bold", sans-serif;
 `;
 
 export const NavContainer = styled.div`

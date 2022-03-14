@@ -1,12 +1,13 @@
+import TextField from "@mui/material/TextField";
 import styled from "styled-components";
 import bg from "../../images/IMG_2717.JPG";
 import shoe5 from "../../images/shoe5.jpeg";
 import IconButton from "@material-ui/core/IconButton";
 import { keyframes } from "styled-components";
 const scrolling = keyframes`
- 0% {transform: translateY(0vh) }
- 99% {transform: translateY(0vh) }
- 100% {transform: translateY(0vh) }
+ 0% {transform: translateX(0vh) }
+ 99% {transform: translateX(-100vh) }
+ 100% {transform: translateX(-100vh) }
 `;
 export const BgImg = styled.div`
   position: fixed;
@@ -16,10 +17,8 @@ export const BgImg = styled.div`
   width: 100%;
   height: 120vh;
   background-repeat: no-repeat;
-  z-index: -10;
 `;
 export const Div = styled.div`
-  flex: ${(props) => props.flex};
   // background-image: url(${bg});
   background: rgba(0, 0, 0, 1);
   text-align: center;
@@ -27,7 +26,6 @@ export const Div = styled.div`
   height: max-content;
   min-height: 100vh;
   padding-bottom: 20px;
-  z-index: -10;
   position: relative;
 `;
 
@@ -41,6 +39,7 @@ export const MainContainer = styled.div`
 
 export const CardsContainer = styled.div`
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
@@ -66,13 +65,12 @@ export const Img = styled.img`
   position: relative;
   top: 100%;
   animation-name: ${scrolling};
-  animation-duration: 30s;
+  animation-duration: 10s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 `;
 export const SideBarDiv = styled.div`
   display: flex;
-  flex: 0.25;
   overflow-y: scroll;
   justify-content: center;
   align-items: center;
@@ -86,7 +84,6 @@ export const SideBarDiv = styled.div`
 export const SideBar = styled.div`
   max-height: 95vh;
   display: flex;
-  flex-direction: column;
   padding-top: 30px;
   animation-name: ${scrolling} 20s linear infinite;
   // animation-duration: 8s;
@@ -94,28 +91,28 @@ export const SideBar = styled.div`
   @media (max-width: 800px) {
     display: none;
   }
-  transform: translate3d(0px, ${(props) => props.rotate}px, 0px);
+  // transform: translateX(${(props) => props.pos + 2000}px);
 `;
 export const CardBar = styled.div`
   display: flex;
-  flex: 0.75;
   flex-wrap: wrap;
+  width: 100vw;
   height: max-content;
   align-items: center;
   justify-content: center;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 50px;
 `;
 export const CardStack = styled.div`
   display: flex;
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   position: relative;
 `;
 export const Card = styled.div`
   display: flex;
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   position: absolute;
   box-shadow: 0px 0px 20px 2px black;
   background-color: white;
@@ -125,8 +122,8 @@ export const Card = styled.div`
 `;
 
 export const CardImg = styled.img`
-  height: 410px;
-  width: 410px;
+  height: 310px;
+  width: 310px;
   transform: translate(-5px, -5px);
   border-radius: 10px 10px 10px 10px;
   transition: all 0.3s;
@@ -212,3 +209,29 @@ export const MintButton = styled.button`
   font-size: 1rem;
   font-weight: normal;
 `;
+
+export const InputDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  // background-color: white;
+`;
+
+export const CssTextField = styled(TextField)({
+  "& label.Mui-focused": {
+    color: "green",
+  },
+  "& .MuiInput-underline:after": {
+    borderBottomColor: "green",
+  },
+  "& .MuiOutlinedInput-root": {
+    "& fieldset": {
+      borderColor: "red",
+    },
+    "&:hover fieldset": {
+      borderColor: "yellow",
+    },
+    "&.Mui-focused fieldset": {
+      borderColor: "green",
+    },
+  },
+});

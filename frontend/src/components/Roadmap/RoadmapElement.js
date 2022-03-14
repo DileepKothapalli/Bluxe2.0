@@ -259,7 +259,7 @@ export const RoadmapCardRight = styled(motion.button)`
   margin: 10px;
   min-width: 500px;
   width: 650px;
-  max-width: 650px;
+  max-width: 550px;
   padding: 10px;
   position: relative;
   &:hover {
@@ -288,7 +288,7 @@ export const RoadmapCardRight = styled(motion.button)`
   }
 
   &:focus {
-    border: none;
+    // border: none;
   }
   border: ${({ mousenum }) => (mousenum === 1 && "none") || ""};
 `;
@@ -310,10 +310,10 @@ export const RoadmapH2 = styled(motion.h2)`
 `;
 
 export const Video = styled(motion.video)`
-  height: 500px;
-  width: 400px;
+  // height: 500px;
+  width: 350px;
   scale: 2;
   margin-left: 100px;
-  margin-top: 10px;
+  margin-top: 100px;
   position: relative;
 `;

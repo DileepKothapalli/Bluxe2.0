@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from "react";
 import Rellax from "rellax";
+import LocomotiveScroll from "locomotive-scroll";
 import {
   Div,
   MainContainer,
@@ -19,6 +20,10 @@ import {
   BgImg,
   CardStack,
   CardImg,
+  InputDiv,
+  Input,
+  Label,
+  CssTextField,
 } from "./ShoeElements.js";
 // import NavbarShoe from "../NavbarShoe/index";
 
@@ -42,12 +47,18 @@ import shoe17 from "../../images/shoe17.jpeg";
 import shoe18 from "../../images/shoe18.jpeg";
 import shoe19 from "../../images/shoe19.jpeg";
 import shoe20 from "../../images/shoe20.jpeg";
+import { TextField } from "@mui/material";
 // import shoe21 from "../../images/shoe21.jpeg";
 // import shoe22 from "../../images/shoe22.jpeg";
 // import shoe23 from "../../images/shoe23.jpeg";
 // import shoe24 from "../../images/shoe24.jpeg";
 // import shoe25 from "../../images/shoe25.jpeg";
 const Shoe = (shoenum) => {
+  // const scroll = new LocomotiveScroll({
+  //   el: document.querySelector("[data-scroll-container]"),
+  //   smooth: true,
+  // });
+
   const rellaxRef = useRef();
   const [scrollPosition, setScrollPosition] = useState(0);
   const [divPosition, setDivPosition] = useState(0);
@@ -89,9 +100,8 @@ const Shoe = (shoenum) => {
       {/* <BgImg></BgImg> */}
       <MainContainer>
         <CardsContainer>
-          <SideBarDiv>
-            {/* <SideBar rotate={scrollPosition - 4200}> */}
-            <SideBar ref={rellaxRef}>
+          <SideBarDiv data-scroll-container>
+            <SideBar pos={-scrollPosition}>
               <Img src={shoe1} />
               <Img src={shoe2} />
               <Img src={shoe3} />
@@ -146,7 +156,26 @@ const Shoe = (shoenum) => {
                   <h2>ETH</h2>
                 </ShoeNameText>
               </ShoeInfo>
+              {/* 
+              <InputDiv>
+                <CssTextField
+                  id="outlined-number"
+                  label="Number"
+                  type="number"
+                  focused
+                  InputLabelProps={{
+                    shrink: true,
+                  }}
+                />
+              </InputDiv> */}
+
               <MintButton>MINT</MintButton>
+
+              {/* <CssTextField
+                id="outlined-basic"
+                label="Outlined"
+                variant="outlined"
+              /> */}
             </CardInfo>
           </CardBar>
         </CardsContainer>

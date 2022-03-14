@@ -74,15 +74,16 @@ export const StoryCaption = styled(motion.h2)`
 `;
 export const StoryText = styled(motion.p)`
   font-size: 1rem;
-  color: rgba(176, 176, 176, 0.75);
+  color: rgba(256, 256, 256, 0.75);
   text-align: justify;
   text-justify: inter-word;
   font-style: italic;
+  margin: 0px;
   font-family: "Arial", sans-serif;
 `;
 export const Storyp = styled(motion.p)`
   font-size: 1rem;
-  color: rgba(176, 176, 176, 0.75);
+  color: rgba(256, 256, 256, 0.75);
   font-family: "Arial", sans-serif;
   display: inline;
   font-style: normal;
@@ -95,16 +96,15 @@ export const StudioWrapper = styled(motion.div)`
   position: relative;
   width: 50vw;
   min-width: 550px;
+  height: max-content;
   font-family: "Poppins", sans-serif;
   padding: 30px 45px;
   background: linear-gradient(
     152.97deg,
-    rgba(0, 137, 123, 0.4) 0%,
+    rgba(0, 0, 137, 0.2) 0%,
     rgba(0, 137, 123, 0.1) 100%
   );
-  backdrop-filter: blur(42px);
-  /* Note: backdrop-filter has minimal browser support */
-  border-radius: 16px;
+  backdrop-filter: blur(1px);
 `;
 
 export const StudioTextHeading = styled(motion.p)`

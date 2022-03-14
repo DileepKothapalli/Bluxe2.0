@@ -139,7 +139,7 @@ const Home = () => {
       <MainContainer>
         <TopContainer>
           <HalfDivl>
-            {/* <Video
+            <Video
               id="hero-lightpass"
               variants={ShoeFade}
               initial="initial"
@@ -150,8 +150,8 @@ const Home = () => {
             >
               <source src={shoevideo1} type="video/mp4" />
               Your browser does not support the video tag.
-            </Video> */}
-            <Canvasnew />
+            </Video>
+            {/* <Canvasnew /> */}
           </HalfDivl>
           <HalfDivr
             variants={StaggerContainer}

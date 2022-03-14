@@ -72,7 +72,7 @@ export const Caption = styled(motion.h1)`
   max-width: 950px;
   justify-content: center;
   text-align: center;
-  color: #00897d;
+  color: #aaa;
 `;
 export const Skill = styled.p`
   font-size: 1.375rem;
