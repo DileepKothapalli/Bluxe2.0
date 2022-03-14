@@ -100,35 +100,7 @@ const Shoe = (shoenum) => {
       {/* <BgImg></BgImg> */}
       <MainContainer>
         <CardsContainer>
-          <SideBarDiv data-scroll-container>
-            <SideBar pos={-scrollPosition}>
-              <Img src={shoe1} />
-              <Img src={shoe2} />
-              <Img src={shoe3} />
-              <Img src={shoe4} />
-              <Img src={shoe5} />
-              <Img src={shoe6} />
-              <Img src={shoe7} />
-              <Img src={shoe8} />
-              <Img src={shoe9} />
-              <Img src={shoe10} />
-              <Img src={shoe11} />
-              <Img src={shoe12} />
-              <Img src={shoe13} />
-              <Img src={shoe14} />
-              <Img src={shoe15} />
-              <Img src={shoe16} />
-              <Img src={shoe17} />
-              <Img src={shoe18} />
-              <Img src={shoe19} />
-              <Img src={shoe20} />
-              {/* <Img src={shoe21} />
-              <Img src={shoe22} />
-              <Img src={shoe23} />
-              <Img src={shoe24} />
-              <Img src={shoe25} /> */}
-            </SideBar>
-          </SideBarDiv>
+          
           <CardBar>
             <CardStack>
               <Card rotate={-4}></Card>
@@ -178,6 +150,37 @@ const Shoe = (shoenum) => {
               /> */}
             </CardInfo>
           </CardBar>
+
+
+<SideBarDiv>
+            <SideBar>
+              <Img src={shoe1} />
+              <Img src={shoe2} />
+              <Img src={shoe3} />
+              <Img src={shoe4} />
+              <Img src={shoe5} />
+              <Img src={shoe6} />
+              <Img src={shoe7} />
+              <Img src={shoe8} />
+              <Img src={shoe9} />
+              <Img src={shoe10} />
+              <Img src={shoe11} />
+              <Img src={shoe12} />
+              <Img src={shoe13} />
+              <Img src={shoe14} />
+              <Img src={shoe15} />
+              <Img src={shoe16} />
+              <Img src={shoe17} />
+              <Img src={shoe18} />
+              <Img src={shoe19} />
+              <Img src={shoe20} />
+              {/* <Img src={shoe21} />
+              <Img src={shoe22} />
+              <Img src={shoe23} />
+              <Img src={shoe24} />
+              <Img src={shoe25} /> */}
+            </SideBar>
+          </SideBarDiv>
         </CardsContainer>
       </MainContainer>
     </Div>
