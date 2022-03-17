@@ -1,24 +1,16 @@
 import React, { useRef, useEffect, useState } from "react";
 
-import SideBar from "../Sidebar/index";
 import {
-  BottomContainer,
   Cards,
   CardsContainer,
   Div,
   Container,
-  MiddleContainer,
   TopContainer,
   Heading,
-  TextContainer,
-  Bullet,
-  Text,
   Caption,
   Skill,
   Rarity,
   HalfContainer,
-  BgImg,
-  HalfCards,
   CardsWrapper,
   HeadContainer,
   HeadingLogo,
@@ -26,22 +18,18 @@ import {
   Video,
   CaptionDiv,
 } from "./AboutElements.js";
-import Navbar from "../../components/Navbar/index";
 import logo from "../../images/logowhite.png";
 import logo1 from "../../images/logo.svg";
-import { useInView } from "react-intersection-observer";
-import { useAnimation } from "framer-motion";
-import { motion } from "framer-motion";
+import logo2 from "../../images/bluxestudio.png";
 import {
-  FadeUp,
   FadeUpCard,
   StaggerContainer,
   VideoAnimate,
   AboutAnimation,
 } from "./AboutFramer";
 
-import fly from "../../images/fly.mp4";
-import run from "../../images/Run.mp4";
+import fly from "../../images/fly.webm";
+import run from "../../images/Run.webm";
 
 import { useScroll } from "../UseScroll";
 import Studio from "../Studio/index";
@@ -54,6 +42,8 @@ const About = () => {
   return (
     <Div id="about">
       <Studio></Studio>
+
+      <MysteryCode />
 
       <Container>
         <TopContainer>
@@ -68,7 +58,7 @@ const About = () => {
               ease: "easeInOut",
             }}
           >
-            <HeadingLogo src={logo} />
+            <HeadingLogo src={logo2} />
             <Heading> x </Heading>
             <Heading> WINGX </Heading>
             <HeadingLogoW src={logo1}></HeadingLogoW>
@@ -164,8 +154,6 @@ const About = () => {
           </HalfContainer>
         </CardsWrapper>
       </Container>
-
-      <MysteryCode />
     </Div>
   );
 };

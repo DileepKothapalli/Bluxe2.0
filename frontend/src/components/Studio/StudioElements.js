@@ -1,18 +1,27 @@
 import { motion } from "framer-motion";
 import styled, { css, keyframes } from "styled-components";
-import bg from "../../images/greensmoke.jpg";
+import bg from "../../images/lightbackground.jpg";
 // import bg from "../../images/yellowsmoke.jpg";
 // import bg from "../../images/moonbackground.jpg";
 import shoe5 from "../../images/shoe5.jpeg";
-
+import bg1 from "../../images/Blackbackground2.jpg";
+import bg2 from "../../images/blacklight.jpg";
+import bg3 from "../../images/blackmanbackground.jpg";
+import bg4 from "../../images/blackbackground.jpg";
+import bg5 from "../../images/darkpurple.jpg";
+import bg6 from "../../images/lightbackground.jpg";
+import bg7 from "../../images/linebackground.jpg";
 export const Div = styled(motion.div)`
   display: flex;
   justify-content: center;
-  background-image: url(${bg});
-  // background: rgba(0, 0, 0, 1);
+  background: rgba(0, 0, 0, 1);
+  background: url(${bg2});
   min-height: 100vh;
   height: max-content;
   position: relative;
+  background-size: 100vw 100vh;
+  baclground-size: cover;
+  padding-top: 70px;
 `;
 
 export const Container = styled(motion.div)`
@@ -94,16 +103,20 @@ export const StudioWrapper = styled(motion.div)`
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 50vw;
+  width: 40vw;
   min-width: 550px;
   height: max-content;
   font-family: "Poppins", sans-serif;
   padding: 30px 45px;
   background: linear-gradient(
     152.97deg,
-    rgba(0, 0, 137, 0.2) 0%,
+    rgba(0, 123, 137, 0.2) 0%,
     rgba(0, 137, 123, 0.1) 100%
   );
+  // background-image: url(${bg1});
+  baclground-size: auto;
+  opacity: 0.6;
+  font-weight: 500;
   backdrop-filter: blur(1px);
 `;
 

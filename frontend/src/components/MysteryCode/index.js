@@ -1,5 +1,4 @@
 import React from "react";
-import { Container } from "react-bootstrap";
 import {
   BodyContainer,
   Div,
@@ -9,6 +8,7 @@ import {
   StoryText,
   MysteryHeading,
   MysteryWrapper,
+  Container,
 } from "./MysteryCodeElements";
 
 import {
@@ -19,7 +19,8 @@ import {
   VideoAnimate,
 } from "./MysteryCodeFramer";
 import { useScroll } from "../UseScroll.js";
-
+import girl from "../../images/girl.jpg";
+import girl1 from "../../images/girl1.jpg";
 const MysteryCode = () => {
   const [element, controls] = useScroll(0.7);
   const [element1, controls1] = useScroll(0.7);
@@ -69,6 +70,7 @@ const MysteryCode = () => {
             ease: "easeInOut",
           }}
         >
+          <Img src={girl1} alt="" />
           <MysteryWrapper
             variants={MysteryWrapperAnimate}
             transition={{

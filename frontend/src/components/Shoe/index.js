@@ -47,6 +47,10 @@ import shoe17 from "../../images/shoe17.jpeg";
 import shoe18 from "../../images/shoe18.jpeg";
 import shoe19 from "../../images/shoe19.jpeg";
 import shoe20 from "../../images/shoe20.jpeg";
+import shoe10c from "../../images/shoe10c.jpeg";
+import shoe12c from "../../images/shoe12c.jpeg";
+import shoe14c from "../../images/shoe14c.jpeg";
+import shoe16c from "../../images/shoe16c.jpeg";
 import { TextField } from "@mui/material";
 // import shoe21 from "../../images/shoe21.jpeg";
 // import shoe22 from "../../images/shoe22.jpeg";
@@ -100,35 +104,6 @@ const Shoe = (shoenum) => {
       {/* <BgImg></BgImg> */}
       <MainContainer>
         <CardsContainer>
-          <SideBarDiv data-scroll-container>
-            <SideBar pos={-scrollPosition}>
-              <Img src={shoe1} />
-              <Img src={shoe2} />
-              <Img src={shoe3} />
-              <Img src={shoe4} />
-              <Img src={shoe5} />
-              <Img src={shoe6} />
-              <Img src={shoe7} />
-              <Img src={shoe8} />
-              <Img src={shoe9} />
-              <Img src={shoe10} />
-              <Img src={shoe11} />
-              <Img src={shoe12} />
-              <Img src={shoe13} />
-              <Img src={shoe14} />
-              <Img src={shoe15} />
-              <Img src={shoe16} />
-              <Img src={shoe17} />
-              <Img src={shoe18} />
-              <Img src={shoe19} />
-              <Img src={shoe20} />
-              {/* <Img src={shoe21} />
-              <Img src={shoe22} />
-              <Img src={shoe23} />
-              <Img src={shoe24} />
-              <Img src={shoe25} /> */}
-            </SideBar>
-          </SideBarDiv>
           <CardBar>
             <CardStack>
               <Card rotate={-4}></Card>
@@ -156,20 +131,17 @@ const Shoe = (shoenum) => {
                   <h2>ETH</h2>
                 </ShoeNameText>
               </ShoeInfo>
-              {/* 
+
               <InputDiv>
-                <CssTextField
-                  id="outlined-number"
-                  label="Number"
-                  type="number"
-                  focused
-                  InputLabelProps={{
-                    shrink: true,
-                  }}
-                />
-              </InputDiv> */}
+                <Label>NFTs</Label>
+                <Input type="number"></Input>
+              </InputDiv>
 
               <MintButton>MINT</MintButton>
+              <InputDiv>
+                <Label>Mystery Code</Label>
+                <Input type="text"></Input>
+              </InputDiv>
 
               {/* <CssTextField
                 id="outlined-basic"
@@ -178,6 +150,59 @@ const Shoe = (shoenum) => {
               /> */}
             </CardInfo>
           </CardBar>
+          <SideBarDiv>
+            <SideBar pos={-scrollPosition}>
+              <Img src={shoe1} />
+              <Img src={shoe12c} />
+              <Img src={shoe3} />
+              <Img src={shoe14c} />
+              <Img src={shoe5} />
+              <Img src={shoe16c} />
+              <Img src={shoe7} />
+              <Img src={shoe10c} />
+              <Img src={shoe9} />
+              <Img src={shoe12c} />
+              <Img src={shoe11} />
+              <Img src={shoe14c} />
+              <Img src={shoe13} />
+              <Img src={shoe16c} />
+              <Img src={shoe15} />
+              <Img src={shoe10c} />
+              <Img src={shoe17} />
+              <Img src={shoe12c} />
+              <Img src={shoe19} />
+              <Img src={shoe14c} />
+              {/* <Img src={shoe21} />
+              <Img src={shoe22} />
+              <Img src={shoe23} />
+              <Img src={shoe24} />
+              <Img src={shoe25} /> */}
+            </SideBar>
+          </SideBarDiv>{" "}
+          <SideBarDiv>
+            <SideBar pos={scrollPosition - 6500}>
+              <Img src={shoe1} />
+              <Img src={shoe12c} />
+              <Img src={shoe3} />
+              <Img src={shoe14c} />
+              <Img src={shoe5} />
+              <Img src={shoe10c} />
+              <Img src={shoe7} />
+              <Img src={shoe12c} />
+              <Img src={shoe9} />
+              <Img src={shoe14c} />
+              <Img src={shoe11} />
+              <Img src={shoe12c} />
+              <Img src={shoe13} />
+              <Img src={shoe14c} />
+              <Img src={shoe15} />
+              <Img src={shoe16c} />
+              <Img src={shoe17} />
+              <Img src={shoe10c} />
+              <Img src={shoe19} />
+              <Img src={shoe12c} />
+            </SideBar>
+          </SideBarDiv>
         </CardsContainer>
       </MainContainer>
     </Div>

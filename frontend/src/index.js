@@ -4,9 +4,6 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./fonts/specify/SpecifyPERSONAL-ConBold.woff";
-import "./fonts/axis/axis.woff";
-import "./fonts/waronia/Warownia.woff";
 
 ReactDOM.render(<App />, document.getElementById("root"));
 

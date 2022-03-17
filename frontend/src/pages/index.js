@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import Navbar from "../components/Navbar";
 import Roadmap from "../components/Roadmap";
 import Mainpage from "../components/Mainpage";
 import About from "../components/About";
@@ -10,12 +9,10 @@ import "./index.css";
 import Shoe from "../components/Shoe";
 import Sidebar from "../components/Sidebar";
 
-import { useScroll } from "../components/UseScroll";
 import { motion } from "framer-motion";
-import Studio from "../components/Studio";
-import MysteryCode from "../components/MysteryCode";
-import Canvasnew from "../components/canvas";
 import NavbarGlass from "../components/NavbarGlass";
+import Artwork from "../components/Artwork";
+import Team1 from "../components/Team1";
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -23,14 +20,9 @@ const Home = () => {
     setIsOpen(!isOpen);
   };
 
-  // const scroll = new LocomotiveScroll({
-  //   el: document.querySelector("[data-scroll-container]"),
-  //   smooth: true,
-  // });
   return (
     <div className="heade">
       <Sidebar isOpen={isOpen} toggle={toggle} />
-      {/* <Navbar toggle={toggle} /> */}
       <NavbarGlass toggle={toggle} />
 
       <motion.div initial="hidden" animate="show">
@@ -38,11 +30,13 @@ const Home = () => {
 
         <About />
 
+        <Artwork />
+        {/* <Shoe /> */}
+
         <Roadmap />
 
-        <Shoe />
-
-        <Team />
+        {/* <Team /> */}
+        <Team1 />
 
         <Faq />
       </motion.div>

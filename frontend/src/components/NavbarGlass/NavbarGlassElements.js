@@ -1,23 +1,7 @@
 import styled, { css, keyframes } from "styled-components";
 
-import { NavLink } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 
-export const Navlogo = styled.div;
-export const MobileIcon = styled.div`
-  display: none;
-
-  @media screen and (max-width: 1025px) {
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 20%);
-    font-size: 1.8rem;
-    cursor: pointer;
-    color: #fff;
-  }
-`;
 export const Nav = styled.div`
   background-color: transparent;
   height: 100px;
@@ -43,23 +27,53 @@ export const Nav = styled.div`
 
 export const NavContainer = styled.div`
   display: flex;
-  width: 90%;
+  width: 93.5%;
   text-align: center;
   justify-content: space-between;
   align-items: center;
   margin-top: 20px;
   font-family: "Gilroy-Bold", sans-serif;
-  padding: 0px 10px 0px 30px;
+  padding: 0px 20px 0px 30px;
   // font-weight: bold;
   border: 1px solid hsla(0, 0%, 80%, 0.47);
   border-radius: 24px;
   height: 70px;
 `;
-export const Logo = styled.img`
-  // width: 130px;
-  height: 70px;
-  // margin-left: 210px;
+
+export const LogoDiv = styled.div`
+  display: flex;
 `;
+
+export const Logo = styled.img`
+  height: 55px;
+`;
+
+export const NavLinksh = styled(LinkS)`
+  text-decoration: none;
+  cursor: pointer;
+  padding: 12px 0px;
+
+  font-size: 1.125rem;
+
+  color: #004c7a;
+  color: white;
+`;
+
+export const MobileIcon = styled.div`
+  display: none;
+
+  @media screen and (max-width: 1025px) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 20%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #fff;
+  }
+`;
+
 export const NavMenu = styled.div`
   display: flex;
   list-style: none;
@@ -79,107 +93,30 @@ export const NavItem = styled.div`
   padding: 0px 10px 0px 10px;
   // min-width: 200px;
 `;
-export const LogoDiv = styled.div`
-  display: flex;
-`;
-export const ButtonDIv = styled.div`
-  display: flex;
-  @media screen and (max-width: 1025px) {
-    display: none;
-  }
-`;
+
 export const NavLinks = styled(LinkS)`
   text-decoration: none;
   cursor: pointer;
   padding: 12px 0px;
 
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   &:hover {
     color: white;
     transition: 0.3s;
   }
   &.active {
-    border-bottom: 3px solid #00897d;
     color: #00897d;
   }
 
   color: #004c7a;
   color: white;
 `;
-export const NavLinksh = styled(LinkS)`
-  text-decoration: none;
-  cursor: pointer;
-  padding: 12px 0px;
 
-  font-size: 1.125rem;
-
-  color: #004c7a;
-  color: white;
-`;
-export const NavLinkLink = styled(NavLink)`
-  text-decoration: none;
-  cursor: pointer;
-  padding: 12px 0px;
-
-  font-size: 1.125px;
-  &:hover {
-    border-bottom: 3px solid white;
-    color: white;
-    transition: 0.3s;
-  }
-  &.active {
-    border-bottom: 3px solid white;
-  }
-  color: #004c7a;
-  color: white;
-`;
-
-export const Button = styled.div`
-  position: relative;
+export const ButtonDIv = styled.div`
   display: flex;
-  height: 50px;
-  width: 150px;
-  color: #2846ed;
-  color: white;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-
-  border-radius: 100px;
-  background: linear-gradient(to right, #4b4b4b, #111111);
-  box-shadow: 7px 0px 7px #171717 inset;
-  box-shadow: -7px 0px -7px #494949 inset;
-
-  border: none;
-  z-index: 10;
-
-  & > li {
-    cursor: pointer;
-    list-style-type: none;
-    outline: none;
-    text-decoration: none;
-    color: white;
-    padding-left: 15px;
-    padding-right: 20px;
-    font-size: 1.25rem;
+  @media screen and (max-width: 1025px) {
+    display: none;
   }
-`;
-
-export const NavLinksBtn = styled(NavLink)`
-  text-decoration: none;
-  cursor: pointer;
-  font-size: 1rem;
-  margin: 10px;
-  height: 50px;
-  width: 150px;
-
-  &.active {
-    border-bottom: 3px solid white;
-    color: #00897d;
-  }
-  color: #004c7a;
-  background-color: #ddd;
-  border-radius: 50px;
 `;
 
 export const NeuButton = styled.div`
@@ -191,6 +128,8 @@ export const NeuButton = styled.div`
   min-width: 150px;
   max-height: 50px;
   max-width: 150px;
+  // width: 150px;
+  // height: 50px;
   background: rgba(240, 240, 240, 1);
   border: none;
   border-radius: 5.5rem;
@@ -199,7 +138,6 @@ export const NeuButton = styled.div`
   font-weight: 700;
   outline: none;
   cursor: pointer;
-  // transition: 0.2s ease-in-out;
   ${(props) =>
     props.on === "on" &&
     css`
@@ -209,48 +147,3 @@ export const NeuButton = styled.div`
         inset 3px 3px 15px rgba(30, 30, 30, 0.12);
     `}
 `;
-
-export const DetailsDiv = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-`;
-
-export const Balance = styled.h1`
-  font-size: 1.25rem;
-  font-weight: bold;
-`;
-
-export const Account = styled.h1`
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: #ccc;
-`;
-export const Dot = styled.div`
-  max-height: 3px;
-  max-width: 3px;
-  min-width: 3px;
-  min-height: 3px;
-  border-radius: 3px;
-  padding: 3px;
-  background-color: lightgreen;
-  position: relative;
-  // margin-top: 100px;
-  // left: 50%;
-  // filter: blur(2px);
-  box-shadow: 1px 1px 2px 2px lightgreen;
-  transform: translate(-250%, 280%);
-`;
-
-export const Label = styled.label`
-  font-size: 0.75rem;
-`;
-
-export const AccountDiv = styled.div`
-  display: flex;
-`;
-
-// 6. if we can reduce the width of the text.
-// Shop page
-// 1. Reduce border radius of various images.
-// 2. Add two input box, one above the mint button, one below for the mystery code.

@@ -2,37 +2,22 @@ import { Link } from "react-router-dom";
 import { ethers } from "ethers";
 import React, { useState, useEffect } from "react";
 import { FaBars } from "react-icons/fa";
-import { IconContext } from "react-icons/lib";
 import { animateScroll as scroll } from "react-scroll";
 import {
   Nav,
   NavContainer,
   NavMenu,
   NavItem,
-  NavLinksBtn,
   Logo,
-  Button,
   MobileIcon,
-  NavLinkLink,
   NavLinks,
   NavLinksh,
   LogoDiv,
   ButtonDIv,
-  DetailsDiv,
-  Balance,
-  Account,
-  Dot,
-  Label,
   NeuButton,
 } from "../NavbarGlass/NavbarGlassElements";
 
-// import logo from "../../images/bluxe3.jpg";
 import logo from "../../images/Asset1.png";
-// import logo from "../../images/Asset2.png";
-// import logo from "../../images/logo4.png";
-import insta from "../../images/Instagram.png";
-import discord from "../../images/Discord.png";
-import twitter from "../../images/Twitter1.png";
 
 const NavbarGlass = ({ toggle }) => {
   const [scrollNav, setScrollNav] = useState(false);
@@ -113,41 +98,41 @@ const NavbarGlass = ({ toggle }) => {
               duration={500}
               spy={true}
               exact="true"
-              offset={-30}
+              offset={0}
             >
-              PROVENANCE
+              ABOUT US
             </NavLinks>{" "}
           </NavItem>
-
+          <NavItem>
+            <NavLinks
+              to="artwork"
+              duration={500}
+              spy={true}
+              exact="true"
+              offset={0}
+            >
+              ARTWORK
+            </NavLinks>
+          </NavItem>
           <NavItem>
             <NavLinks
               to="roadmap"
               duration={500}
               spy={true}
               exact="true"
-              offset={-30}
+              offset={0}
             >
               ROADMAP
             </NavLinks>{" "}
           </NavItem>
-          <NavItem>
-            <NavLinks
-              to="shoe"
-              duration={500}
-              spy={true}
-              exact="true"
-              offset={-10}
-            >
-              SHOP
-            </NavLinks>
-          </NavItem>
+
           <NavItem>
             <NavLinks
               to="team"
               duration={500}
               spy={true}
               exact="true"
-              offset={-10}
+              offset={0}
             >
               TEAM
             </NavLinks>
@@ -158,7 +143,7 @@ const NavbarGlass = ({ toggle }) => {
               duration={500}
               spy={true}
               exact="true"
-              offset={-10}
+              offset={0}
             >
               FAQ
             </NavLinks>

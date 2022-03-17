@@ -1,10 +1,18 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import bg1 from "../../images/Blackbackground2.jpg";
+import bg2 from "../../images/blacklight.jpg";
+import bg3 from "../../images/blackmanbackground.jpg";
+import bg4 from "../../images/blackbackground.jpg";
+import bg5 from "../../images/darkpurple.jpg";
+import bg6 from "../../images/lightbackground.jpg";
+import bg7 from "../../images/linebackground.jpg";
 
 export const Div = styled(motion.div)`
   background: rgba(0, 0, 0, 1);
+  background: url(${bg4});
   text-align: center;
-  background-size: cover;
+  background-size: 100vw 100vh;
   position: relative;
   height: max-content;
   z-index: 1;
@@ -39,7 +47,8 @@ export const HeadContainer = styled(motion.div)`
 export const HeadingLogo = styled.img`
   width: 130px;
   height: auto;
-  margin-right: 20px;
+  margin-top: 10px;
+  margin-right: -10px;
 `;
 export const HeadingLogoW = styled.img`
   width: 80px;

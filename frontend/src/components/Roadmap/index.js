@@ -7,35 +7,27 @@ import {
   RoadmapLine,
   RoadmapDot,
   RoadmapCardRight,
-  RoadmapH2,
   RoadmapP,
   RoadmapDiv,
   RoadmapHeading,
   HeadingContainer,
-  HeadingCaption,
   BodyContainer,
   RoadmapLineTop,
-  RoadmapDotTop,
   RoadmapLineBottom,
-  RoadmapDotBottom,
   RoadmapTextHeading,
   RoadmapCardDiv,
   Video,
   RoadmapDotFixed,
-  BgImg,
 } from "./RoadmapElement.js";
 import walk from "../../images/walk.webm";
-import Navbar from "../../components/Navbar/index";
 
 import {
-  RoadmapCaptionAnimate,
   RoadmapHeadingAnimate,
   RoadmapWrapperAnimate,
   StaggerContainer,
   VideoAnimate,
 } from "../Roadmap/RoadmapFramer";
 import { useScroll } from "../UseScroll.js";
-import { AboutAnimation } from "../Animation.js";
 
 const Roadmap = () => {
   const [count, setCount] = useState(0);
@@ -159,6 +151,22 @@ const Roadmap = () => {
             ease: "easeInOut",
           }}
         >
+          <Video
+            variants={VideoAnimate}
+            transition={{
+              duration: 1,
+              delay: 0.5,
+              bounce: 1.3,
+              ease: "easeInOut",
+            }}
+            loop
+            autoPlay
+            muted
+          >
+            {/* <source src={shoevideo} type="video/mp4" /> */}
+            <source src={walk} type="video/mp4" />
+            Your browser does not support the video tag.
+          </Video>
           <RoadmapWrapper
             variants={RoadmapWrapperAnimate}
             transition={{
@@ -283,22 +291,6 @@ const Roadmap = () => {
               </RoadmapCardRight>
             </RoadmapDiv>
           </RoadmapWrapper>
-          <Video
-            variants={VideoAnimate}
-            transition={{
-              duration: 1,
-              delay: 0.5,
-              bounce: 1.3,
-              ease: "easeInOut",
-            }}
-            loop
-            autoPlay
-            muted
-          >
-            {/* <source src={shoevideo} type="video/mp4" /> */}
-            <source src={walk} type="video/mp4" />
-            Your browser does not support the video tag.
-          </Video>
         </BodyContainer>
       </Container>
     </Div>

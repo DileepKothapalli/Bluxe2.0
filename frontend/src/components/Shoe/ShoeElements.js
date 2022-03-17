@@ -1,9 +1,16 @@
 import TextField from "@mui/material/TextField";
 import styled from "styled-components";
-import bg from "../../images/IMG_2717.JPG";
-import shoe5 from "../../images/shoe5.jpeg";
 import IconButton from "@material-ui/core/IconButton";
 import { keyframes } from "styled-components";
+
+import bg1 from "../../images/Blackbackground2.jpg";
+import bg2 from "../../images/blacklight.jpg";
+import bg3 from "../../images/blackmanbackground.jpg";
+import bg4 from "../../images/blackbackground.jpg";
+import bg5 from "../../images/darkpurple.jpg";
+import bg6 from "../../images/lightbackground.jpg";
+import bg7 from "../../images/linebackground.jpg";
+
 const scrolling = keyframes`
  0% {transform: translateX(0vh) }
  99% {transform: translateX(-100vh) }
@@ -12,17 +19,16 @@ const scrolling = keyframes`
 export const BgImg = styled.div`
   position: fixed;
   // position: relative;
-  // background-image: url(${bg});
   background-size: cover;
   width: 100%;
   height: 120vh;
   background-repeat: no-repeat;
 `;
 export const Div = styled.div`
-  // background-image: url(${bg});
-  background: rgba(0, 0, 0, 1);
   text-align: center;
-  background-size: 100vh 100vw;
+  background: rgba(0, 0, 0, 1);
+  background: url(${bg1});
+  background-size: 100vw 100vh;
   height: max-content;
   min-height: 100vh;
   padding-bottom: 20px;
@@ -41,8 +47,9 @@ export const CardsContainer = styled.div`
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: flex-start;
+  align-items: space-between;
+  justify-content: space-evenly;
+  min-height: 90vh;
   @media (max-width: 800px) {
     justify-content: center;
     align-items: center;
@@ -54,20 +61,21 @@ export const Img = styled.img`
   height: 150px;
   margin: 20px;
   width: 150px;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 1px;
+  // border-radius: 100px;
   transition: all 0.3s;
   cursor: pointer;
   &:hover {
     transition: all 0.3s;
-    transform: scale(1.15, 1.15);
+    // transform: scale(1.15, 1.15);
   }
   traslateY(-430vh);
   position: relative;
   top: 100%;
-  animation-name: ${scrolling};
-  animation-duration: 10s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
+  // animation-name: ${scrolling};
+  // animation-duration: 10s;
+  // animation-timing-function: linear;
+  // animation-iteration-count: infinite;
 `;
 export const SideBarDiv = styled.div`
   display: flex;
@@ -80,18 +88,19 @@ export const SideBarDiv = styled.div`
   @media (max-width: 800px) {
     display: none;
   }
+  padding-top: 30px;
 `;
 export const SideBar = styled.div`
   max-height: 95vh;
   display: flex;
-  padding-top: 30px;
+  padding-top: 10px;
   animation-name: ${scrolling} 20s linear infinite;
   // animation-duration: 8s;
   // animation-iteration-count: infinite;
   @media (max-width: 800px) {
     display: none;
   }
-  // transform: translateX(${(props) => props.pos + 2000}px);
+  transform: translateX(${(props) => props.pos + 2000}px);
 `;
 export const CardBar = styled.div`
   display: flex;
@@ -188,7 +197,7 @@ export const MintButton = styled.button`
   align-items: center;
   border: none;
   margin: 10px 0px;
-  width: 180px;
+  width: 177px;
   height: 40px;
   padding: 0px 10px;
   background-color: #fff;
@@ -196,7 +205,7 @@ export const MintButton = styled.button`
   letter-spacing: 3px;
   font-family: "Playfair Display", serif;
   font-weight: bolder;
-  border-radius: 1px;
+  border-radius: 4px;
   box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
   & > h4 {
     font-size: 1.125rem;
@@ -204,7 +213,8 @@ export const MintButton = styled.button`
     padding: 5px;
   }
   &:hover {
-    // box-shadow: 0px 0px 50px 30px rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 137, 123, 1);
+    transform: scale(1.03);
   }
   font-size: 1rem;
   font-weight: normal;
@@ -216,22 +226,19 @@ export const InputDiv = styled.div`
   // background-color: white;
 `;
 
-export const CssTextField = styled(TextField)({
-  "& label.Mui-focused": {
-    color: "green",
-  },
-  "& .MuiInput-underline:after": {
-    borderBottomColor: "green",
-  },
-  "& .MuiOutlinedInput-root": {
-    "& fieldset": {
-      borderColor: "red",
-    },
-    "&:hover fieldset": {
-      borderColor: "yellow",
-    },
-    "&.Mui-focused fieldset": {
-      borderColor: "green",
-    },
-  },
-});
+export const Input = styled.input`
+  outline: none;
+  width: 180px;
+  height: 35px;
+  border-radius: 4px;
+  background-color: #3c3a42;
+  border: none;
+  border-bottom: 1px solid #aaa;
+  padding: 10px;
+  color: #ddd;
+`;
+
+export const Label = styled.label`
+  font-size: 10px;
+  text-align: start;
+`;

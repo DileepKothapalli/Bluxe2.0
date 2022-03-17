@@ -2,20 +2,29 @@ import styled from "styled-components";
 // import bg from "../../images/bluxe7.jpg";
 import bg from "../../images/DeepakJoshiAvatar.png";
 import { motion } from "framer-motion";
+
+import bg1 from "../../images/Blackbackground2.jpg";
+import bg2 from "../../images/blacklight.jpg";
+import bg3 from "../../images/blackmanbackground.jpg";
+import bg4 from "../../images/blackbackground.jpg";
+import bg5 from "../../images/darkpurple.jpg";
+import bg6 from "../../images/lightbackground.jpg";
+import bg7 from "../../images/linebackground.jpg";
+
 export const Div = styled(motion.div)`
-  background-size: cover;
+  background-size: 100vw 100vh;
   background: rgba(0, 0, 0, 1);
   text-align: center;
   background-size: 100vw 100vh;
   padding-bottom: 30px;
+  padding-top: 10px;
   min-height: 100vh;
   height: max-content;
 `;
 
 export const BgImg = styled(motion.div)`
   position: fixed;
-  // top: 0%;
-  background-image: url(${bg});
+  background-image: url(${bg2});
   background: rgba(0, 0, 0, 1);
   z-index: -10;
   background-size: cover;

@@ -1,9 +1,15 @@
 import { motion } from "framer-motion";
 import styled, { css, keyframes } from "styled-components";
 
-import bg from "../../images/IMG_2716.JPG";
+import bg1 from "../../images/Blackbackground2.jpg";
+import bg2 from "../../images/blacklight.jpg";
+import bg3 from "../../images/blackmanbackground.jpg";
+import bg4 from "../../images/blackbackground.jpg";
+import bg5 from "../../images/darkpurple.jpg";
+import bg6 from "../../images/lightbackground.jpg";
+import bg7 from "../../images/linebackground.jpg";
+
 // import bg from "../../images/Roadmap2.jpg";
-import shoe5 from "../../images/shoe5.jpeg";
 
 const MovingDown = (x, y) => keyframes`
     ${
@@ -55,13 +61,15 @@ const MovingDown = (x, y) => keyframes`
     }`;
 
 export const Div = styled(motion.div)`
+  // background: url(${bg1});
   display: flex;
   justify-content: center;
   background: rgba(0, 0, 0, 1);
+  background-size: 100vw 100vh;
   height: max-content;
   padding-bottom: 60px;
   position: relative;
-  padding-top: 30px;
+  padding-top: 70px;
   overflow: hidden;
   overflow-x: hidden;
 `;
@@ -72,6 +80,8 @@ export const Container = styled(motion.div)`
   flex-wrap: wrap;
   position: relative;
   min-height: 90vh;
+  justify-content: space-evenly;
+  // justify-content: space-between;
 `;
 
 export const HeadingContainer = styled(motion.div)`
@@ -133,7 +143,7 @@ export const BodyContainer = styled(motion.div)`
   display: flex;
   flex-wrap: wrap;
   margin: 0px 30px;
-  justify-content: center;
+  justify-content: space-evenly;
   max-width: 100vw;
 `;
 
@@ -254,18 +264,22 @@ export const RoadmapCardRight = styled(motion.button)`
   align-items: center;
   background-color: transparent;
   border-radius: 10px;
-  min-height: 75px;
+  min-height: 65px;
   height: max-content;
   margin: 10px;
   min-width: 500px;
   width: 650px;
   max-width: 550px;
   padding: 10px;
+  border: 1px solid #aaa;
   position: relative;
   &:hover {
     transform: scale(1.01);
     transition: all 0.2s ease-in-out;
     cursor: pointer;
+  }
+  &:active {
+    border: 1px solid #aaa;
   }
   text-align: justify;
   text-justify: inter-word;
@@ -311,9 +325,8 @@ export const RoadmapH2 = styled(motion.h2)`
 
 export const Video = styled(motion.video)`
   // height: 500px;
-  width: 350px;
+  width: 450px;
   scale: 2;
-  margin-left: 100px;
-  margin-top: 100px;
+  margin-right: 100px;
   position: relative;
 `;
