@@ -2,6 +2,12 @@ import { motion } from "framer-motion";
 import styled, { css, keyframes } from "styled-components";
 import bg from "../../images/DeepakJoshiAvatar.png";
 
+const scrolling = keyframes`
+ 0% {transform: translateX(0px) }
+ 99% {transform: translateX(-300px) }
+ 100% {transform: translateX(-300vh) }
+`;
+
 export const Div = styled.div`
   min-height: 100vh;
   background: rgba(0, 0, 0, 1);
@@ -22,12 +28,14 @@ export const BodyContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  overflow: hidden;
 `;
 export const Card = styled.div`
 display:flex;
 align-items:center;
 flex-direction:column;
+margin:10px;
 justify-content:space-evenly;
   min-height: 300px;
   min-width: 220px;
@@ -51,10 +59,17 @@ justify-content:space-evenly;
 export const CardContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 200px;
-  margin: 10px 60px;
+  // width: 200px;
+  min-width: 170px;
+  max-width: 200px;
+  margin: 10px 40px;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+
+  animation-name: ${scrolling};
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  // animation-iteration-count: infinite;
 `;
 
 export const Img = styled.img`

@@ -1,7 +1,14 @@
 import styled from "styled-components";
+import { keyframes } from "styled-components";
 import { motion } from "framer-motion";
 
 import group from "../../images/team1.png";
+
+const scrolling = keyframes`
+ 0% {transform: translateX(0px) }
+ 99% {transform: translateX(300px) }
+ 100% {transform: translateX(300vh) }
+`;
 
 export const Div = styled.div`
   background-size: 100vw 100vh;
@@ -47,45 +54,27 @@ export const MainDiv = styled.div`
   display: flex;
 `;
 
-export const Name = styled.div`
-  background-color: white;
-  padding: 10px 5px;
-  border-radius: 5px;
-  margin-top: -40px;
-  width: 120px;
-  font-size: 12px;
-  transform: translate(-40%, 0%);
-  height: 40px;
-  font-weight: bold;
-  &:before {
-    position: absolute;
-    content: "";
-    height: 15px;
-    width: 15px;
-    background: white;
-    transform: translate(330%, 150%) rotate(45deg);
-  }
-  display: none;
+export const SideContainer = styled.div`
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  text-justify: inter-word;
 `;
 
-export const Designation = styled.div`
-  background-color: white;
-  padding: 10px 5px;
-  border-radius: 5px;
-  margin-top: -40px;
-  width: 130px;
-  transform: translate(60%, 0%);
-  height: 40px;
-  font-weight: bold;
-  &:before {
-    position: absolute;
-    content: "";
-    height: 15px;
-    width: 15px;
-    background: white;
-    transform: translate(50%, 150%) rotate(45deg);
-  }
-  display: none;
+export const Name = styled.h1`
+  color: white;
+  font-family: "Playfair Display", serif;
+`;
+
+export const Designation = styled.h1`
+  font-size: 16px;
+  color: white;
+  font-family: "Playfair Display", serif;
+  max-width: 400px;
 `;
 
 export const SideDiv = styled.div`
@@ -94,18 +83,16 @@ export const SideDiv = styled.div`
 
   min-width: 300px;
   min-height: 500px;
-  // display: none;
-  // opacity: 0;
 `;
 export const SubDiv = styled.div`
   flex: 0.2;
 
   &:hover {
     & > ${Name} {
-      display: block;
+      // display: block;
     }
     & > ${Designation} {
-      display: block;
+      // display: block;
     }
     & > ${SideDiv} {
       display: block;

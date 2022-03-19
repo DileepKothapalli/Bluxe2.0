@@ -1,9 +1,16 @@
 import { motion } from "framer-motion";
 import styled, { css, keyframes } from "styled-components";
-
+import bg1 from "../../images/Blackbackground2.jpg";
+import bg2 from "../../images/blacklight.jpg";
+import bg3 from "../../images/blackmanbackground.jpg";
+import bg4 from "../../images/blackbackground.jpg";
+import bg5 from "../../images/darkpurple.jpg";
+import bg6 from "../../images/lightbackground.jpg";
+import bg7 from "../../images/linebackground.jpg";
 export const Div = styled.div`
   display: flex;
   min-height: 100vh;
+  background: url(${bg4});
   padding-top: 100px;
 `;
 
@@ -26,7 +33,7 @@ export const BodyContainer = styled.div`
 
 export const HalfDivl = styled.div`
   display: flex;
-  margin-top: 15px;
+  margin-top: 25px;
 `;
 
 export const HalfDivR = styled.div`
