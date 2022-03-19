@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-import group from "../../images/group.png";
+import group from "../../images/team1.png";
 
 export const Div = styled.div`
   background-size: 100vw 100vh;
@@ -25,7 +25,7 @@ export const HeadContainer = styled.div`
 `;
 export const BodyContainer = styled.div`
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
 `;
 export const Heading = styled.h1`
@@ -47,11 +47,36 @@ export const MainDiv = styled.div`
   display: flex;
 `;
 
-export const Label = styled.div`
+export const Name = styled.div`
   background-color: white;
   padding: 10px 5px;
-  border-radius: 30px;
+  border-radius: 5px;
   margin-top: -40px;
+  width: 120px;
+  font-size: 12px;
+  transform: translate(-40%, 0%);
+  height: 40px;
+  font-weight: bold;
+  &:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background: white;
+    transform: translate(330%, 150%) rotate(45deg);
+  }
+  display: none;
+`;
+
+export const Designation = styled.div`
+  background-color: white;
+  padding: 10px 5px;
+  border-radius: 5px;
+  margin-top: -40px;
+  width: 130px;
+  transform: translate(60%, 0%);
+  height: 40px;
+  font-weight: bold;
   &:before {
     position: absolute;
     content: "";
@@ -63,15 +88,28 @@ export const Label = styled.div`
   display: none;
 `;
 
+export const SideDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  min-width: 300px;
+  min-height: 500px;
+  // display: none;
+  // opacity: 0;
+`;
 export const SubDiv = styled.div`
-  //   min-height: 500px;
-  //   max-height: 500px;
-  //   min-width: 100px;
-  //   max-width: 100px;
   flex: 0.2;
+
   &:hover {
-    & > ${Label} {
+    & > ${Name} {
       display: block;
+    }
+    & > ${Designation} {
+      display: block;
+    }
+    & > ${SideDiv} {
+      display: block;
+      opacity: 1;
     }
   }
 `;

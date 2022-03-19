@@ -7,7 +7,9 @@ import {
   MainDiv,
   Container,
   SubDiv,
-  Label,
+  Name,
+  Designation,
+  SideDiv,
 } from "./Team1Elements";
 
 const Team1 = () => {
@@ -20,21 +22,23 @@ const Team1 = () => {
         <BodyContainer>
           <MainDiv>
             <SubDiv>
-              <Label>Deepak</Label>
+              <Name>Deepak</Name>
+              <Designation>Graphic Designer</Designation>
             </SubDiv>
             <SubDiv>
-              <Label>Bhawana</Label>
+              <Name>Bhawana</Name>
             </SubDiv>
             <SubDiv>
-              <Label>Dileep</Label>
+              <Name>Dileep</Name>
             </SubDiv>
             <SubDiv>
-              <Label>Rachana</Label>
+              <Name>Rachana</Name>
             </SubDiv>
             <SubDiv>
-              <Label>Prashant</Label>
+              <Name>Prashant</Name>
             </SubDiv>
           </MainDiv>
+          <SideDiv></SideDiv>
         </BodyContainer>
       </Container>
     </Div>

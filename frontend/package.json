@@ -21,6 +21,7 @@
     "ethers": "^5.5.4",
     "framer-motion": "^6.2.1",
     "locomotive-scroll": "^4.1.4",
+    "pure-react-carousel": "^1.28.1",
     "react": "^17.0.2",
     "react-bootstrap": "^2.1.1",
     "react-dom": "^17.0.2",

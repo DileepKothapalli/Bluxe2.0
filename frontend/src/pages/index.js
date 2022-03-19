@@ -13,6 +13,7 @@ import { motion } from "framer-motion";
 import NavbarGlass from "../components/NavbarGlass";
 import Artwork from "../components/Artwork";
 import Team1 from "../components/Team1";
+import BluxeStudio from "../components/BluxeStudio";
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -31,11 +32,11 @@ const Home = () => {
         <About />
 
         <Artwork />
-        {/* <Shoe /> */}
+
+        <BluxeStudio />
 
         <Roadmap />
 
-        {/* <Team /> */}
         <Team1 />
 
         <Faq />
