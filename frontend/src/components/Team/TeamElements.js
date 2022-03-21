@@ -78,7 +78,7 @@ export const TopContainer = styled(motion.div)`
   display: flex;
   flex-wrap: wrap;
   margin: 0px 70px;
-  justify-content: space-evenly;
+  justify-content: flex-end;
 `;
 export const BottomContainer = styled(motion.div)`
   flex-wrap: wrap;

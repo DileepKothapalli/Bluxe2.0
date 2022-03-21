@@ -27,8 +27,8 @@ export const StaggerContainer = {
   hidden: {},
   show: {
     transition: {
-      staggerChildren: 0,
-      delayChildren: 0.5,
+      staggerChildren: 5,
+      delayChildren: 5.5,
     },
   },
 };
@@ -51,6 +51,25 @@ export const MysteryCaptionAnimate = {
 };
 
 export const MysteryWrapperAnimate = {
+  hidden: {
+    x: 0,
+    opacity: 0,
+    scale: 0.9,
+  },
+  show: {
+    x: 0,
+    scale: 1,
+    opacity: 1,
+    transition: {
+      delay: 0,
+      duration: 0.5,
+      bounce: 0.5,
+      ease: "easeInOut",
+    },
+  },
+};
+
+export const GirlImageAnimate = {
   hidden: {
     x: 0,
     opacity: 0,

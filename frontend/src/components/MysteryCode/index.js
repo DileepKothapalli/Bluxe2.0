@@ -9,6 +9,7 @@ import {
   MysteryHeading,
   MysteryWrapper,
   Container,
+  StoryP,
 } from "./MysteryCodeElements";
 
 import {
@@ -17,6 +18,7 @@ import {
   MysteryHeadingAnimate,
   MysteryWrapperAnimate,
   VideoAnimate,
+  GirlImageAnimate,
 } from "./MysteryCodeFramer";
 import { useScroll } from "../UseScroll.js";
 import girl from "../../images/girl.jpg";
@@ -29,7 +31,6 @@ const MysteryCode = () => {
   return (
     <Div id="mystery">
       <Container>
-        {/* <BgImg></BgImg> */}
         <HeadingContainer>
           <MysteryHeading
             ref={element}
@@ -44,20 +45,6 @@ const MysteryCode = () => {
           >
             Mystery Code
           </MysteryHeading>
-          {/* <HeadingCaption
-        ref={element1}
-        variants={MysteryCaptionAnimate}
-        animate={controls1}
-        transition={{
-          duration: 1,
-          delay: 0.5,
-          bounce: 1.3,
-          ease: "easeInOut",
-        }}
-      >
-        The Goal of Bluxe Team is to provide long-term fashion value to our
-        community
-      </HeadingCaption> */}
         </HeadingContainer>
         <BodyContainer
           ref={element2}
@@ -70,7 +57,17 @@ const MysteryCode = () => {
             ease: "easeInOut",
           }}
         >
-          <Img src={girl1} alt="" />
+          <Img
+            variants={GirlImageAnimate}
+            transition={{
+              duration: 1,
+              delay: 0.5,
+              bounce: 1.3,
+              ease: "easeInOut",
+            }}
+            src={girl1}
+            alt=""
+          />
           <MysteryWrapper
             variants={MysteryWrapperAnimate}
             transition={{
@@ -90,7 +87,8 @@ const MysteryCode = () => {
               favorite sneaker and get rewards like Eth and free NFTs. There are
               50 codes to be explored and all the codes with the person who used
               it first will be updated in this space. Don't share your code with
-              anyone else as each code can be used only once. Happy Hunting.
+              anyone else as each code can be used only once.
+              <StoryP>Happy Hunting.</StoryP>
             </StoryText>
           </MysteryWrapper>
         </BodyContainer>

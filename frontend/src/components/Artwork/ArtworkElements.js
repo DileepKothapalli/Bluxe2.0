@@ -4,43 +4,53 @@ import bg from "../../images/DeepakJoshiAvatar.png";
 
 const scrolling = keyframes`
  0% {transform: translateX(0px) }
- 99% {transform: translateX(-300px) }
- 100% {transform: translateX(-300vh) }
+ 99% {transform: translateX(00px) }
+ 100% {transform: translateX(00vh) }
 `;
 
-export const Div = styled.div`
+export const Div = styled(motion.div)`
   min-height: 100vh;
   background: rgba(0, 0, 0, 1);
   padding-top: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100vw;
 `;
 
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
+export const Container = styled(motion.div)`
+  width: 90vw;
+  @media screen and (max-width: 1200px) {
+    width: 80vw;
+  }
+  @media screen and (max-width: 1024px) {
+    width: 70vw;
+  }
+  @media screen and (max-width: 750px) {
+    width: 50vw;
+  }
+  @media screen and (max-width: 750px) {
+    width: 55vw;
+  }
 `;
-export const HeadContainer = styled.div`
+export const HeadContainer = styled(motion.div)`
   display: flex;
 `;
-export const BodyContainer = styled.div`
+export const BodyContainer = styled(motion.div)`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
   overflow: hidden;
 `;
-export const Card = styled.div`
+export const Card = styled(motion.div)`
 display:flex;
 align-items:center;
 flex-direction:column;
-margin:10px;
+margin: 0vh 0px 5vh 0px;
 justify-content:space-evenly;
-  min-height: 300px;
-  min-width: 220px;
-  max-height: 300px;
-  max-width: 200px;
+  height: 38vh;
+  width: 30vh;
   margin:30px 
   backdrop-filter: blur(40px);
   border-radius: 12px;
@@ -56,62 +66,51 @@ justify-content:space-evenly;
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
 `;
 
-export const CardContainer = styled.div`
+export const CardContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
-  // width: 200px;
   min-width: 170px;
   max-width: 200px;
   margin: 10px 40px;
   align-items: center;
   justify-content: space-evenly;
-
-  animation-name: ${scrolling};
-  animation-duration: 3s;
-  animation-timing-function: linear;
-  // animation-iteration-count: infinite;
 `;
 
-export const Img = styled.img`
-  height: 150px;
+export const Img = styled(motion.img)`
+  height: 20vh;
   margin-top: 10px;
-  width: 150px;
-  // margin: 0px 0px -5px;
+  width: 20vh;
   border-radius: 4px;
 `;
-export const Logo = styled.img`
-  margin: 0px 25px;
+export const Logo = styled(motion.img)`
   height: 30px;
 `;
-export const Love = styled.img`
-  // position: absolute;
-  top: 15px;
-  // left: 30px;
+export const Love = styled(motion.img)`
   height: 20px;
   cursor: pointer;
-  // width: 20px;
-  margin: 0px 35px 0px 0px;
+  margin: 5px 0px 0px 0px;
 `;
-export const BottomContainer = styled.div`
+export const BottomContainer = styled(motion.div)`
   display: flex;
-  justify-content: space-between;
-  width: 220px;
+  justify-content: flex-start;
+  width: 20vh;
   // margin: 10px 0px 0px 0px;
 `;
-export const TopContainer = styled.div`
+export const TopContainer = styled(motion.div)`
   display: flex;
   justify-content: space-between;
-  width: 220px;
+  width: 20vh;
   margin: 10px 0px 0px 0px;
 `;
-export const Details = styled.div`
+export const Details = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  margin: 5px 35px;
+  margin: 5px 0px;
+  width: 20vh;
 `;
-export const Name = styled.h1`
+export const Name = styled(motion.h1)`
   font-size: 28px;
   margin: 0px 0px 4px;
   font-family: "Playfair Display", serif;
@@ -119,40 +118,42 @@ export const Name = styled.h1`
   color: #00897b;
   font-weight: bold;
 `;
-export const Id = styled.h1`
+export const Id = styled(motion.h1)`
   margin: 0px 0px 2px;
-  font-size: 16px;
+  font-size: 20px;
   color: #006e62;
-  color: grey;
+  // color: grey;
 `;
-export const Price = styled.h1`
+export const Price = styled(motion.h1)`
   margin: 0px 0px 2px;
   font-size: 16px;
   color: grey;
 `;
 
-export const MainDiv = styled.div`
+export const MainDiv = styled(motion.div)`
   display: flex;
 `;
 
-export const SideDivLeft = styled.div`
+export const SideDivLeft = styled(motion.div)`
   display: flex;
   min-width: 50px;
   align-items: center;
   justify-content: flex-end;
+  max-width: 50px;
 `;
-export const SideDivRight = styled.div`
+export const SideDivRight = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: flex-start;
   min-width: 50px;
 `;
 
-export const Prev = styled.img`
+export const Prev = styled(motion.img)`
   height: 50px;
   cursor: pointer;
+  max-width: 50px;
 `;
-export const Next = styled.img`
+export const Next = styled(motion.img)`
   height: 50px;
   cursor: pointer;
 `;

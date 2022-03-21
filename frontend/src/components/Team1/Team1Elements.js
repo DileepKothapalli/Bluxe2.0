@@ -10,7 +10,7 @@ const scrolling = keyframes`
  100% {transform: translateX(300vh) }
 `;
 
-export const Div = styled.div`
+export const Div = styled(motion.div)`
   background-size: 100vw 100vh;
   background: rgba(0, 0, 0, 1);
   text-align: center;
@@ -20,30 +20,32 @@ export const Div = styled.div`
   min-height: 100vh;
   height: max-content;
 `;
-export const Container = styled.div`
+export const Container = styled(motion.div)`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  padding-top: 5vh;
 `;
-export const HeadContainer = styled.div`
+export const HeadContainer = styled(motion.div)`
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
 `;
-export const BodyContainer = styled.div`
+export const BodyContainer = styled(motion.div)`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 `;
-export const Heading = styled.h1`
-  margin: 100px 0px 40px 0px;
+export const Heading = styled(motion.h1)`
+  margin: 100px 0px 0px 0px;
   font-weight: bolder;
   color: #00897d;
   text-shadow: 1px 1px 2px #000;
   font-family: "Playfair Display", serif;
   font-size: 3rem;
 `;
-export const MainDiv = styled.div`
+export const MainDiv = styled(motion.div)`
   min-height: 500px;
   max-height: 500px;
   min-width: 500px;
@@ -54,37 +56,41 @@ export const MainDiv = styled.div`
   display: flex;
 `;
 
-export const SideContainer = styled.div`
+export const SideContainer = styled(motion.div)`
   width: 300px;
   height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  // justify-content: space-evenly;
   text-align: justify;
   text-justify: inter-word;
 `;
 
-export const Name = styled.h1`
+export const Name = styled(motion.h1)`
   color: white;
   font-family: "Playfair Display", serif;
 `;
 
-export const Designation = styled.h1`
-  font-size: 16px;
-  color: white;
+export const Designation = styled(motion.h1)`
+  font-size: 20px;
+  color: #efe;
   font-family: "Playfair Display", serif;
   max-width: 400px;
 `;
-
-export const SideDiv = styled.div`
+export const Info = styled(motion.h1)`
+  font-size: 16px;
+  color: #999;
+  font-family: "Poppins", sans-serif;
+`;
+export const SideDiv = styled(motion.div)`
   display: flex;
   flex-direction: column;
-
+  justify-content: center;
   min-width: 300px;
   min-height: 500px;
 `;
-export const SubDiv = styled.div`
+export const SubDiv = styled(motion.div)`
   flex: 0.2;
 
   &:hover {

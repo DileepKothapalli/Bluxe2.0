@@ -78,13 +78,23 @@ export const StoryText = styled(motion.p)`
   font-family: "Arial", sans-serif;
   font-weight: 400;
 `;
+
+export const StoryP = styled(motion.p)`
+  font-size: 1rem;
+  color: rgba(256, 256, 256, 0.75);
+  text-align: center;
+  margin: 0px;
+  font-family: "Arial", sans-serif;
+  font-weight: 400;
+`;
+
 export const BodyContainer = styled(motion.div)`
   position: relative;
   display: flex;
   flex-wrap: wrap;
   margin: 0px 10px;
   justify-content: space-evenly;
-  align-items: space-evenly;
+  align-items: center;
   width: 100%;
   max-width: 100vw;
   min-width: 600px;
@@ -104,11 +114,9 @@ export const MysteryWrapper = styled(motion.div)`
   height: max-content;
   background: linear-gradient(
     152.97deg,
-    rgba(0, 123, 137, 0.2) 0%,
-    rgba(0, 137, 123, 0.1) 100%
+    rgba(237, 223, 0, 0.2) 0%,
+    rgba(0, 237, 223, 0.1) 100%
   );
-  // background-image: url(${bg4});
-  // backdrop-filter: blur(1px);
 `;
 
 export const MysteryDiv = styled(motion.div).attrs((props) => props)`
@@ -141,7 +149,7 @@ export const Video = styled(motion.video)`
   position: relative;
 `;
 
-export const Img = styled.img`
+export const Img = styled(motion.img)`
   width: 400px;
   max-width: 400px;
   margin-right: 50px;

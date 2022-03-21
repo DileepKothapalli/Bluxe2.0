@@ -33,6 +33,7 @@ import run from "../../images/Run.webm";
 
 import { useScroll } from "../UseScroll";
 import Studio from "../Studio/index";
+import BluxeStudio from "../BluxeStudio/index";
 import MysteryCode from "../MysteryCode";
 
 const About = () => {
@@ -42,6 +43,8 @@ const About = () => {
   return (
     <Div id="about">
       <Studio></Studio>
+
+      <BluxeStudio />
 
       <MysteryCode />
 
