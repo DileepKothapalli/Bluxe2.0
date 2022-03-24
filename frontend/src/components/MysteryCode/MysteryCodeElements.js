@@ -112,11 +112,16 @@ export const MysteryWrapper = styled(motion.div)`
   font-family: "Poppins", sans-serif;
   padding: 30px 45px;
   height: max-content;
+  margin: 30px;
   background: linear-gradient(
     152.97deg,
     rgba(237, 223, 0, 0.2) 0%,
     rgba(0, 237, 223, 0.1) 100%
   );
+  @media (max-width: 550px) {
+    width: 80vw;
+    min-width: 50px;
+  }
 `;
 
 export const MysteryDiv = styled(motion.div).attrs((props) => props)`

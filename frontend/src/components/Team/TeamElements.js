@@ -13,7 +13,7 @@ import bg7 from "../../images/linebackground.jpg";
 
 export const Div = styled(motion.div)`
   background-size: 100vw 100vh;
-  background: rgba(0, 0, 0, 1);
+  // background: rgba(0, 0, 0, 1);
   text-align: center;
   background-size: 100vw 100vh;
   padding-bottom: 30px;
@@ -25,7 +25,7 @@ export const Div = styled(motion.div)`
 export const BgImg = styled(motion.div)`
   position: fixed;
   background-image: url(${bg2});
-  background: rgba(0, 0, 0, 1);
+  // background: rgba(0, 0, 0, 1);
   z-index: -10;
   background-size: cover;
   width: 100%;

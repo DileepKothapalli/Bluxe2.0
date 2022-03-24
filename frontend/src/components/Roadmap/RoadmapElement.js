@@ -61,10 +61,9 @@ const MovingDown = (x, y) => keyframes`
     }`;
 
 export const Div = styled(motion.div)`
-  // background: url(${bg1});
   display: flex;
   justify-content: center;
-  background: rgba(0, 0, 0, 1);
+  // background: rgba(0, 0, 0, 1);
   background-size: 100vw 100vh;
   height: max-content;
   padding-bottom: 60px;
@@ -81,7 +80,6 @@ export const Container = styled(motion.div)`
   position: relative;
   min-height: 90vh;
   justify-content: space-evenly;
-  // justify-content: space-between;
 `;
 
 export const HeadingContainer = styled(motion.div)`
@@ -93,7 +91,6 @@ export const HeadingContainer = styled(motion.div)`
   position: relative;
   margin: 30px 30px 40px;
   overflow-wrap: break-word;
-  // overflow: ;
 `;
 
 export const RoadmapHeading = styled(motion.h2)`
@@ -137,6 +134,10 @@ export const RoadmapP = styled(motion.p)`
   min-width: 500px;
   display: ${({ mousenum }) => (mousenum === 1 && "block") || "none"};
   max-width: 500px;
+  @media (max-width: 550px) {
+    max-width: 90vw;
+    min-width: 50px;
+  }
 `;
 export const BodyContainer = styled(motion.div)`
   position: relative;
@@ -154,6 +155,11 @@ export const RoadmapWrapper = styled(motion.div)`
   justify-content: flex-start;
   position: relative;
   font-family: "Poppins", sans-serif;
+  overflow-wrap: break-word;
+  @media (max-width: 550px) {
+    max-width: 90vw;
+    min-width: 50px;
+  }
 `;
 
 export const RoadmapDot = styled(motion.div)`
@@ -186,7 +192,6 @@ export const RoadmapDiv = styled(motion.div).attrs((props) => props)`
   background-color: rgb(80, 80, 80);
   background-color: transparent;
   display: flex;
-  // min-width: 600px;
   max-width: 70vw;
   align-items: space-between;
   justify-content: space-between;
@@ -198,6 +203,10 @@ export const RoadmapDiv = styled(motion.div).attrs((props) => props)`
   &:hover ${RoadmapDotFixed} {
     transition-delay: 1.01s;
     background-color: #00adf2;
+  }
+  @media (max-width: 550px) {
+    max-width: 80vw;
+    min-width: 50px;
   }
 `;
 
@@ -267,8 +276,7 @@ export const RoadmapCardRight = styled(motion.button)`
   min-height: 65px;
   height: max-content;
   margin: 10px;
-  min-width: 500px;
-  width: 650px;
+  width: 90vh;
   max-width: 550px;
   padding: 10px;
   border: 1px solid #aaa;
@@ -281,29 +289,17 @@ export const RoadmapCardRight = styled(motion.button)`
   &:active {
     border: 1px solid #aaa;
   }
-  text-align: justify;
-  text-justify: inter-word;
-
-  @media (max-width: 320px) {
-  }
-  @media (max-width: 480px) {
-  }
   @media (max-width: 700px) {
     flex-direction: column;
     text-align: start;
     justify-content: flex-start;
     align-items: flex-start;
   }
-  @media (max-width: 801px) {
-  }
-  @media (max-width: 1025px) {
-  }
-  @media (max-width: 1281px) {
+  @media (max-width: 550px) {
+    max-width: 90vw;
+    min-width: 50px;
   }
 
-  &:focus {
-    // border: none;
-  }
   border: ${({ mousenum }) => (mousenum === 1 && "none") || ""};
 `;
 export const RoadmapCardDiv = styled(motion.div)`
@@ -327,6 +323,8 @@ export const Video = styled(motion.video)`
   // height: 500px;
   width: 450px;
   scale: 2;
-  margin-right: 100px;
   position: relative;
+  @media (max-width: 1200px) {
+    margin-bottom: 30px;
+  }
 `;

@@ -50,9 +50,10 @@ export const BodyContainer = styled(motion.div)`
   position: relative;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: space-evenly;
   max-width: 100vw;
+  min-width: 90vw;
   margin: 0px 40px;
 `;
 
@@ -113,11 +114,18 @@ export const StudioWrapper = styled(motion.div)`
     rgba(0, 123, 137, 0.2) 0%,
     rgba(0, 137, 123, 0.1) 100%
   );
-  // background-image: url(${bg1});
   baclground-size: auto;
   opacity: 0.6;
   font-weight: 500;
   backdrop-filter: blur(1px);
+  @media (max-width: 768px) {
+    width: 80vw;
+    min-width: 50px;
+  }
+  @media (max-width: 550px) {
+    width: 80vw;
+    min-width: 50px;
+  }
 `;
 
 export const StudioTextHeading = styled(motion.p)`
@@ -134,6 +142,9 @@ export const Video = styled(motion.video)`
   height: 500px;
   width: 400px;
   scale: 2;
-  margin-left: 100px;
+  // margin-left: 100px;
   position: relative;
+  @media (max-width: 1024px) {
+    margin-top: 50px;
+  }
 `;

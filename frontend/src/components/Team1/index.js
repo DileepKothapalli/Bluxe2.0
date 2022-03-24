@@ -114,26 +114,11 @@ const Team1 = () => {
               ease: "easeInOut",
             }}
           >
-            <SubDiv
-              onMouseEnter={handleMouseEnter1}
-              onMouseLeave={handleMouseLeave1}
-            ></SubDiv>
-            <SubDiv
-              onMouseEnter={handleMouseEnter2}
-              onMouseLeave={handleMouseLeave2}
-            ></SubDiv>
-            <SubDiv
-              onMouseEnter={handleMouseEnter3}
-              onMouseLeave={handleMouseLeave3}
-            ></SubDiv>
-            <SubDiv
-              onMouseEnter={handleMouseEnter4}
-              onMouseLeave={handleMouseLeave4}
-            ></SubDiv>
-            <SubDiv
-              onMouseEnter={handleMouseEnter5}
-              onMouseLeave={handleMouseLeave5}
-            ></SubDiv>
+            <SubDiv flex="0.2" onMouseEnter={handleMouseEnter1}></SubDiv>
+            <SubDiv flex="0.27" onMouseEnter={handleMouseEnter2}></SubDiv>
+            <SubDiv flex="0.17" onMouseEnter={handleMouseEnter3}></SubDiv>
+            <SubDiv flex="0.14" onMouseEnter={handleMouseEnter4}></SubDiv>
+            <SubDiv flex="0.22" onMouseEnter={handleMouseEnter5}></SubDiv>
           </MainDiv>
           <SideDiv
             variants={TeamWrapperAnimate}

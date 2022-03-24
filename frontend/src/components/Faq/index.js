@@ -18,11 +18,22 @@ import {
   Icon,
   QuestionContainer,
 } from "./FaqElements";
+import { useScroll } from "../UseScroll.js";
 import iconPlus from "../../images/plus4.png";
 import walk from "../../images/walk.webm";
 import shoevideo1 from "../../images/shoewb.webm";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoffee } from "@fortawesome/free-solid-svg-icons";
+import {
+  FaqContainer,
+  FaqHeadingAnimate,
+  FaqWrapperAnimate,
+  QuestionAnimate,
+  QuestionAnimate1,
+  QuestionAnimate2,
+  QuestionAnimate3,
+  StaggerContainer,
+} from "./FaqFramer";
 const Faq = () => {
   const [mouse1, setMouse1] = useState(0);
   const [mouse2, setMouse2] = useState(0);
@@ -70,14 +81,41 @@ const Faq = () => {
     }
   }
 
+  const [element, controls] = useScroll(0.7);
+  const [element1, controls1] = useScroll(0.7);
+  const [element2, controls2] = useScroll(0.1);
+  const [element3, controls3] = useScroll(0.1);
+
   return (
     <Div id="faq">
       <BodyContainer>
         <HeadContainer>
-          <Heading>FAQ</Heading>
+          <Heading
+            ref={element}
+            variants={FaqHeadingAnimate}
+            animate={controls}
+            transition={{
+              duration: 1,
+              delay: 0.5,
+              bounce: 1.3,
+              ease: "easeInOut",
+            }}
+          >
+            FAQ
+          </Heading>
         </HeadContainer>
-        <QuestionsContainer>
-          <QuestionDiv onClick={handleMouseEnter1}>
+        <QuestionsContainer
+          ref={element2}
+          variants={StaggerContainer}
+          animate={controls2}
+          transition={{
+            duration: 0.5,
+            delay: 0.5,
+            bounce: 0.3,
+            ease: "easeInOut",
+          }}
+        >
+          <QuestionDiv variants={QuestionAnimate} onClick={handleMouseEnter1}>
             <QuestionContainer>
               <Question mouse={mouse1}>What is Bluxe?</Question>
               <Icon src={iconPlus} direction={mouse1} />
@@ -88,7 +126,7 @@ const Faq = () => {
               exclusive part of the future of fashion.
             </Answer>
           </QuestionDiv>
-          <QuestionDiv onClick={handleMouseEnter2}>
+          <QuestionDiv variants={QuestionAnimate} onClick={handleMouseEnter2}>
             <QuestionContainer>
               <Question mouse={mouse2}>What is Bluxe NFT collection ?</Question>
               <Icon src={iconPlus} direction={mouse2} />
@@ -100,7 +138,7 @@ const Faq = () => {
               exclusive merchandiseand raffles.
             </Answer>
           </QuestionDiv>
-          <QuestionDiv onClick={handleMouseEnter3}>
+          <QuestionDiv variants={QuestionAnimate} onClick={handleMouseEnter3}>
             <QuestionContainer>
               <Question mouse={mouse3}>What is price of shoes ?</Question>
               <Icon src={iconPlus} direction={mouse3} />{" "}
@@ -110,7 +148,7 @@ const Faq = () => {
               sale will be 0.1 eth and price of phase 2 will be 0.15 eth.
             </Answer>
           </QuestionDiv>
-          <QuestionDiv onClick={handleMouseEnter4}>
+          <QuestionDiv variants={QuestionAnimate} onClick={handleMouseEnter4}>
             <QuestionContainer>
               <Question mouse={mouse4}>
                 {" "}
@@ -127,10 +165,22 @@ const Faq = () => {
           </QuestionDiv>
         </QuestionsContainer>
 
-        <BottomContainer>
-          <BottomHeading>Ask A Question</BottomHeading>
-          <Input />
-          <SubmitButton>Submit</SubmitButton>
+        <BottomContainer
+          ref={element3}
+          variants={FaqContainer}
+          animate={controls3}
+          transition={{
+            duration: 0.5,
+            delay: 0.5,
+            bounce: 0.3,
+            ease: "easeInOut",
+          }}
+        >
+          <BottomHeading variants={FaqWrapperAnimate}>
+            Ask A Question
+          </BottomHeading>
+          <Input variants={FaqWrapperAnimate} />
+          <SubmitButton variants={FaqWrapperAnimate}>Submit</SubmitButton>
         </BottomContainer>
       </BodyContainer>
     </Div>

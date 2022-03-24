@@ -12,7 +12,7 @@ const scrolling = keyframes`
 
 export const Div = styled(motion.div)`
   background-size: 100vw 100vh;
-  background: rgba(0, 0, 0, 1);
+  // background: rgba(0, 0, 0, 1);
   text-align: center;
   background-size: 100vw 100vh;
   padding-bottom: 30px;
@@ -36,6 +36,7 @@ export const BodyContainer = styled(motion.div)`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  flex-wrap: wrap;
 `;
 export const Heading = styled(motion.h1)`
   margin: 100px 0px 0px 0px;
@@ -46,18 +47,29 @@ export const Heading = styled(motion.h1)`
   font-size: 3rem;
 `;
 export const MainDiv = styled(motion.div)`
-  min-height: 500px;
-  max-height: 500px;
-  min-width: 500px;
-  max-width: 500px;
+  min-height: 490px;
+  max-height: 490px;
+  min-width: 490px;
+  max-width: 490px;
   background: url(${group});
-  background-size: 500px 500px;
+  background-size: 490px 490px;
   background-repeat: no-repeat;
   display: flex;
+  margin: 10px;
+  @media (max-width: 700px) {
+    height: 100px;
+    margin: 0px;
+    padding: 0px;
+    min-height: 390px;
+    max-height: 390px;
+    min-width: 390px;
+    max-width: 390px;
+    background-size: 390px 390px;
+  }
 `;
 
 export const SideContainer = styled(motion.div)`
-  width: 300px;
+  width: 340px;
   height: 300px;
   display: flex;
   flex-direction: column;
@@ -65,6 +77,25 @@ export const SideContainer = styled(motion.div)`
   // justify-content: space-evenly;
   text-align: justify;
   text-justify: inter-word;
+  padding: 20px;
+
+  border-radius: 8px;
+
+  background: linear-gradient(
+    150.59deg,
+    rgba(30, 40, 30, 0.45) 17.37%,
+    rgba(255, 255, 255, 0) 101.21%,
+    rgba(0, 0, 0, 0) 101.21%
+  );
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 215, 0, 0.5);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  @media (max-width: 700px) {
+    height: 100px;
+    margin: 0px;
+    padding: 10px 0px 0px;
+  }
 `;
 
 export const Name = styled(motion.h1)`
@@ -77,11 +108,18 @@ export const Designation = styled(motion.h1)`
   color: #efe;
   font-family: "Playfair Display", serif;
   max-width: 400px;
+  width: 320px;
+  text-align: center;
+  margin-bottom: 30px;
+  // border-bottom: 1px solid rgba(255, 215, 0, 0.5);
 `;
 export const Info = styled(motion.h1)`
   font-size: 16px;
   color: #999;
   font-family: "Poppins", sans-serif;
+  @media (max-width: 700px) {
+    display: none;
+  }
 `;
 export const SideDiv = styled(motion.div)`
   display: flex;
@@ -89,10 +127,14 @@ export const SideDiv = styled(motion.div)`
   justify-content: center;
   min-width: 300px;
   min-height: 500px;
+  @media (max-width: 700px) {
+    min-height: 100px;
+    margin: 0px;
+    padding: 0px;
+  }
 `;
 export const SubDiv = styled(motion.div)`
-  flex: 0.2;
-
+  flex: ${(props) => props.flex};
   &:hover {
     & > ${Name} {
       // display: block;

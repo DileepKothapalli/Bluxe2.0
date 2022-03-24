@@ -9,8 +9,15 @@ import bg6 from "../../images/lightbackground.jpg";
 import bg7 from "../../images/linebackground.jpg";
 
 export const Div = styled(motion.div)`
-  background: rgba(0, 0, 0, 1);
-  background: url(${bg4});
+  // background: rgba(0, 0, 0, 1);
+  // background: url(${bg4});
+  // background: rgba(
+  //   ${(props) => props.scrolls},
+  //   ${(props) => props.scrolls},
+  //   ${(props) => props.scrolls},
+  //   1
+  // );
+
   text-align: center;
   background-size: 100vw 100vh;
   position: relative;
@@ -74,6 +81,7 @@ export const CaptionDiv = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 0px 10px;
 `;
 export const Caption = styled(motion.h1)`
   text-shadow: 1px 1px 1px #222;
@@ -109,6 +117,7 @@ export const HalfContainer = styled(motion.div)`
   max-width: 800px;
   text-align: justify;
   text-justify: inter-word;
+  flex-wrap: wrap;
 `;
 
 export const CardsContainer = styled(motion.div)`

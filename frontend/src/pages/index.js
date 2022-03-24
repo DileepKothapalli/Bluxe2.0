@@ -1,8 +1,7 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Roadmap from "../components/Roadmap";
 import Mainpage from "../components/Mainpage";
 import About from "../components/About";
-import Team from "../components/Team";
 import Faq from "../components/Faq";
 
 import "./index.css";
@@ -13,7 +12,9 @@ import { motion } from "framer-motion";
 import NavbarGlass from "../components/NavbarGlass";
 import Artwork from "../components/Artwork";
 import Team1 from "../components/Team1";
+import Footer from "../components/Footer";
 import BluxeStudio from "../components/BluxeStudio";
+import { Div } from "./Elements";
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -21,8 +22,37 @@ const Home = () => {
     setIsOpen(!isOpen);
   };
 
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [scrollPositionR, setScrollPositionR] = useState(0);
+  const [scrollPositionG, setScrollPositionG] = useState(0);
+  const [scrollPositionB, setScrollPositionB] = useState(0);
+  const [divPosition, setDivPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition((position / 100) % 128);
+    setScrollPositionR((position * 46) / 5000);
+    setScrollPositionG((position * 26) / 5000);
+    setScrollPositionB((position * 71) / 5000);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="heade">
+    <Div
+      scrollR={scrollPositionR}
+      scrollG={scrollPositionG}
+      scrollB={scrollPositionB}
+      // scrollR="0"
+      // scrollG="0"
+      // scrollB="0"
+      className="heade"
+    >
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <NavbarGlass toggle={toggle} />
 
@@ -33,15 +63,15 @@ const Home = () => {
 
         <Artwork />
 
-        <BluxeStudio />
-
         <Roadmap />
 
         <Team1 />
 
         <Faq />
+
+        <Footer />
       </motion.div>
-    </div>
+    </Div>
   );
 };
 

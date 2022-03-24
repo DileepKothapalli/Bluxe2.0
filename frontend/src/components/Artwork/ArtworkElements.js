@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import styled, { css, keyframes } from "styled-components";
-import bg from "../../images/DeepakJoshiAvatar.png";
 
 const scrolling = keyframes`
  0% {transform: translateX(0px) }
@@ -10,7 +9,7 @@ const scrolling = keyframes`
 
 export const Div = styled(motion.div)`
   min-height: 100vh;
-  background: rgba(0, 0, 0, 1);
+  // background: rgba(0, 0, 0, 1);
   padding-top: 100px;
   display: flex;
   justify-content: center;
@@ -26,12 +25,13 @@ export const Container = styled(motion.div)`
   @media screen and (max-width: 1024px) {
     width: 70vw;
   }
-  @media screen and (max-width: 750px) {
-    width: 50vw;
+  @media screen and (max-width: 768px) {
+    width: 70vw;
   }
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 550px) {
     width: 55vw;
   }
+  display: inline-block;
 `;
 export const HeadContainer = styled(motion.div)`
   display: flex;
@@ -140,20 +140,31 @@ export const SideDivLeft = styled(motion.div)`
   align-items: center;
   justify-content: flex-end;
   max-width: 50px;
+  opacity: 0.1;
+  &:hover {
+    opacity: 0.75;
+  }
+  cursor: pointer;
 `;
 export const SideDivRight = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: flex-start;
   min-width: 50px;
+  opacity: 0.1;
+  &:hover {
+    opacity: 0.75;
+  }
+  cursor: pointer;
 `;
 
 export const Prev = styled(motion.img)`
   height: 50px;
-  cursor: pointer;
   max-width: 50px;
+  margin-bottom: 40px;
 `;
 export const Next = styled(motion.img)`
   height: 50px;
-  cursor: pointer;
+  max-width: 50px;
+  margin-bottom: 40px;
 `;

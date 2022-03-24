@@ -21,12 +21,11 @@ import {
   GirlImageAnimate,
 } from "./MysteryCodeFramer";
 import { useScroll } from "../UseScroll.js";
-import girl from "../../images/girl.jpg";
 import girl1 from "../../images/girl1.jpg";
 const MysteryCode = () => {
-  const [element, controls] = useScroll(0.7);
+  const [element, controls] = useScroll(0.3);
   const [element1, controls1] = useScroll(0.7);
-  const [element2, controls2] = useScroll(0.4);
+  const [element2, controls2] = useScroll(0.2);
   const [element3, controls3] = useScroll(0.4);
   return (
     <Div id="mystery">

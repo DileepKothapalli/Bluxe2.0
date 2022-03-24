@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import {
   BodyContainer,
   BottomContainer,
@@ -25,14 +25,8 @@ import {
 
 import { ArtworkAnimate } from "./ArtworkFramer";
 
-// import IconButton from '@mui/material/IconButton';
-// // or
-// import "~slick-carousel/slick/slick.css";
-// import "~slick-carousel/slick/slick-theme.css";
-
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
-import bg from "../../images/DeepakJoshiAvatar.png";
 import logo from "../../images/Asset1.png";
 // import logo from "../../images/bluxestudio1.png";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
@@ -91,6 +85,8 @@ const Artwork = () => {
   const [element1, controls1] = useScroll(0.7);
   const [element2, controls2] = useScroll(0.4);
   const [element3, controls3] = useScroll(0.4);
+
+  const slider = React.useRef(null);
   function NextHandler() {
     setNum(num + 2);
   }
@@ -119,7 +115,7 @@ const Artwork = () => {
     speed: 500,
     slidesToShow: 4,
     slidesToScroll: 1,
-
+    arrows: false,
     responsive: [
       {
         breakpoint: 1200,
@@ -142,14 +138,15 @@ const Artwork = () => {
         },
       },
       {
-        breakpoint: 750,
+        breakpoint: 768,
         settings: {
           dots: true,
           infinite: true,
           speed: 500,
           slidesToShow: 1,
           slidesToScroll: 1,
-          centerPadding: "60px",
+          centerMode: true,
+          centerPadding: "0px",
         },
       },
     ],
@@ -157,6 +154,10 @@ const Artwork = () => {
   const i = 1;
   return (
     <Div id="artwork">
+      <SideDivLeft onClick={() => slider?.current?.slickPrev()}>
+        <Prev src={prev} />
+      </SideDivLeft>
+
       <Container
         ref={element}
         variants={ArtworkAnimate}
@@ -168,7 +169,7 @@ const Artwork = () => {
           ease: "easeInOut",
         }}
       >
-        <Slider {...settings}>
+        <Slider ref={slider} {...settings}>
           <CardContainer>
             <Card>
               <TopContainer>
@@ -339,6 +340,10 @@ const Artwork = () => {
           </CardContainer>
         </Slider>
       </Container>
+
+      <SideDivRight onClick={() => slider?.current?.slickNext()}>
+        <Next src={next} />
+      </SideDivRight>
     </Div>
   );
 };

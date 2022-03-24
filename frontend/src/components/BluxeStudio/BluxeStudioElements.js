@@ -56,7 +56,7 @@ export const Heading = styled(motion.h1)`
   color: rgba(256, 256, 256, 1);
   font-family: "Playfair Display", serif;
   text-transform: uppercase;
-  font-size: 27px;
+  font-size: 1.5rem;
 `;
 
 export const TextDiv = styled(motion.div)`
@@ -79,6 +79,10 @@ export const TextDivl = styled(motion.div)`
   width: 45vw;
   min-width: 500px;
   max-width: 550px;
+  @media (max-width: 550px) {
+    width: 80vw;
+    min-width: 50px;
+  }
 `;
 export const TextDivR = styled(motion.div)`
   display: flex;
@@ -94,6 +98,10 @@ export const TextDivR = styled(motion.div)`
   text-align: start;
   width: 50vw;
   justify-content: center;
+  @media (max-width: 550px) {
+    width: 80vw;
+    min-width: 50px;
+  }
 `;
 
 export const Bullet = styled(motion.div)`
@@ -106,7 +114,7 @@ export const Bullet = styled(motion.div)`
 
 export const TextP = styled(motion.p)`
   margin: 0px;
-  font-size: 20px;
+  font-size: 1rem;
   margin: 0px 0px 0px 10px;
   color: rgba(256, 256, 256, 1);
 `;
@@ -116,5 +124,5 @@ export const Logo = styled(motion.img)`
 `;
 
 export const TextL = styled(motion.h1)`
-  font-size: 24px;
+  font-size: 1.5rem;
 `;

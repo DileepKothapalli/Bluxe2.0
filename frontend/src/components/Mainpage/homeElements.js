@@ -13,8 +13,7 @@ import bg9 from "../../images/mainbg.jpg";
 import bg10 from "../../images/scifimain.jpg";
 
 export const Div = styled(motion.div)`
-  background: rgba(0, 0, 0, 1);
-  background: url(${bg10});
+  // background: url(${bg10});
   display: flex;
   min-height: 100vh;
   height: max-content;

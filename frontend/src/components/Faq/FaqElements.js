@@ -9,63 +9,59 @@ import bg5 from "../../images/darkpurple.jpg";
 import bg6 from "../../images/lightbackground.jpg";
 import bg7 from "../../images/linebackground.jpg";
 
-export const Div = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(0, 0, 0, 1);
-  background: url(${bg3});
-  background-size: 100vw 100vh;
+export const Div = styled(motion.div)`
+  // background: rgba(0, 0, 0, 1);
+  // background: url(${bg3});
+
   text-align: center;
+  background-size: 100vw 100vh;
+  padding-bottom: 30px;
+  padding-top: 1px;
   height: max-content;
-  min-height: 120vh;
-  position: relative;
-  padding-bottom: 70px;
 `;
-export const VideoDiv = styled.div`
+export const VideoDiv = styled(motion.div)`
   height: 100vh;
   display: flex;
   align-items: center;
   top: 150%;
   right: 50%;
 `;
-export const BodyContainer = styled.div`
+export const BodyContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 70px 10px 0px;
+  margin: 70px 0px 0px;
   min-height: 85vh;
-
+  justify-content: space-evenly;
   border-radius: 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 90vw;
+  width: 100vw;
   box-shadow: 0px 1px 24px -1px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(4px);
 `;
-export const Video = styled.video`
+export const Video = styled(motion.video)`
   height: 500px;
   width: 400px;
   position: relative;
 `;
 
-export const HeadContainer = styled.div`
+export const HeadContainer = styled(motion.div)`
   margin-top: 20px;
   display: flex;
   justify-content: center;
 `;
-export const Heading = styled.h2`
+export const Heading = styled(motion.h2)`
   font-weight: bolder;
   color: #00897d;
   text-shadow: 1px 1px 2px #000;
   font-family: "Playfair Display", serif;
   font-size: 2.5rem;
+  padding-top: 20px;
 `;
-export const Question = styled.h2`
+export const Question = styled(motion.h2)`
   padding: 10px 0px 25px;
   margin-bottom: 10px;
-  width: 650px;
+  width: 70vw;
+  max-width: 650px;
   font-size: 1.5rem;
   text-shadow: 0px 0px 1px #000;
   font-family: "Poppins", sans-serif;
@@ -99,7 +95,7 @@ ${
 }
 `;
 
-export const Answer = styled.h2`
+export const Answer = styled(motion.h2)`
   font-size: 1.125rem;
   color: #bbb;
   overflow-wrap: break-word;
@@ -110,7 +106,7 @@ export const Answer = styled.h2`
   margin-bottom: 20px;
 `;
 
-export const QuestionsContainer = styled.div`
+export const QuestionsContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -120,7 +116,7 @@ export const QuestionsContainer = styled.div`
   transition: all 0.5s ease;
   margin: 0px 0px 20px;
 `;
-export const QuestionContainer = styled.div`
+export const QuestionContainer = styled(motion.div)`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -173,7 +169,7 @@ export const Icon = styled(motion.img)`
   );
 `;
 
-export const QuestionDiv = styled.div.attrs((props) => props)`
+export const QuestionDiv = styled(motion.div).attrs((props) => props)`
   overflow-wrap: break-word;
   display: flex;
   flex-direction: column;
@@ -181,7 +177,7 @@ export const QuestionDiv = styled.div.attrs((props) => props)`
   align-items: flex-start;
   background-color: transparent;
   min-height: 20px;
-  min-width: 450px;
+  width:70vw;
 
   max-width: 650px;
   position: relative;
@@ -200,20 +196,20 @@ export const QuestionDiv = styled.div.attrs((props) => props)`
   }
 `;
 
-export const BottomContainer = styled.div`
+export const BottomContainer = styled(motion.div)`
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 `;
 
-export const BottomHeading = styled.h1`
+export const BottomHeading = styled(motion.h1)`
   font-size: 1.875rem;
   color: #fff;
   margin-bottom: 20px;
 `;
 
-export const Input = styled.textarea`
+export const Input = styled(motion.textarea)`
   max-width: 600px;
   // width: 600px;
   min-width: 400px;
@@ -227,9 +223,14 @@ export const Input = styled.textarea`
     padding-left: 5px;
     outline: none;
   }
+  @media (max-width: 550px) {
+    max-width: 80vw;
+    width: 80vw;
+    min-width: 50px;
+  }
 `;
 
-export const SubmitButton = styled.button`
+export const SubmitButton = styled(motion.button)`
   width: 100px;
   height: 40px;
   border: none;
