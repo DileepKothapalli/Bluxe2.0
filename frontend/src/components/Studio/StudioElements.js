@@ -14,8 +14,8 @@ import bg7 from "../../images/linebackground.jpg";
 export const Div = styled(motion.div)`
   display: flex;
   justify-content: center;
-  background: rgba(0, 0, 0, 1);
-  background: url(${bg2});
+  // background: rgba(0, 0, 0, 1);
+  // background: url(${bg2});
   min-height: 100vh;
   height: max-content;
   position: relative;

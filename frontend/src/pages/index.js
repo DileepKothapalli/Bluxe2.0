@@ -30,9 +30,9 @@ const Home = () => {
   const handleScroll = () => {
     const position = window.pageYOffset;
     setScrollPosition((position / 100) % 128);
-    setScrollPositionR((position * 46) / 5000);
-    setScrollPositionG((position * 26) / 5000);
-    setScrollPositionB((position * 71) / 5000);
+    setScrollPositionR((position * 0) / 5000);
+    setScrollPositionG((position * 0) / 5000);
+    setScrollPositionB((position * 56) / 5000);
   };
 
   useEffect(() => {

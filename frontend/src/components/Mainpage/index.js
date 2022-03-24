@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./homeElements.js";
 import Axios from "axios";
 import { ethers } from "ethers";
@@ -75,6 +75,21 @@ const Home = () => {
   //   context.drawImage(img, 0, 0);
   // };
 
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [divPosition, setDivPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition((position / 10) % 126);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   // preloadImages();
 
   const [email_id, setEmail] = useState("");
@@ -146,7 +161,7 @@ const Home = () => {
   window.ethereum.on("chainChanged", chainChangedHandler);
 
   return (
-    <Div id="home">
+    <Div scrolls={scrollPosition} id="home">
       <MainContainer>
         <TopContainer>
           <HalfDivl>

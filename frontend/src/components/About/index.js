@@ -37,11 +37,26 @@ import BluxeStudio from "../BluxeStudio/index";
 import MysteryCode from "../MysteryCode";
 
 const About = () => {
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [divPosition, setDivPosition] = useState(0);
+  const handleScroll = () => {
+    const position = window.pageYOffset;
+    setScrollPosition((position / 100) % 20);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const [element, controls] = useScroll(0.2);
   const [element1, controls1] = useScroll(0.4);
   const [element2, controls2] = useScroll(0.4);
   return (
-    <Div id="about">
+    <Div scrolls={scrollPosition} id="about">
       <Studio></Studio>
 
       <BluxeStudio />

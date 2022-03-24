@@ -25,7 +25,7 @@ export const BgImg = styled(motion.div)`
 export const Div = styled(motion.div)`
   display: flex;
   justify-content: center;
-  background: rgba(0, 0, 0, 1);
+  // background: rgba(0, 0, 0, 1);
   height: max-content;
   padding-bottom: 60px;
   padding-top: 30px;

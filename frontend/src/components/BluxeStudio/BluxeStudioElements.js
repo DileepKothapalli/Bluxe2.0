@@ -10,7 +10,7 @@ import bg7 from "../../images/linebackground.jpg";
 export const Div = styled(motion.div)`
   display: flex;
   min-height: 100vh;
-  background: url(${bg4});
+  // background: url(${bg4});
   padding-top: 100px;
 `;
 

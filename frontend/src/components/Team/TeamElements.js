@@ -25,7 +25,7 @@ export const Div = styled(motion.div)`
 export const BgImg = styled(motion.div)`
   position: fixed;
   background-image: url(${bg2});
-  // background: rgba(0, 0, 0, 1);
+  background: rgba(0, 0, 0, 1);
   z-index: -10;
   background-size: cover;
   width: 100%;
